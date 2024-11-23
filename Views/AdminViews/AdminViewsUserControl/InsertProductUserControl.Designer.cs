@@ -45,9 +45,10 @@
             this.ProductPreviewPictureBox.BorderRadius = 18;
             this.ProductPreviewPictureBox.ImageRotate = 0F;
             this.ProductPreviewPictureBox.Location = new System.Drawing.Point(64, 127);
-            this.ProductPreviewPictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProductPreviewPictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.ProductPreviewPictureBox.Name = "ProductPreviewPictureBox";
             this.ProductPreviewPictureBox.Size = new System.Drawing.Size(440, 343);
+            this.ProductPreviewPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ProductPreviewPictureBox.TabIndex = 0;
             this.ProductPreviewPictureBox.TabStop = false;
             // 
@@ -84,7 +85,7 @@
             this.ProductMenuComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.ProductMenuComboBox.ItemHeight = 30;
             this.ProductMenuComboBox.Location = new System.Drawing.Point(545, 198);
-            this.ProductMenuComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProductMenuComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.ProductMenuComboBox.Name = "ProductMenuComboBox";
             this.ProductMenuComboBox.Size = new System.Drawing.Size(206, 36);
             this.ProductMenuComboBox.TabIndex = 2;
@@ -115,7 +116,7 @@
             this.ProductDescriptionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ProductDescriptionTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(144)))), ((int)(((byte)(144)))));
             this.ProductDescriptionTextBox.Location = new System.Drawing.Point(545, 301);
-            this.ProductDescriptionTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProductDescriptionTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.ProductDescriptionTextBox.Name = "ProductDescriptionTextBox";
             this.ProductDescriptionTextBox.Size = new System.Drawing.Size(315, 148);
             this.ProductDescriptionTextBox.TabIndex = 5;
@@ -127,7 +128,7 @@
             this.AddCategoryLabel.Font = new System.Drawing.Font("Century Gothic", 23F, System.Drawing.FontStyle.Bold);
             this.AddCategoryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.AddCategoryLabel.Location = new System.Drawing.Point(64, 67);
-            this.AddCategoryLabel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddCategoryLabel.Margin = new System.Windows.Forms.Padding(2);
             this.AddCategoryLabel.Name = "AddCategoryLabel";
             this.AddCategoryLabel.Size = new System.Drawing.Size(208, 39);
             this.AddCategoryLabel.TabIndex = 9;
@@ -226,7 +227,7 @@
             this.Controls.Add(this.ProductMenuComboBox);
             this.Controls.Add(this.ProductNameTextBox);
             this.Controls.Add(this.ProductPreviewPictureBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InsertProductUserControl";
             this.Size = new System.Drawing.Size(1148, 731);
             ((System.ComponentModel.ISupportInitialize)(this.ProductPreviewPictureBox)).EndInit();

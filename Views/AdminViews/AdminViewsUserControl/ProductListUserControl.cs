@@ -14,9 +14,11 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
     public partial class ProductListUserControl : UserControl
     {
         private readonly ProductViewModel productViewModel = new ProductViewModel();
+        private UpdateDeleteUserControl updateDeleteUserControl;
 
         public delegate void ProductListUserControlClickedEventHandler();
         public event ProductListUserControlClickedEventHandler ProductListUserControlAddProductClicked;
+        public event ProductListUserControlClickedEventHandler ProductListUserControlNavigateToUpdateDeleteUserControl;
         public ProductListUserControl()
         {
             InitializeComponent();
@@ -30,14 +32,22 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
                 DataGridViewRow selectedRow = ProductListDataGridView.Rows[e.RowIndex];         
                 int productId = Convert.ToInt32(selectedRow.Cells["Product_Id"].Value);
 
-                UpdateDeleteDialogView updateDeleteDialogView = new UpdateDeleteDialogView(productId, true);
-                updateDeleteDialogView.Show();
+                updateDeleteUserControl = new UpdateDeleteUserControl
+                {
+                    IsFromMenuListUserControl = false
+                };
+                ProductListUserControlNavigateToUpdateDeleteUserControl?.Invoke();
             }
         }
         private void LoadProducts()
         {
             ProductListDataGridView.DataSource = productViewModel.Products;
             CustomizeDataGridViewHeaders();
+        }
+        public void ReloadProducts()
+        {
+            productViewModel.LoadProducts();
+            LoadProducts();
         }
         private void CustomizeDataGridViewHeaders()
         {

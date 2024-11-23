@@ -145,7 +145,7 @@
             this.Name = "InsertMenuUserControl";
             this.Size = new System.Drawing.Size(1333, 823);
             ((System.ComponentModel.ISupportInitialize)(this.MenuPreviewPictureBox)).EndInit();
-            this.ResumeLayout(false);
+
 
         }
 

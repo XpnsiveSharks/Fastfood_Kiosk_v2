@@ -1,6 +1,4 @@
 ﻿using Fastfood_Kiosk_v2.ViewModels;
-using Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl;
-using Mysqlx.Crud;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,25 +9,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Fastfood_Kiosk_v2.Views.AdminViews
+namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 {
-    public partial class UpdateDeleteDialogView : Form
+    public partial class UpdateDeleteUserControl : UserControl
     {
         public delegate void UpdateDialogViewEventHandler();
         public event UpdateDialogViewEventHandler UpdateDialogViewEventHandlerNavigateToMenuList;
         public event UpdateDialogViewEventHandler UpdateDialogViewEventHandlerNavigateToProductList;
-
-        private readonly AdminUserControl adminUserControl = new AdminUserControl();
-        private InsertMenuUserControl insertMenuUserControl;
         public bool IsProductUpdate { get; set; }
+        public bool IsFromMenuListUserControl { get; set; }
         public int MenuAndProductId { get; set; }
-        public UpdateDeleteDialogView()
+        public UpdateDeleteUserControl()
         {
             InitializeComponent();
-        } 
+        }
+
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            this.Close();
             if (IsProductUpdate)
             {
                 //InsertProductUserControl insertProductUserControl = new InsertProductUserControl(MenuAndProductId);
@@ -37,28 +33,27 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews
             }
             else
             {
-               /* insertMenuUserControl = new InsertMenuUserControl
-                {
-                    MenuId = MenuAndProductId,
-                };
-                AdminUserControl adminUserControl = new AdminUserControl();
-                adminUserControl.ChangeUserControlInAdminUserControl(insertMenuUserControl);*/
+                /* insertMenuUserControl = new InsertMenuUserControl
+                 {
+                     MenuId = MenuAndProductId,
+                 };
+                 AdminUserControl adminUserControl = new AdminUserControl();
+                 adminUserControl.ChangeUserControlInAdminUserControl(insertMenuUserControl);*/
             }
-                
+
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            this.Close();
             if (IsProductUpdate)
             {
-                
-                if(DialogResultMessageBox("product"))
+
+                if (DialogResultMessageBox("product"))
                 {
                     ProductViewModel productViewModel = new ProductViewModel();
                     productViewModel.DeleteProduct(MenuAndProductId);
                     MessageBox.Show("Product deleted succesfully");
-                    UpdateDialogViewEventHandlerNavigateToProductList?.Invoke();
+                    //UpdateDialogViewEventHandlerNavigateToProductList?.Invoke();
                 }
                 else
                 {
@@ -72,7 +67,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews
                     MenuViewModel menuViewModel = new MenuViewModel();
                     menuViewModel.DeleteMenu(MenuAndProductId);
                     MessageBox.Show("Menu deleted succesfully");
-                    UpdateDialogViewEventHandlerNavigateToMenuList?.Invoke();
+                    //UpdateDialogViewEventHandlerNavigateToMenuList?.Invoke();
                 }
                 else
                 {
@@ -91,7 +86,10 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews
         }
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (IsFromMenuListUserControl)
+                UpdateDialogViewEventHandlerNavigateToMenuList?.Invoke();
+            else
+                UpdateDialogViewEventHandlerNavigateToProductList?.Invoke();
         }
     }
 }

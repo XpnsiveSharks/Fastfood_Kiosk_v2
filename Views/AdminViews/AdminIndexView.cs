@@ -42,22 +42,12 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews
             adminUserControl.ProductListAdminUserControlClicked += OnProductListAdminUserControlClicked;
             
         }
-        /// <summary>
-        /// handles the event when the menu list button in the admin user control is clicked
-        /// loads the insert menu user control
-        /// </summary>
         private void OnMenuListAdminUserControlClicked()
         {
             insertMenuUserControl.InsertMenuUserControlClicked += LoadInitialUserControl;
-
-
             AdminIndexPanel.Controls.Clear();
             AdminIndexPanel.Controls.Add(insertMenuUserControl);
         }
-        /// <summary>
-        /// handles the event when the product list button in the admin user control is clicked
-        /// loads the insert product user control
-        /// </summary>
         private void OnProductListAdminUserControlClicked()
         {
             //insertProductUserControl.InsertProductUserControlClicked += LoadInitialUserControl;
@@ -65,11 +55,6 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews
             AdminIndexPanel.Controls.Clear();
             AdminIndexPanel.Controls.Add(insertProductUserControl);
         }
-        /// <summary>
-        /// calls the LoadInitialUserControl() when admin button is clicked
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void AdminButton_Click(object sender, EventArgs e)
         {
             LoadInitialUserControl();
@@ -103,7 +88,6 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews
         private void HomeButton_Click_1(object sender, EventArgs e)
         {
             ChangeUserControl(cashierUserControl);
-
 
         }
 

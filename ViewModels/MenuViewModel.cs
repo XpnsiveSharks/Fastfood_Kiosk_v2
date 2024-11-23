@@ -1,5 +1,6 @@
 ﻿using Fastfood_Kiosk_v2.Models;
 using Fastfood_Kiosk_v2.Repositories;
+using Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -115,7 +116,7 @@ namespace Fastfood_Kiosk_v2.ViewModels
         /// <summary>
         /// Property for MenuButtonsUserControl 
         /// </summary>
-        /*private List<MenuButtonsUserControl> _menuControls;
+       /* private List<MenuButtonsUserControl> _menuControls;
         public List<MenuButtonsUserControl> MenuControls
         {
             get => _menuControls;
@@ -128,26 +129,11 @@ namespace Fastfood_Kiosk_v2.ViewModels
                 }
             }
         }
-        /// <summary>
-        /// Property for MenuCashierUserControl
-        /// </summary>
-        private List<MenuCashierUserControl> _menuCashierControls;
-        public List<MenuCashierUserControl> MenuCashierControls
-        {
-            get => _menuCashierControls;
-            set
-            {
-                if (_menuCashierControls != value)
-                {
-                    _menuCashierControls = value;
-                    OnPropertyChanged(nameof(MenuCashierControls));
-                }
-            }
-        }
+*/
         /// <summary>
         /// Load Menu to CustomerIndexView
         /// </summary>
-        public void LoadMenuToUserControl()
+        /*public void LoadMenuToUserControl()
         {
             List<MenuButtonsUserControl> menuButtonsUserControls = new List<MenuButtonsUserControl>();
             foreach (var menu in Menus)
@@ -165,16 +151,32 @@ namespace Fastfood_Kiosk_v2.ViewModels
 
             }
             MenuControls = menuButtonsUserControls;
-        }
+        }*/
         /// <summary>
         /// Loading menu to cashier user control
         /// </summary>
+        /// /// <summary>
+        /// Property for MenuCashierUserControl
+        /// </summary>
+        private List<MenuForCashierUserControl> _menuCashierControls;
+        public List<MenuForCashierUserControl> MenuCashierControls
+        {
+            get => _menuCashierControls;
+            set
+            {
+                if (_menuCashierControls != value)
+                {
+                    _menuCashierControls = value;
+                    OnPropertyChanged(nameof(MenuCashierControls));
+                }
+            }
+        }
         public void LoadMenuToCashierUserControl()
         {
-            List<MenuCashierUserControl> menuCashierUserControls = new List<MenuCashierUserControl>();
+            List<MenuForCashierUserControl> menuCashierUserControls = new List<MenuForCashierUserControl>();
             foreach (var menu in Menus)
             {
-                MenuCashierUserControl menuCashierUserControl = new MenuCashierUserControl
+                MenuForCashierUserControl menuCashierUserControl = new MenuForCashierUserControl
                 {
                     MenuId = menu.Menu_Id,
                     MenuName = menu.Menu_Name
@@ -182,6 +184,6 @@ namespace Fastfood_Kiosk_v2.ViewModels
                 menuCashierUserControls.Add(menuCashierUserControl);
             }
             MenuCashierControls = menuCashierUserControls;
-        }*/
+        }
     }
 }

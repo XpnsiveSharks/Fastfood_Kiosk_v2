@@ -15,9 +15,10 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
     {
         public delegate void MenuListUserControlClickedEventHandler();
         public event MenuListUserControlClickedEventHandler MenuListUserControlAddMenuClicked;
+        public event MenuListUserControlClickedEventHandler MenuListUserControlAddMenuNavigateToUpdateDeleteUserControl;
 
         private readonly MenuViewModel menuViewModel = new MenuViewModel();
-
+        private UpdateDeleteUserControl updateDeleteUserControl;
         public MenuListUserControl()
         {
             InitializeComponent();
@@ -50,10 +51,13 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow selectedRow = MenuListDataGridView.Rows[e.RowIndex];      
-                int menuId = Convert.ToInt32(selectedRow.Cells["Menu_Id"].Value); 
-
-                UpdateDeleteDialogView updateDeleteDialogView = new UpdateDeleteDialogView(menuId, false);
-                updateDeleteDialogView.Show();
+                int menuId = Convert.ToInt32(selectedRow.Cells["Menu_Id"].Value);
+           
+                MenuListUserControlAddMenuNavigateToUpdateDeleteUserControl?.Invoke();
+                updateDeleteUserControl = new UpdateDeleteUserControl
+                {
+                    IsFromMenuListUserControl = true
+                };
             }
         }
         public void ReloadMenus()

@@ -1,5 +1,6 @@
 ﻿using Fastfood_Kiosk_v2.Models;
 using Fastfood_Kiosk_v2.Repositories;
+using Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -145,7 +146,7 @@ namespace Fastfood_Kiosk_v2.ViewModels
             _productRepository.DeleteProduct(productId);
         }
 
-       /* private List<ProductButtonsUserControl> _productControls;
+        private List<ProductButtonsUserControl> _productControls;
         public List<ProductButtonsUserControl> ProductControls
         {
             get => _productControls;
@@ -176,6 +177,10 @@ namespace Fastfood_Kiosk_v2.ViewModels
                 productDisplayUserControls.Add(productDisplayUserControl);
             }
             ProductControls = productDisplayUserControls;
-        }*/
+        }
+        public void LoadProducts()
+        {
+            Products = _productRepository.GetAllProducts() ?? new List<Products>();
+        }
     }
 }

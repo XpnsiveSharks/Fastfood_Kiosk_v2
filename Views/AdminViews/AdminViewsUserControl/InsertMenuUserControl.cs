@@ -25,17 +25,14 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 
         private readonly MenuViewModel menuViewModel = new MenuViewModel();
 
-
-        private int menuId;
-        private bool IsUpdate;
-        public InsertMenuUserControl(int menuId = 0)
+        public int MenuId { get; set; }
+        public bool IsUpdate { get; set; }
+        public InsertMenuUserControl()
         {
             InitializeComponent();
+            IfMenuIsUpdating();
 
-            this.menuId = menuId;
-            IsUpdate = menuId != 0;
-            if (IsUpdate)
-                DisplaySelectedCategoriesForMenuUpdate();
+
 
             MenuPreviewPictureBox.DataBindings.Add("Image", menuViewModel, nameof(menuViewModel.SelectedMenuImage), true, DataSourceUpdateMode.OnPropertyChanged);
             MenuNameTextBox.DataBindings.Add("Text", menuViewModel, nameof(menuViewModel.MenuName), true, DataSourceUpdateMode.OnPropertyChanged);
@@ -76,7 +73,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
             }
             if (IsUpdate)
             {
-                menuViewModel.UpdateMenu(menuId);
+                menuViewModel.UpdateMenu(MenuId);
                 MessageBox.Show("Category updated successfully");
             }
             else
@@ -87,9 +84,15 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 
             InsertMenuUserControlGoToMenuListClicked?.Invoke();
         }
+        private void IfMenuIsUpdating()
+        {
+            IsUpdate = MenuId != 0;
+            if (IsUpdate)
+                DisplaySelectedCategoriesForMenuUpdate();
+        }
         private void DisplaySelectedCategoriesForMenuUpdate()
         {
-            var category = menuViewModel.GetMenuById(menuId);
+            var category = menuViewModel.GetMenuById(MenuId);
             menuViewModel.MenuName = category.Menu_Name;
             menuViewModel.SelectedMenuImagePath = category.Menu_Image_File_Path;
         }

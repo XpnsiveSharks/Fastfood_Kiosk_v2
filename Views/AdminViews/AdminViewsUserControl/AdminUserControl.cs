@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
@@ -17,62 +10,77 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
         public event AdminUserControlClickedEventHandler ProductListAdminUserControlClicked;
 
         private readonly MenuListUserControl menuListUserControl = new MenuListUserControl();
-        private InsertMenuUserControl insertMenuUserControl = new InsertMenuUserControl();
+        private readonly InsertMenuUserControl insertMenuUserControl = new InsertMenuUserControl();
         private readonly ProductListUserControl productListUserControl = new ProductListUserControl();
         private readonly InsertProductUserControl insertProductUserControl = new InsertProductUserControl();
-       
+        private readonly UpdateDeleteUserControl updateDeleteUserControl = new UpdateDeleteUserControl();
         public AdminUserControl()
         {
             InitializeComponent();
+            InitializeEventHandlers();
             DisplayListMenuUserControl();
         }
+
+        private void InitializeEventHandlers()
+        {
+            menuListUserControl.MenuListUserControlAddMenuClicked += OnMenuListUserControlAddMenuClicked;
+            insertMenuUserControl.InsertMenuUserControlClicked += DisplayListMenuUserControl;
+            productListUserControl.ProductListUserControlAddProductClicked += OnProductListUserControlAddProductClicked;
+            insertProductUserControl.InsertProductUserControlCancelClicked += DisplayProductListUserControl;
+            productListUserControl.ProductListUserControlNavigateToUpdateDeleteUserControl += DisplayUpdateDeleteUserControl;
+            menuListUserControl.MenuListUserControlAddMenuNavigateToUpdateDeleteUserControl += DisplayUpdateDeleteUserControl;
+            updateDeleteUserControl.UpdateDialogViewEventHandlerNavigateToMenuList += DisplayListMenuUserControl;
+            updateDeleteUserControl.UpdateDialogViewEventHandlerNavigateToProductList += DisplayProductListUserControl;
+            insertMenuUserControl.InsertMenuUserControlGoToMenuListClicked += () =>
+            {
+                ChangeUserControl(menuListUserControl);
+                menuListUserControl.ReloadMenus();
+            };
+            insertProductUserControl.InsertProductUserControlNavigateToMenuList += () =>
+            {
+                ChangeUserControl(productListUserControl);
+                productListUserControl.ReloadProducts();
+            };
+        }
+
         private void MenuListButton_Click(object sender, EventArgs e)
         {
-            ChangeUserControlInAdminUserControl(menuListUserControl);
+            ChangeUserControl(menuListUserControl);
         }
+
         private void ProductListButton_Click(object sender, EventArgs e)
         {
-            ChangeUserControlInAdminUserControl(productListUserControl);
+            ChangeUserControl(productListUserControl);
         }
+        public void DisplayUpdateDeleteUserControl()
+        {
+            ChangeUserControl(updateDeleteUserControl);
+        }
+
         public void DisplayListMenuUserControl()
-        {  
-            ChangeUserControlInAdminUserControl(menuListUserControl);
-
-            menuListUserControl.MenuListUserControlAddMenuClicked += OnMenuListUserControlAddMenuClicked;
-
-            insertMenuUserControl.InsertMenuUserControlClicked += DisplayListMenuUserControl;
-            menuListUserControl.MenuListUserControlAddMenuClicked += OnMenuListUserControlAddMenuClicked;
-
-            productListUserControl.ProductListUserControlAddProductClicked += OnProductListUserControlAddProductClicked;
-            insertProductUserControl.InsertProductUserControlCancelClicked += OnInsertProductUserControlCancelClicked;
-
-
+        {
+            ChangeUserControl(menuListUserControl);
         }
+
         private void OnMenuListUserControlAddMenuClicked()
         {
-            insertMenuUserControl.InsertMenuUserControlGoToMenuListClicked += () => 
-            { 
-                ChangeUserControlInAdminUserControl(menuListUserControl);
-                menuListUserControl.ReloadMenus(); 
-            };
-            ChangeUserControlInAdminUserControl(insertMenuUserControl);
+            ChangeUserControl(insertMenuUserControl);
         }
+
         private void OnProductListUserControlAddProductClicked()
         {
-            ChangeUserControlInAdminUserControl(insertProductUserControl);
+            ChangeUserControl(insertProductUserControl);
         }
-        private void OnInsertProductUserControlCancelClicked()
+
+        private void DisplayProductListUserControl()
         {
-            ChangeUserControlInAdminUserControl(productListUserControl);
+            ChangeUserControl(productListUserControl);
         }
-        public void ChangeUserControlInAdminUserControl(UserControl userControl)
+
+        private void ChangeUserControl(UserControl userControl)
         {
             AdminFlowLayoutPanel.Controls.Clear();
             AdminFlowLayoutPanel.Controls.Add(userControl);
-        }
-        private void OnUpdateDialogViewClickedForMenuUpdate()
-        {
-            ChangeUserControlInAdminUserControl(insertMenuUserControl);
         }
     }
 }

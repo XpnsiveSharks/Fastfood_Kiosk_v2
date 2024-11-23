@@ -75,7 +75,7 @@
             // 
             this.ProductsFlowLayoutPanel.AutoScroll = true;
             this.ProductsFlowLayoutPanel.Location = new System.Drawing.Point(359, 76);
-            this.ProductsFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProductsFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
             this.ProductsFlowLayoutPanel.Name = "ProductsFlowLayoutPanel";
             this.ProductsFlowLayoutPanel.Size = new System.Drawing.Size(1079, 727);
             this.ProductsFlowLayoutPanel.TabIndex = 12;
@@ -104,7 +104,7 @@
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(13, 85);
-            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
@@ -198,14 +198,13 @@
             this.label1.Size = new System.Drawing.Size(82, 21);
             this.label1.TabIndex = 14;
             this.label1.Text = "Sub Total";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // MenuFlowLayoutPanel
             // 
             this.MenuFlowLayoutPanel.Location = new System.Drawing.Point(359, 16);
-            this.MenuFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MenuFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
             this.MenuFlowLayoutPanel.Name = "MenuFlowLayoutPanel";
-            this.MenuFlowLayoutPanel.Size = new System.Drawing.Size(642, 55);
+            this.MenuFlowLayoutPanel.Size = new System.Drawing.Size(753, 55);
             this.MenuFlowLayoutPanel.TabIndex = 0;
             // 
             // PaymentPanel
@@ -258,7 +257,7 @@
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.ProductsFlowLayoutPanel);
             this.Controls.Add(this.SearchTextBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CashierUserControl";
             this.Size = new System.Drawing.Size(1440, 803);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
