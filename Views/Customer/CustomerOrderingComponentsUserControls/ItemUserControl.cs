@@ -12,6 +12,7 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControl
 {
     public partial class ItemUserControl : UserControl
     {
+        public event EventHandler RemoveItemClicked;
         public ItemUserControl()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControl
             get => int.TryParse(QuantityLabel.Text, out var quantity) ? quantity : 0; 
             set => QuantityLabel.Text = value.ToString();
         }
-        public double MyProperty 
+        public double Total
         { 
             get => double.TryParse(TotalLabel.Text, out var total) ? total : 0; 
             set => TotalLabel.Text = value.ToString(); 
@@ -39,7 +40,8 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControl
 
         private void RemoveItemButton_Click(object sender, EventArgs e)
         {
-
+            RemoveItemClicked?.Invoke(this, EventArgs.Empty);
+            Console.WriteLine("Remove");
         }
     }
 }
