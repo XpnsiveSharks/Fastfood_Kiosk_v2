@@ -166,6 +166,7 @@ namespace Fastfood_Kiosk_v2.ViewModels
             {
                 ProductButtonsUserControl productDisplayUserControl = new ProductButtonsUserControl
                 {
+                    ProductId = item.Product_Id,
                     ProductNames = item.Product_Name,
                     ProductPrice = item.Product_Price
                 };
