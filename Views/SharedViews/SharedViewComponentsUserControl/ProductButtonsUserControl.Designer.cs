@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.ProductPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.ProductButton = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PriceLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ProductNameLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.ProductButton = new Guna.UI2.WinForms.Guna2PictureBox();
             this.ProductPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductButton)).BeginInit();
             this.SuspendLayout();
@@ -45,18 +45,28 @@
             this.ProductPanel.Controls.Add(this.ProductNameLabel);
             this.ProductPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(251)))));
             this.ProductPanel.Location = new System.Drawing.Point(2, 2);
-            this.ProductPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProductPanel.Margin = new System.Windows.Forms.Padding(2);
             this.ProductPanel.Name = "ProductPanel";
             this.ProductPanel.Size = new System.Drawing.Size(171, 201);
             this.ProductPanel.TabIndex = 0;
+            // 
+            // ProductButton
+            // 
+            this.ProductButton.ImageRotate = 0F;
+            this.ProductButton.Location = new System.Drawing.Point(-2, -2);
+            this.ProductButton.Name = "ProductButton";
+            this.ProductButton.Size = new System.Drawing.Size(175, 159);
+            this.ProductButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ProductButton.TabIndex = 3;
+            this.ProductButton.TabStop = false;
             // 
             // PriceLabel
             // 
             this.PriceLabel.BackColor = System.Drawing.Color.Transparent;
             this.PriceLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PriceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(144)))), ((int)(((byte)(144)))));
-            this.PriceLabel.Location = new System.Drawing.Point(6, 180);
-            this.PriceLabel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PriceLabel.Location = new System.Drawing.Point(5, 184);
+            this.PriceLabel.Margin = new System.Windows.Forms.Padding(2);
             this.PriceLabel.Name = "PriceLabel";
             this.PriceLabel.Size = new System.Drawing.Size(56, 19);
             this.PriceLabel.TabIndex = 2;
@@ -68,21 +78,11 @@
             this.ProductNameLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductNameLabel.ForeColor = System.Drawing.Color.Black;
             this.ProductNameLabel.Location = new System.Drawing.Point(5, 162);
-            this.ProductNameLabel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProductNameLabel.Margin = new System.Windows.Forms.Padding(2);
             this.ProductNameLabel.Name = "ProductNameLabel";
             this.ProductNameLabel.Size = new System.Drawing.Size(109, 22);
             this.ProductNameLabel.TabIndex = 1;
             this.ProductNameLabel.Text = "Product Name";
-            // 
-            // ProductButton
-            // 
-            this.ProductButton.ImageRotate = 0F;
-            this.ProductButton.Location = new System.Drawing.Point(-2, -2);
-            this.ProductButton.Name = "ProductButton";
-            this.ProductButton.Size = new System.Drawing.Size(175, 159);
-            this.ProductButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ProductButton.TabIndex = 3;
-            this.ProductButton.TabStop = false;
             // 
             // ProductButtonsUserControl
             // 

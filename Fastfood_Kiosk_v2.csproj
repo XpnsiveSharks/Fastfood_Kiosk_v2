@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1F24DDE1-C742-4322-847E-10B685C295C5}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>Fastfood_Kiosk_v2</RootNamespace>
     <AssemblyName>Fastfood_Kiosk_v2</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -185,10 +185,23 @@
     <Compile Include="Views\AdminViews\AdminViewsUserControl\InsertProductUserControl.Designer.cs">
       <DependentUpon>InsertProductUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\AdminViews\AdminViewsUserControl\MenuForCashierUserControl.cs">
+    <Compile Include="Views\Customer\CustomerOrderingComponentsUserControls\ItemUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\AdminViews\AdminViewsUserControl\MenuForCashierUserControl.Designer.cs">
+    <Compile Include="Views\Customer\CustomerOrderingComponentsUserControls\ItemUserControl.Designer.cs">
+      <DependentUpon>ItemUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Customer\CustomerUserControls\CartUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Customer\CustomerUserControls\CartUserControl.Designer.cs">
+      <DependentUpon>CartUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NavigationManager.cs" />
+    <Compile Include="Views\SharedViews\SharedViewComponentsUserControl\MenuForCashierUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SharedViews\SharedViewComponentsUserControl\MenuForCashierUserControl.Designer.cs">
       <DependentUpon>MenuForCashierUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\AdminViews\AdminViewsUserControl\MenuListUserControl.cs">
@@ -203,10 +216,28 @@
     <Compile Include="Views\AdminViews\AdminViewsUserControl\UpdateDeleteUserControl.Designer.cs">
       <DependentUpon>UpdateDeleteUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\SharedViews\ProductButtonsUserControl.cs">
+    <Compile Include="Views\Customer\CustomerMainFrameView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Customer\CustomerMainFrameView.Designer.cs">
+      <DependentUpon>CustomerMainFrameView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Customer\CustomerUserControls\CustomerOrderingUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\SharedViews\ProductButtonsUserControl.Designer.cs">
+    <Compile Include="Views\Customer\CustomerUserControls\CustomerOrderingUserControl.Designer.cs">
+      <DependentUpon>CustomerOrderingUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Customer\CustomerUserControls\OrderTypeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Customer\CustomerUserControls\OrderTypeUserControl.Designer.cs">
+      <DependentUpon>OrderTypeUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SharedViews\SharedViewComponentsUserControl\ProductButtonsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SharedViews\SharedViewComponentsUserControl\ProductButtonsUserControl.Designer.cs">
       <DependentUpon>ProductButtonsUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\AdminViews\AdminViewsUserControl\ProductListUserControl.cs">
@@ -251,7 +282,13 @@
     <EmbeddedResource Include="Views\AdminViews\AdminViewsUserControl\InsertProductUserControl.resx">
       <DependentUpon>InsertProductUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\AdminViews\AdminViewsUserControl\MenuForCashierUserControl.resx">
+    <EmbeddedResource Include="Views\Customer\CustomerOrderingComponentsUserControls\ItemUserControl.resx">
+      <DependentUpon>ItemUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Customer\CustomerUserControls\CartUserControl.resx">
+      <DependentUpon>CartUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SharedViews\SharedViewComponentsUserControl\MenuForCashierUserControl.resx">
       <DependentUpon>MenuForCashierUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminViews\AdminViewsUserControl\MenuListUserControl.resx">
@@ -269,7 +306,16 @@
     <EmbeddedResource Include="Views\AdminViews\UpdateDeleteDialogView.resx">
       <DependentUpon>UpdateDeleteDialogView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\SharedViews\ProductButtonsUserControl.resx">
+    <EmbeddedResource Include="Views\Customer\CustomerMainFrameView.resx">
+      <DependentUpon>CustomerMainFrameView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Customer\CustomerUserControls\CustomerOrderingUserControl.resx">
+      <DependentUpon>CustomerOrderingUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Customer\CustomerUserControls\OrderTypeUserControl.resx">
+      <DependentUpon>OrderTypeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SharedViews\SharedViewComponentsUserControl\ProductButtonsUserControl.resx">
       <DependentUpon>ProductButtonsUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Configurations\AppSettings.json" />
@@ -287,6 +333,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\SharedViews\SharedViewsUserControl\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
