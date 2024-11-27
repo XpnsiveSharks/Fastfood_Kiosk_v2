@@ -1,5 +1,4 @@
-﻿using Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 

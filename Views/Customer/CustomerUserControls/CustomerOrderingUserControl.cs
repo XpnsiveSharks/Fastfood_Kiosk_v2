@@ -1,7 +1,6 @@
 ﻿using Fastfood_Kiosk_v2.ViewModels;
 using Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl;
 using Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControls;
-using System;
 using System.Windows.Forms;
 
 namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls

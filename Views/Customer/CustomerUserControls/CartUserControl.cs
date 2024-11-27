@@ -58,7 +58,7 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
             if(SubTotal != 0)
                 MessageBox.Show($"Proceeding with order. Subtotal: {SubTotal:C}");
             else
-                MessageBox.Show($"Please add  items");  
+                MessageBox.Show($"Please add items");  
         }
     }
 }
