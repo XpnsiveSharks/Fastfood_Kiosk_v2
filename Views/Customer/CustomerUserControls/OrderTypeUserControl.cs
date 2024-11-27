@@ -16,7 +16,6 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
         {
             InitializeComponent();
         }
-
         private void DineInButton_Click(object sender, EventArgs e)
         {
 

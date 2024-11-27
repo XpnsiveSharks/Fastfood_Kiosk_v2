@@ -29,4 +29,4 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
             MenuForCashierUserControlClicked?.Invoke(MenuId);
         }
     }
-}
+} 

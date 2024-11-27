@@ -14,7 +14,6 @@ namespace Fastfood_Kiosk_v2.Views.Customer
     public partial class CustomerMainFrameView : Form
     {
         private readonly Dictionary<string, UserControl> _userControls = new Dictionary<string, UserControl>();
-
         public CustomerMainFrameView()
         {
             InitializeComponent();
@@ -24,7 +23,6 @@ namespace Fastfood_Kiosk_v2.Views.Customer
         {
             LoadUserControl("Order Type", () => new OrderTypeUserControl());
         }
-
         public void ShowOrderingUserControl()
         {
             LoadUserControl("Customer Ordering", () => new CustomerOrderingUserControl());

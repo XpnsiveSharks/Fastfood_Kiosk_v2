@@ -73,9 +73,7 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
                 CartPanel.Controls.Clear();
                 CartPanel.Controls.Add(_cartUserControl);
             }
-
             bool itemFound = false;
-
             // Check if the item already exists in the cart
             foreach (ItemUserControl item in _cartUserControl.itemsFlowLayoutPanel.Controls)
             {
@@ -87,7 +85,6 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
                     break;
                 }
             }
-
             // If the item does not exist, create a new one and add it
             if (!itemFound)
             {
@@ -98,11 +95,9 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
                     Quantity = 1,
                     Total = productPrice
                 };
-
                 _cartUserControl.AddItem(itemControl); // Use AddItem to handle adding and event subscription
             }
-
-            _cartUserControl.UpdateSubtotal(); // Update subtotal after changes
+            _cartUserControl.UpdateSubtotal();
         }
     }
 }
