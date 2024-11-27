@@ -1,5 +1,4 @@
-﻿using Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -7,7 +6,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 {
     public partial class ProductButtonsUserControl : UserControl
     {
-        public event EventHandler ProductClicked;
+        public event EventHandler<(string ProductName, double ProductPrice)> ProductClicked;
         public ProductButtonsUserControl()
         {
             InitializeComponent();
@@ -38,8 +37,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
         }
         private void NotifyProductClicked(object sender, EventArgs e)
         {
-            ProductClicked?.Invoke(this, EventArgs.Empty);
+            ProductClicked?.Invoke(this, (ProductNames, ProductPrice));
         }
     }
-
 }

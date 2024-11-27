@@ -1,6 +1,6 @@
 ﻿using Fastfood_Kiosk_v2.ViewModels;
 using Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl;
-using System;
+using Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControls;
 using System.Windows.Forms;
 
 namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
@@ -9,7 +9,7 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
     {
         private readonly MenuViewModel _menuViewModel;
         private readonly ProductViewModel _productViewModel;
-
+        private CartUserControl _cartUserControl;
         public CustomerOrderingUserControl()
         {
             InitializeComponent();
@@ -52,20 +52,51 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
             {
                 if (control is ProductButtonsUserControl productControl)
                 {
-                    productControl.ProductClicked += (s, e) => ShowCart();
+                    productControl.ProductClicked += (s, e) =>
+                    {
+                        var (productName, productPrice) = e;
+                        ShowCart(productName, productPrice);
+                    };
                 }
                 ProductsFLayoutPanel.Controls.Add(control);
             }
         }
-        public void ShowCart()
+        public void ShowCart(string productName, double productPrice)
         {
-            var cartUserControl = new CartUserControl
+            if (_cartUserControl == null)
             {
-                Dock = DockStyle.Fill
-            };
-
-            CartPanel.Controls.Clear();
-            CartPanel.Controls.Add(cartUserControl);
+                _cartUserControl = new CartUserControl
+                {
+                    Dock = DockStyle.Fill
+                };
+                CartPanel.Controls.Clear();
+                CartPanel.Controls.Add(_cartUserControl);
+            }
+            bool itemFound = false;
+            // Check if the item already exists in the cart
+            foreach (ItemUserControl item in _cartUserControl.itemsFlowLayoutPanel.Controls)
+            {
+                if (item.Product == productName)
+                {
+                    item.Quantity += 1;
+                    item.Total = item.Price * item.Quantity;
+                    itemFound = true;
+                    break;
+                }
+            }
+            // If the item does not exist, create a new one and add it
+            if (!itemFound)
+            {
+                var itemControl = new ItemUserControl
+                {
+                    Product = productName,
+                    Price = productPrice,
+                    Quantity = 1,
+                    Total = productPrice
+                };
+                _cartUserControl.AddItem(itemControl); // Use AddItem to handle adding and event subscription
+            }
+            _cartUserControl.UpdateSubtotal();
         }
     }
 }

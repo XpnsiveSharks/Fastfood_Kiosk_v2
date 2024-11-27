@@ -1,12 +1,6 @@
 ﻿using Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fastfood_Kiosk_v2.Views.Customer
@@ -14,7 +8,6 @@ namespace Fastfood_Kiosk_v2.Views.Customer
     public partial class CustomerMainFrameView : Form
     {
         private readonly Dictionary<string, UserControl> _userControls = new Dictionary<string, UserControl>();
-
         public CustomerMainFrameView()
         {
             InitializeComponent();
@@ -24,7 +17,6 @@ namespace Fastfood_Kiosk_v2.Views.Customer
         {
             LoadUserControl("Order Type", () => new OrderTypeUserControl());
         }
-
         public void ShowOrderingUserControl()
         {
             LoadUserControl("Customer Ordering", () => new CustomerOrderingUserControl());
