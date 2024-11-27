@@ -70,6 +70,7 @@
             this.OrderListFlowLayoutPanel.Name = "OrderListFlowLayoutPanel";
             this.OrderListFlowLayoutPanel.Size = new System.Drawing.Size(754, 373);
             this.OrderListFlowLayoutPanel.TabIndex = 2;
+            this.OrderListFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.OrderListFlowLayoutPanel_Paint);
             // 
             // OrderListView
             // 
