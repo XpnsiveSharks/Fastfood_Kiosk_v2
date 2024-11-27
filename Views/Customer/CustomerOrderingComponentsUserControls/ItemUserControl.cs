@@ -41,5 +41,10 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControl
         {
 
         }
+
+        private void PriceLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

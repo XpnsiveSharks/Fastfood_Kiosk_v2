@@ -10,29 +10,24 @@ using System.Windows.Forms;
 
 namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
 {
-    public partial class CartUserControl : UserControl
+    public partial class OrderListUserControl : UserControl
     {
-        public CartUserControl()
+        public OrderListUserControl()
         {
             InitializeComponent();
         }
 
-        private void ClearOrderButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ProceedButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SubTotalLabel_Click(object sender, EventArgs e)
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QuantityTitleLabel_Click(object sender, EventArgs e)
         {
 
         }
