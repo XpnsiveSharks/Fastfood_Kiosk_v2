@@ -34,42 +34,57 @@
             // 
             // DineInButton
             // 
+            this.DineInButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
+            this.DineInButton.BorderRadius = 20;
+            this.DineInButton.BorderThickness = 2;
             this.DineInButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.DineInButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.DineInButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.DineInButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.DineInButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.DineInButton.ForeColor = System.Drawing.Color.White;
-            this.DineInButton.Location = new System.Drawing.Point(364, 267);
+            this.DineInButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
+            this.DineInButton.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DineInButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.DineInButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.DineInButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
+            this.DineInButton.Location = new System.Drawing.Point(589, 411);
+            this.DineInButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DineInButton.Name = "DineInButton";
-            this.DineInButton.Size = new System.Drawing.Size(180, 180);
+            this.DineInButton.Size = new System.Drawing.Size(270, 277);
             this.DineInButton.TabIndex = 0;
             this.DineInButton.Text = "Dine-in";
             this.DineInButton.Click += new System.EventHandler(this.DineInButton_Click);
             // 
             // TakeOutButton
             // 
+            this.TakeOutButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
+            this.TakeOutButton.BorderRadius = 20;
+            this.TakeOutButton.BorderThickness = 2;
             this.TakeOutButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.TakeOutButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.TakeOutButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.TakeOutButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.TakeOutButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TakeOutButton.ForeColor = System.Drawing.Color.White;
-            this.TakeOutButton.Location = new System.Drawing.Point(712, 267);
+            this.TakeOutButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
+            this.TakeOutButton.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TakeOutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.TakeOutButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.TakeOutButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
+            this.TakeOutButton.Location = new System.Drawing.Point(1072, 411);
+            this.TakeOutButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TakeOutButton.Name = "TakeOutButton";
-            this.TakeOutButton.Size = new System.Drawing.Size(180, 180);
-            this.TakeOutButton.TabIndex = 1;
-            this.TakeOutButton.Text = "Take out";
-            this.TakeOutButton.Click += new System.EventHandler(this.TakeOutButton_Click);
+            this.TakeOutButton.Size = new System.Drawing.Size(270, 277);
+            this.TakeOutButton.TabIndex = 2;
+            this.TakeOutButton.Text = "Take-out";
             // 
             // OrderTypeUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.Controls.Add(this.TakeOutButton);
             this.Controls.Add(this.DineInButton);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "OrderTypeUserControl";
-            this.Size = new System.Drawing.Size(1335, 758);
+            this.Size = new System.Drawing.Size(1920, 1080);
             this.ResumeLayout(false);
 
         }

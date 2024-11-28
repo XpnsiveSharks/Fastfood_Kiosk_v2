@@ -63,5 +63,15 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
             OrderListView orderListView = new OrderListView();
             orderListView.Show();           
         }
+
+        private void SubTotalLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

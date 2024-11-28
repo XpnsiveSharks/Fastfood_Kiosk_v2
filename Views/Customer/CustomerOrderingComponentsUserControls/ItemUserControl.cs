@@ -35,5 +35,10 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControl
             RemoveItemClicked?.Invoke(this, EventArgs.Empty);
             Console.WriteLine("Remove");
         }
+
+        private void PriceLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

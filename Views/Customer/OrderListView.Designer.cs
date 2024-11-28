@@ -28,68 +28,129 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.AddMoreButton = new Guna.UI2.WinForms.Guna2Button();
-            this.CheckOutButton = new Guna.UI2.WinForms.Guna2Button();
+
+            this.AddOrderButton = new Guna.UI2.WinForms.Guna2Button();
+            this.CheckoutButton = new Guna.UI2.WinForms.Guna2Button();
+            this.OrderListButtonsPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.OrderListPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.OrderListFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.OrderListLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.OrderListButtonsPanel.SuspendLayout();
+            this.OrderListPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // AddMoreButton
+            // AddOrderButton
             // 
-            this.AddMoreButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.AddMoreButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.AddMoreButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.AddMoreButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.AddMoreButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.AddMoreButton.ForeColor = System.Drawing.Color.White;
-            this.AddMoreButton.Location = new System.Drawing.Point(211, 510);
-            this.AddMoreButton.Name = "AddMoreButton";
-            this.AddMoreButton.Size = new System.Drawing.Size(180, 45);
-            this.AddMoreButton.TabIndex = 0;
-            this.AddMoreButton.Text = "Add More";
-            this.AddMoreButton.Click += new System.EventHandler(this.AddMoreButton_Click);
+            this.AddOrderButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.AddOrderButton.BorderRadius = 20;
+            this.AddOrderButton.BorderThickness = 2;
+            this.AddOrderButton.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.AddOrderButton.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.AddOrderButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AddOrderButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.AddOrderButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AddOrderButton.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddOrderButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.AddOrderButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AddOrderButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.AddOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AddOrderButton.Location = new System.Drawing.Point(576, 26);
+            this.AddOrderButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.AddOrderButton.Name = "AddOrderButton";
+            this.AddOrderButton.Size = new System.Drawing.Size(350, 55);
+            this.AddOrderButton.TabIndex = 2;
+            this.AddOrderButton.Text = "Add order";
             // 
-            // CheckOutButton
+            // CheckoutButton
             // 
-            this.CheckOutButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.CheckOutButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.CheckOutButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.CheckOutButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.CheckOutButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.CheckOutButton.ForeColor = System.Drawing.Color.White;
-            this.CheckOutButton.Location = new System.Drawing.Point(471, 510);
-            this.CheckOutButton.Name = "CheckOutButton";
-            this.CheckOutButton.Size = new System.Drawing.Size(180, 45);
-            this.CheckOutButton.TabIndex = 1;
-            this.CheckOutButton.Text = "Check Out";
-            this.CheckOutButton.Click += new System.EventHandler(this.CheckOutButton_Click);
+            this.CheckoutButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.CheckoutButton.BorderRadius = 20;
+            this.CheckoutButton.BorderThickness = 2;
+            this.CheckoutButton.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.CheckoutButton.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.CheckoutButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.CheckoutButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.CheckoutButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.CheckoutButton.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckoutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.CheckoutButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.CheckoutButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.CheckoutButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.CheckoutButton.Location = new System.Drawing.Point(1068, 26);
+            this.CheckoutButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CheckoutButton.Name = "CheckoutButton";
+            this.CheckoutButton.Size = new System.Drawing.Size(350, 55);
+            this.CheckoutButton.TabIndex = 3;
+            this.CheckoutButton.Text = "Checkout";
+            // 
+            // OrderListButtonsPanel
+            // 
+            this.OrderListButtonsPanel.Controls.Add(this.CheckoutButton);
+            this.OrderListButtonsPanel.Controls.Add(this.AddOrderButton);
+            this.OrderListButtonsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.OrderListButtonsPanel.Location = new System.Drawing.Point(0, 980);
+            this.OrderListButtonsPanel.Name = "OrderListButtonsPanel";
+            this.OrderListButtonsPanel.Size = new System.Drawing.Size(1920, 100);
+            this.OrderListButtonsPanel.TabIndex = 4;
+            // 
+            // OrderListPanel
+            // 
+            this.OrderListPanel.Controls.Add(this.OrderListLabel);
+            this.OrderListPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.OrderListPanel.Location = new System.Drawing.Point(0, 0);
+            this.OrderListPanel.Name = "OrderListPanel";
+            this.OrderListPanel.Size = new System.Drawing.Size(1920, 119);
+            this.OrderListPanel.TabIndex = 5;
             // 
             // OrderListFlowLayoutPanel
             // 
-            this.OrderListFlowLayoutPanel.AutoScroll = true;
-            this.OrderListFlowLayoutPanel.Location = new System.Drawing.Point(56, 74);
+            this.OrderListFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OrderListFlowLayoutPanel.Location = new System.Drawing.Point(0, 119);
             this.OrderListFlowLayoutPanel.Name = "OrderListFlowLayoutPanel";
-            this.OrderListFlowLayoutPanel.Size = new System.Drawing.Size(754, 373);
-            this.OrderListFlowLayoutPanel.TabIndex = 2;
-            this.OrderListFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.OrderListFlowLayoutPanel_Paint);
+            this.OrderListFlowLayoutPanel.Size = new System.Drawing.Size(1920, 861);
+            this.OrderListFlowLayoutPanel.TabIndex = 6;
+            // 
+            // OrderListLabel
+            // 
+            this.OrderListLabel.BackColor = System.Drawing.Color.Transparent;
+            this.OrderListLabel.Font = new System.Drawing.Font("Century Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderListLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.OrderListLabel.Location = new System.Drawing.Point(853, 33);
+            this.OrderListLabel.Name = "OrderListLabel";
+            this.OrderListLabel.Size = new System.Drawing.Size(237, 64);
+            this.OrderListLabel.TabIndex = 0;
+            this.OrderListLabel.Text = "Order List";
             // 
             // OrderListView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 590);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.OrderListFlowLayoutPanel);
-            this.Controls.Add(this.CheckOutButton);
-            this.Controls.Add(this.AddMoreButton);
+            this.Controls.Add(this.OrderListPanel);
+            this.Controls.Add(this.OrderListButtonsPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "OrderListView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderListView";
+            this.OrderListButtonsPanel.ResumeLayout(false);
+            this.OrderListPanel.ResumeLayout(false);
+            this.OrderListPanel.PerformLayout();
+
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Button AddMoreButton;
-        private Guna.UI2.WinForms.Guna2Button CheckOutButton;
+
+        private Guna.UI2.WinForms.Guna2Button AddOrderButton;
+        private Guna.UI2.WinForms.Guna2Button CheckoutButton;
+        private Guna.UI2.WinForms.Guna2Panel OrderListButtonsPanel;
+        private Guna.UI2.WinForms.Guna2Panel OrderListPanel;
+        private Guna.UI2.WinForms.Guna2HtmlLabel OrderListLabel;
+
         private System.Windows.Forms.FlowLayoutPanel OrderListFlowLayoutPanel;
     }
 }
