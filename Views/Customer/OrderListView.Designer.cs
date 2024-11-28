@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             this.AddOrderButton = new Guna.UI2.WinForms.Guna2Button();
             this.CheckoutButton = new Guna.UI2.WinForms.Guna2Button();
             this.OrderListButtonsPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -136,17 +137,20 @@
             this.OrderListButtonsPanel.ResumeLayout(false);
             this.OrderListPanel.ResumeLayout(false);
             this.OrderListPanel.PerformLayout();
+
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+
         private Guna.UI2.WinForms.Guna2Button AddOrderButton;
         private Guna.UI2.WinForms.Guna2Button CheckoutButton;
         private Guna.UI2.WinForms.Guna2Panel OrderListButtonsPanel;
         private Guna.UI2.WinForms.Guna2Panel OrderListPanel;
         private Guna.UI2.WinForms.Guna2HtmlLabel OrderListLabel;
+
         private System.Windows.Forms.FlowLayoutPanel OrderListFlowLayoutPanel;
     }
 }

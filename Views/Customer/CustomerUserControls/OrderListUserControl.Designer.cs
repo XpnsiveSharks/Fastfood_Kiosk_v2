@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.ProductNameLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -225,9 +226,11 @@
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
 
+
         }
 
         #endregion
+
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label1;
@@ -239,5 +242,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel QuantityTitleLabel;
         private Guna.UI2.WinForms.Guna2Button SubtractQuantityButton;
         private Guna.UI2.WinForms.Guna2TextBox QuantityTextBox;
+
     }
 }

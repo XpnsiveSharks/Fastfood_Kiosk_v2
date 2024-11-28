@@ -197,12 +197,14 @@
     <Compile Include="Views\Customer\CustomerUserControls\CartUserControl.Designer.cs">
       <DependentUpon>CartUserControl.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Views\Customer\CustomerUserControls\OrderListUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\Customer\CustomerUserControls\OrderListUserControl.Designer.cs">
       <DependentUpon>OrderListUserControl.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Views\Customer\OrderListView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +326,7 @@
     <EmbeddedResource Include="Views\Customer\CustomerUserControls\CartUserControl.resx">
       <DependentUpon>CartUserControl.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Views\Customer\CustomerUserControls\OrderListUserControl.resx">
       <DependentUpon>OrderListUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -332,6 +335,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SharedViews\MainLoginView.resx">
       <DependentUpon>MainLoginView.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SharedViews\SharedViewComponentsUserControl\MenuForCashierUserControl.resx">
       <DependentUpon>MenuForCashierUserControl.cs</DependentUpon>

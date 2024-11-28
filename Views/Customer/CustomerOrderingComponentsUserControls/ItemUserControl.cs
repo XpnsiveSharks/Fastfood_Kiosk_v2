@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControls
 {
     public partial class ItemUserControl : UserControl
     {
+        public event EventHandler RemoveItemClicked;
         public ItemUserControl()
         {
             InitializeComponent();
@@ -31,15 +25,15 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControl
             get => int.TryParse(QuantityLabel.Text, out var quantity) ? quantity : 0; 
             set => QuantityLabel.Text = value.ToString();
         }
-        public double MyProperty 
+        public double Total
         { 
             get => double.TryParse(TotalLabel.Text, out var total) ? total : 0; 
             set => TotalLabel.Text = value.ToString(); 
         }
-
         private void RemoveItemButton_Click(object sender, EventArgs e)
         {
-
+            RemoveItemClicked?.Invoke(this, EventArgs.Empty);
+            Console.WriteLine("Remove");
         }
 
         private void PriceLabel_Click(object sender, EventArgs e)
