@@ -1,6 +1,5 @@
 ﻿using Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControls;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
@@ -31,17 +30,14 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
         {
             if (sender is OrderListUserControl orderItem)
             {
-                // Remove the item from the panel
                 ItemsFlowLayoutPanel.Controls.Remove(orderItem);
                 orderItem.Dispose();
 
-                // Update the subtotal
                 UpdateSubtotal();
             }
         }
         private void OnQuantityChanged(object sender, EventArgs e)
         {
-            // Recalculate subtotal when quantities change
             UpdateSubtotal();
         }
 
@@ -68,43 +64,50 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
                 SubTotal = 0;
             }
         }
-
         
         private void ClearOrderButton_Click(object sender, EventArgs e)
          {
              ItemsFlowLayoutPanel.Controls.Clear();
              SubTotal = 0;
          }
-         private void ProceedButton_Click_1(object sender, EventArgs e)
-         {
-             if (SubTotal == 0)
-             {
-                 MessageBox.Show("Please add items.");
-                 return;
-             }
 
-
-             var orderListView = new OrderListView();
-
-
-             foreach (ItemUserControl item in ItemsFlowLayoutPanel.Controls)
-             {
-                 var orderListItem = new OrderListUserControl
-                 {
-                     Product = item.Product,
-                     Quantity = item.Quantity,
-                     TotalPrice = item.Total,
-                     Qty = item.Quantity,
-                     OrderPrice = item.Price
-                 };
-                 orderListView.OrderItems.Add(orderListItem);
-             }
-
-
-             orderListView.DisplayOrderItems();
-             orderListView.Show();
-         }
        
+        private OrderListView orderListView;
+
+        private void ProceedButton_Click(object sender, EventArgs e)
+        {
+            if (SubTotal == 0)
+            {
+                MessageBox.Show("Please add items.");
+                return;
+            }
+
+            orderListView = new OrderListView();
+
+            orderListView.SubtotalUpdated += OnOrderListSubtotalUpdated;
+
+            foreach (ItemUserControl item in ItemsFlowLayoutPanel.Controls)
+            {
+                var orderListItem = new OrderListUserControl
+                {
+                    Product = item.Product,
+                    Quantity = item.Quantity,
+                    TotalPrice = item.Total,
+                    Qty = item.Quantity,
+                    OrderPrice = item.Price
+                };
+                orderListView.OrderItems.Add(orderListItem);
+            }
+
+            orderListView.DisplayOrderItems();
+            orderListView.Show();
+        }
+
+        private void OnOrderListSubtotalUpdated(double newSubtotal)
+        {
+            SubTotal = newSubtotal;
+        }
+
     }
 
 }

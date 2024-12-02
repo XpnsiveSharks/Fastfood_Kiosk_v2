@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls;
+using System;
 using System.Windows.Forms;
 
 namespace Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControls
@@ -6,6 +7,8 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControl
     public partial class ItemUserControl : UserControl
     {
         public event EventHandler RemoveItemClicked;
+        public OrderListUserControl LinkedOrderControl { get; set; }
+
         public ItemUserControl()
         {
             InitializeComponent();
@@ -20,11 +23,22 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControl
             get => double.TryParse(PriceLabel.Text, out var price) ? price : 0;
             set => PriceLabel.Text = value.ToString("F2");
         }
-        public int Quantity 
+        /*public int Quantity 
         {
             get => int.TryParse(QuantityLabel.Text, out var quantity) ? quantity : 0; 
             set => QuantityLabel.Text = value.ToString();
+        }*/
+        public int Quantity
+        {
+            get => int.TryParse(QuantityLabel.Text, out var quantity) ? quantity : 0;
+            set
+            {
+                QuantityLabel.Text = value.ToString();
+                Total = value * Price;
+                LinkedOrderControl?.UpdateQuantity(value);//
+            }
         }
+
         public double Total
         { 
             get => double.TryParse(TotalLabel.Text, out var total) ? total : 0; 
@@ -40,5 +54,10 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControl
         {
 
         }
+        public void TriggerRemoveItemClicked()
+        {
+            RemoveItemClicked?.Invoke(this, EventArgs.Empty);
+        }
+
     }
 }

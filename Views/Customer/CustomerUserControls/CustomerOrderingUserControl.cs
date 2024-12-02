@@ -84,7 +84,6 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
                     break;
                 }
             }
-
             if (!itemFound)
             {
                 var itemControl = new ItemUserControl
@@ -99,8 +98,6 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
             }
             _cartUserControl.UpdateSubtotal(); 
         }
-      
-
 
     }
 }

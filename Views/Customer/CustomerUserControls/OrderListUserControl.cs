@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,10 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
 {
     public partial class OrderListUserControl : UserControl
     {
-        public event EventHandler ItemRemoved;
+        public event EventHandler ItemRemovedFromOrderList;
         public event EventHandler QuantityChanged;
 
+        public ItemUserControl LinkedItemControl { get; set; }
 
         public OrderListUserControl()
         {
@@ -48,9 +50,10 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
         }
         private void RemoveOrderButton_Click(object sender, EventArgs e)
         {
-            ItemRemoved?.Invoke(this, EventArgs.Empty); 
-        }
+            ItemRemovedFromOrderList?.Invoke(this, EventArgs.Empty);
+            LinkedItemControl?.TriggerRemoveItemClicked();
 
+        }
         private void DecreaseOrderButton_Click(object sender, EventArgs e)
         {
             if (Qty > 1)
@@ -58,7 +61,14 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
                 Qty--;
                 Quantity = Qty;
                 TotalPrice = Quantity * (TotalPrice / (Quantity + 1));
-                QuantityChanged?.Invoke(this, EventArgs.Empty); 
+
+                if (LinkedItemControl != null)
+                {
+                    LinkedItemControl.Quantity = Qty;
+                    LinkedItemControl.Total = Qty * LinkedItemControl.Price;
+                }
+
+                QuantityChanged?.Invoke(this, EventArgs.Empty);
             }
             else
             {
@@ -73,20 +83,41 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
                 Quantity = newQty;
                 TotalPrice = Quantity * (TotalPrice / Qty);
                 Qty = newQty;
-                QuantityChanged?.Invoke(this, EventArgs.Empty); 
+
+                if (LinkedItemControl != null)
+                {
+                    LinkedItemControl.Quantity = newQty;
+                    LinkedItemControl.Total = newQty * LinkedItemControl.Price;
+                }
+
+                QuantityChanged?.Invoke(this, EventArgs.Empty);
             }
             else
-        {
+            {
                 MessageBox.Show("Invalid quantity entered.");
             }
         }
-
         private void IncreaseOrderButton_Click(object sender, EventArgs e)
         {
             Qty++;
             Quantity = Qty;
             TotalPrice = Quantity * (TotalPrice / (Quantity - 1));
-            QuantityChanged?.Invoke(this, EventArgs.Empty); 
+
+            if (LinkedItemControl != null)
+            {
+                LinkedItemControl.Quantity = Qty;
+                LinkedItemControl.Total = Qty * LinkedItemControl.Price;
+            }
+
+            QuantityChanged?.Invoke(this, EventArgs.Empty);
+        }
+        public void UpdateQuantity(int newQuantity)
+        {
+            Qty = newQuantity;
+            Quantity = newQuantity;
+            TotalPrice = newQuantity * (TotalPrice / Qty);
+
+            QuantityChanged?.Invoke(this, EventArgs.Empty);
         }
 
     }

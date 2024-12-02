@@ -16,13 +16,10 @@ namespace Fastfood_Kiosk_v2.Views.Customer
     public partial class OrderListView : Form
     {
         public List<OrderListUserControl> OrderItems { get; set; } = new List<OrderListUserControl>();
-        //private OrderListView orderListView = new OrderListView();
         public OrderListView()
         {
             InitializeComponent();
-
         }
-
         public double SubTotal
         {
             get => double.TryParse(TotalLabel.Text, out var price) ? price : 0;
@@ -50,34 +47,36 @@ namespace Fastfood_Kiosk_v2.Views.Customer
                 UpdateSubtotal();
             }
         }
-       
         public void DisplayOrderItems()
         {
             OrderListFlowLayoutPanel.Controls.Clear();
-
             foreach (var orderItem in OrderItems)
             {
-                // Subscribe to the ItemRemoved event
-                orderItem.ItemRemoved += OnItemRemoved;
+                orderItem.ItemRemovedFromOrderList += OnItemRemoved;
                 orderItem.QuantityChanged += OnQuantityChanged;
                 OrderListFlowLayoutPanel.Controls.Add(orderItem);
-
             }
             UpdateSubtotal();
-
         }     
-
         public void UpdateTotal()
         {
             double total = OrderItems.Sum(item => item.TotalPrice);
             SubTotal = total; 
         }
-        private void AddMoreButton_Click_1(object sender, EventArgs e)
+
+        
+        private void OnQuantityChanged(object sender, EventArgs e)
+        {
+            UpdateSubtotal();
+        }
+        private void AddMoreButton_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
+        
+        public event Action<double> SubtotalUpdated;
 
-        public void UpdateSubtotal()
+        private void UpdateSubtotal()
         {
             double subtotal = 0;
             foreach (OrderListUserControl item in OrderListFlowLayoutPanel.Controls)
@@ -90,11 +89,8 @@ namespace Fastfood_Kiosk_v2.Views.Customer
             {
                 SubTotal = 0;
             }
-        }
-        private void OnQuantityChanged(object sender, EventArgs e)
-        {
-            // Recalculate subtotal when quantities change
-            UpdateSubtotal();
+
+            SubtotalUpdated?.Invoke(SubTotal);
         }
 
     }
