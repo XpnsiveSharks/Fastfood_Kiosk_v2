@@ -42,7 +42,7 @@
             this.OrderListPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // AddMoreButton
+            // AddOrderButton
             // 
             this.AddMoreButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.AddMoreButton.BorderRadius = 20;
@@ -186,7 +186,7 @@
             // 
             // OrderListView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.ClientSize = new System.Drawing.Size(1280, 700);

@@ -99,13 +99,14 @@
             // 
             // CustomerOrderingUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.Controls.Add(this.ProductsFLayoutPanel);
             this.Controls.Add(this.CustomerOrderingLabelPanel);
             this.Controls.Add(this.CartPanel);
             this.Controls.Add(this.MenuFlowLayoutPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CustomerOrderingUserControl";
             this.Size = new System.Drawing.Size(1920, 1080);
             this.CustomerOrderingLabelPanel.ResumeLayout(false);

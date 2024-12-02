@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControls
@@ -37,11 +30,15 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControl
             get => double.TryParse(TotalLabel.Text, out var total) ? total : 0; 
             set => TotalLabel.Text = value.ToString(); 
         }
-
         private void RemoveItemButton_Click(object sender, EventArgs e)
         {
             RemoveItemClicked?.Invoke(this, EventArgs.Empty);
             Console.WriteLine("Remove");
+        }
+
+        private void PriceLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -75,7 +75,7 @@
             this.PriceLabel.Location = new System.Drawing.Point(18, 193);
             this.PriceLabel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PriceLabel.Name = "PriceLabel";
-            this.PriceLabel.Size = new System.Drawing.Size(56, 19);
+            this.PriceLabel.Size = new System.Drawing.Size(84, 25);
             this.PriceLabel.TabIndex = 2;
             this.PriceLabel.Text = "₱ 100.00";
             // 
@@ -93,11 +93,11 @@
             // 
             // ProductButtonsUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.ProductPanel);
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "ProductButtonsUserControl";
             this.Size = new System.Drawing.Size(210, 238);
             this.ProductPanel.ResumeLayout(false);

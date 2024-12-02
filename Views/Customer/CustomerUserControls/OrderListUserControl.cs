@@ -35,7 +35,7 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
             get => double.TryParse(OrderTotalLabel.Text, out var price) ? price : 0;
             set => OrderTotalLabel.Text = value.ToString("F2");
         }
-        
+
         public int Qty 
         {
             get => int.TryParse(QuantityTextBox.Text, out var quantity) ? quantity : 0;
@@ -76,7 +76,7 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
                 QuantityChanged?.Invoke(this, EventArgs.Empty); 
             }
             else
-            {
+        {
                 MessageBox.Show("Invalid quantity entered.");
             }
         }
@@ -88,6 +88,6 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
             TotalPrice = Quantity * (TotalPrice / (Quantity - 1));
             QuantityChanged?.Invoke(this, EventArgs.Empty); 
         }
-        
+
     }
 }

@@ -210,6 +210,12 @@
       <DependentUpon>OrderListView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\NavigationManager.cs" />
+    <Compile Include="Views\SharedViews\MainLoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SharedViews\MainLoginView.Designer.cs">
+      <DependentUpon>MainLoginView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\SharedViews\SharedViewComponentsUserControl\MenuForCashierUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -270,6 +276,24 @@
     <Compile Include="Views\AdminViews\UpdateDeleteDialogView.Designer.cs">
       <DependentUpon>UpdateDeleteDialogView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\AdminLoginUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\AdminLoginUserControl.Designer.cs">
+      <DependentUpon>AdminLoginUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\CustomerLoginUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\CustomerLoginUserControl.Designer.cs">
+      <DependentUpon>CustomerLoginUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\StaffLoginUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\StaffLoginUserControl.Designer.cs">
+      <DependentUpon>StaffLoginUserControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -306,6 +330,10 @@
     <EmbeddedResource Include="Views\Customer\OrderListView.resx">
       <DependentUpon>OrderListView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\SharedViews\MainLoginView.resx">
+      <DependentUpon>MainLoginView.cs</DependentUpon>
+
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\SharedViews\SharedViewComponentsUserControl\MenuForCashierUserControl.resx">
       <DependentUpon>MenuForCashierUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -336,6 +364,15 @@
     <EmbeddedResource Include="Views\SharedViews\SharedViewComponentsUserControl\ProductButtonsUserControl.resx">
       <DependentUpon>ProductButtonsUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\SharedViews\SharedViewsUserControl\AdminLoginUserControl.resx">
+      <DependentUpon>AdminLoginUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SharedViews\SharedViewsUserControl\CustomerLoginUserControl.resx">
+      <DependentUpon>CustomerLoginUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SharedViews\SharedViewsUserControl\StaffLoginUserControl.resx">
+      <DependentUpon>StaffLoginUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Configurations\AppSettings.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -351,8 +388,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\SharedViews\SharedViewsUserControl\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,7 +11,6 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
         {
             InitializeComponent();
         }
-
         public FlowLayoutPanel itemsFlowLayoutPanel
         {
             get { return this.ItemsFlowLayoutPanel; }
@@ -55,7 +54,6 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
                 UpdateSubtotal();
             }
         }
-
         public void UpdateSubtotal()
         {
             double subtotal = 0;

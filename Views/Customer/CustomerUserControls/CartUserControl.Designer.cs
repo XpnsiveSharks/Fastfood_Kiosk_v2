@@ -93,6 +93,7 @@
             this.SubTotalLabel.Size = new System.Drawing.Size(81, 22);
             this.SubTotalLabel.TabIndex = 6;
             this.SubTotalLabel.Text = "P000.00";
+            this.SubTotalLabel.Click += new System.EventHandler(this.SubTotalLabel_Click);
             // 
             // label1
             // 
@@ -104,6 +105,7 @@
             this.label1.Size = new System.Drawing.Size(92, 22);
             this.label1.TabIndex = 5;
             this.label1.Text = "Sub Total";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // DiscountLabel
             // 
@@ -183,7 +185,7 @@
             // 
             // CartUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.Controls.Add(this.label3);
@@ -191,6 +193,7 @@
             this.Controls.Add(this.Item);
             this.Controls.Add(this.ItemsFlowLayoutPanel);
             this.Controls.Add(this.guna2Panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CartUserControl";
             this.Size = new System.Drawing.Size(323, 1080);
             this.guna2Panel1.ResumeLayout(false);

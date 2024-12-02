@@ -57,6 +57,7 @@
             this.PriceLabel.Size = new System.Drawing.Size(68, 21);
             this.PriceLabel.TabIndex = 2;
             this.PriceLabel.Text = "P000.00";
+            this.PriceLabel.Click += new System.EventHandler(this.PriceLabel_Click);
             // 
             // QuantityLabel
             // 
@@ -99,7 +100,7 @@
             // 
             // ItemUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.Controls.Add(this.RemoveItemButton);
@@ -107,6 +108,7 @@
             this.Controls.Add(this.QuantityLabel);
             this.Controls.Add(this.PriceLabel);
             this.Controls.Add(this.ProductLabel);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ItemUserControl";
             this.Size = new System.Drawing.Size(323, 65);
             this.ResumeLayout(false);
