@@ -38,11 +38,11 @@
             // 
             // MenuPreviewPictureBox
             // 
-            this.MenuPreviewPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(251)))));
+            this.MenuPreviewPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.MenuPreviewPictureBox.BorderRadius = 30;
-            this.MenuPreviewPictureBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(251)))));
+            this.MenuPreviewPictureBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.MenuPreviewPictureBox.ImageRotate = 0F;
-            this.MenuPreviewPictureBox.Location = new System.Drawing.Point(465, 100);
+            this.MenuPreviewPictureBox.Location = new System.Drawing.Point(626, 192);
             this.MenuPreviewPictureBox.Name = "MenuPreviewPictureBox";
             this.MenuPreviewPictureBox.Size = new System.Drawing.Size(432, 350);
             this.MenuPreviewPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -63,7 +63,7 @@
             this.MenuNameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.MenuNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.MenuNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.MenuNameTextBox.Location = new System.Drawing.Point(465, 484);
+            this.MenuNameTextBox.Location = new System.Drawing.Point(626, 576);
             this.MenuNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MenuNameTextBox.Name = "MenuNameTextBox";
             this.MenuNameTextBox.PasswordChar = '\0';
@@ -80,11 +80,15 @@
             this.SaveMenuButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.SaveMenuButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.SaveMenuButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.SaveMenuButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(208)))), ((int)(((byte)(139)))));
-            this.SaveMenuButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(208)))), ((int)(((byte)(139)))));
+            this.SaveMenuButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.SaveMenuButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.SaveMenuButton.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveMenuButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.SaveMenuButton.Location = new System.Drawing.Point(719, 567);
+            this.SaveMenuButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.SaveMenuButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.SaveMenuButton.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.SaveMenuButton.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.SaveMenuButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.SaveMenuButton.Location = new System.Drawing.Point(880, 659);
             this.SaveMenuButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SaveMenuButton.Name = "SaveMenuButton";
             this.SaveMenuButton.Size = new System.Drawing.Size(178, 44);
@@ -100,11 +104,15 @@
             this.UploadImageMenuButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.UploadImageMenuButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.UploadImageMenuButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.UploadImageMenuButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(208)))), ((int)(((byte)(139)))));
-            this.UploadImageMenuButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(208)))), ((int)(((byte)(139)))));
+            this.UploadImageMenuButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.UploadImageMenuButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.UploadImageMenuButton.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UploadImageMenuButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.UploadImageMenuButton.Location = new System.Drawing.Point(465, 567);
+            this.UploadImageMenuButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.UploadImageMenuButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.UploadImageMenuButton.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.UploadImageMenuButton.HoverState.FillColor2 = System.Drawing.Color.Transparent;
+            this.UploadImageMenuButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.UploadImageMenuButton.Location = new System.Drawing.Point(626, 659);
             this.UploadImageMenuButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UploadImageMenuButton.Name = "UploadImageMenuButton";
             this.UploadImageMenuButton.Size = new System.Drawing.Size(178, 44);
@@ -120,11 +128,15 @@
             this.CancelMenuButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.CancelMenuButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.CancelMenuButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.CancelMenuButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.CancelMenuButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.CancelMenuButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.CancelMenuButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.CancelMenuButton.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelMenuButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.CancelMenuButton.Location = new System.Drawing.Point(27, 735);
+            this.CancelMenuButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.CancelMenuButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.CancelMenuButton.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.CancelMenuButton.HoverState.FillColor2 = System.Drawing.Color.Transparent;
+            this.CancelMenuButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.CancelMenuButton.Location = new System.Drawing.Point(25, 785);
             this.CancelMenuButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CancelMenuButton.Name = "CancelMenuButton";
             this.CancelMenuButton.Size = new System.Drawing.Size(178, 44);
@@ -134,18 +146,18 @@
             // 
             // InsertMenuUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.Controls.Add(this.CancelMenuButton);
             this.Controls.Add(this.UploadImageMenuButton);
             this.Controls.Add(this.SaveMenuButton);
             this.Controls.Add(this.MenuNameTextBox);
             this.Controls.Add(this.MenuPreviewPictureBox);
             this.Name = "InsertMenuUserControl";
-            this.Size = new System.Drawing.Size(1333, 823);
+            this.Size = new System.Drawing.Size(1767, 1080);
             ((System.ComponentModel.ISupportInitialize)(this.MenuPreviewPictureBox)).EndInit();
-
+            this.ResumeLayout(false);
 
         }
 

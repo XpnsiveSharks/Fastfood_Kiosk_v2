@@ -40,6 +40,11 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
         {
             ProductClicked?.Invoke(this, (ProductNames, ProductPrice));
         }
+
+        private void ProductPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }

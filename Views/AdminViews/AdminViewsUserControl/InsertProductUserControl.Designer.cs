@@ -42,9 +42,11 @@
             // 
             // ProductPreviewPictureBox
             // 
+            this.ProductPreviewPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.ProductPreviewPictureBox.BorderRadius = 18;
+            this.ProductPreviewPictureBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.ProductPreviewPictureBox.ImageRotate = 0F;
-            this.ProductPreviewPictureBox.Location = new System.Drawing.Point(64, 127);
+            this.ProductPreviewPictureBox.Location = new System.Drawing.Point(376, 227);
             this.ProductPreviewPictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.ProductPreviewPictureBox.Name = "ProductPreviewPictureBox";
             this.ProductPreviewPictureBox.Size = new System.Drawing.Size(440, 343);
@@ -54,6 +56,7 @@
             // 
             // ProductNameTextBox
             // 
+            this.ProductNameTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.ProductNameTextBox.BorderRadius = 18;
             this.ProductNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ProductNameTextBox.DefaultText = "Product name";
@@ -61,10 +64,11 @@
             this.ProductNameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.ProductNameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.ProductNameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ProductNameTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.ProductNameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ProductNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ProductNameTextBox.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.ProductNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ProductNameTextBox.Location = new System.Drawing.Point(545, 145);
+            this.ProductNameTextBox.Location = new System.Drawing.Point(857, 245);
             this.ProductNameTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ProductNameTextBox.Name = "ProductNameTextBox";
             this.ProductNameTextBox.PasswordChar = '\0';
@@ -79,12 +83,13 @@
             this.ProductMenuComboBox.BorderRadius = 18;
             this.ProductMenuComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.ProductMenuComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ProductMenuComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.ProductMenuComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ProductMenuComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ProductMenuComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.ProductMenuComboBox.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.ProductMenuComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.ProductMenuComboBox.ItemHeight = 30;
-            this.ProductMenuComboBox.Location = new System.Drawing.Point(545, 198);
+            this.ProductMenuComboBox.Location = new System.Drawing.Point(857, 298);
             this.ProductMenuComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.ProductMenuComboBox.Name = "ProductMenuComboBox";
             this.ProductMenuComboBox.Size = new System.Drawing.Size(206, 36);
@@ -92,17 +97,20 @@
             // 
             // ProductPriceTextBox
             // 
-            this.ProductPriceTextBox.BorderRadius = 18;
+            this.ProductPriceTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.ProductPriceTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.ProductPriceTextBox.BorderRadius = 17;
             this.ProductPriceTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ProductPriceTextBox.DefaultText = "Price";
             this.ProductPriceTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.ProductPriceTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.ProductPriceTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.ProductPriceTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ProductPriceTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.ProductPriceTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ProductPriceTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ProductPriceTextBox.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.ProductPriceTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ProductPriceTextBox.Location = new System.Drawing.Point(545, 249);
+            this.ProductPriceTextBox.Location = new System.Drawing.Point(857, 349);
             this.ProductPriceTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ProductPriceTextBox.Name = "ProductPriceTextBox";
             this.ProductPriceTextBox.PasswordChar = '\0';
@@ -113,9 +121,11 @@
             // 
             // ProductDescriptionTextBox
             // 
+            this.ProductDescriptionTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.ProductDescriptionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ProductDescriptionTextBox.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.ProductDescriptionTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(144)))), ((int)(((byte)(144)))));
-            this.ProductDescriptionTextBox.Location = new System.Drawing.Point(545, 301);
+            this.ProductDescriptionTextBox.Location = new System.Drawing.Point(857, 401);
             this.ProductDescriptionTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.ProductDescriptionTextBox.Name = "ProductDescriptionTextBox";
             this.ProductDescriptionTextBox.Size = new System.Drawing.Size(315, 148);
@@ -125,12 +135,12 @@
             // AddCategoryLabel
             // 
             this.AddCategoryLabel.BackColor = System.Drawing.Color.Transparent;
-            this.AddCategoryLabel.Font = new System.Drawing.Font("Century Gothic", 23F, System.Drawing.FontStyle.Bold);
-            this.AddCategoryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.AddCategoryLabel.Location = new System.Drawing.Point(64, 67);
+            this.AddCategoryLabel.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddCategoryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.AddCategoryLabel.Location = new System.Drawing.Point(386, 141);
             this.AddCategoryLabel.Margin = new System.Windows.Forms.Padding(2);
             this.AddCategoryLabel.Name = "AddCategoryLabel";
-            this.AddCategoryLabel.Size = new System.Drawing.Size(208, 39);
+            this.AddCategoryLabel.Size = new System.Drawing.Size(231, 43);
             this.AddCategoryLabel.TabIndex = 9;
             this.AddCategoryLabel.Text = "Insert Product";
             // 
@@ -139,22 +149,22 @@
             this.CancelButton.BorderColor = System.Drawing.Color.Transparent;
             this.CancelButton.BorderRadius = 19;
             this.CancelButton.BorderThickness = 2;
-            this.CancelButton.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(54)))));
+            this.CancelButton.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
             this.CancelButton.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.CancelButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.CancelButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.CancelButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.CancelButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.CancelButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.CancelButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(54)))));
+            this.CancelButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.CancelButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.CancelButton.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.CancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.CancelButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(54)))));
+            this.CancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
+            this.CancelButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.CancelButton.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.CancelButton.HoverState.FillColor2 = System.Drawing.Color.Transparent;
             this.CancelButton.HoverState.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.CancelButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(54)))));
-            this.CancelButton.Location = new System.Drawing.Point(644, 595);
+            this.CancelButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.CancelButton.Location = new System.Drawing.Point(956, 695);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(153, 44);
             this.CancelButton.TabIndex = 12;
@@ -171,16 +181,16 @@
             this.SaveButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.SaveButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.SaveButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.SaveButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(208)))), ((int)(((byte)(139)))));
-            this.SaveButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(208)))), ((int)(((byte)(139)))));
+            this.SaveButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.SaveButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.SaveButton.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.SaveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.SaveButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(208)))), ((int)(((byte)(139)))));
+            this.SaveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
+            this.SaveButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.SaveButton.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.SaveButton.HoverState.FillColor2 = System.Drawing.Color.Transparent;
             this.SaveButton.HoverState.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.SaveButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(208)))), ((int)(((byte)(139)))));
-            this.SaveButton.Location = new System.Drawing.Point(818, 595);
+            this.SaveButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.SaveButton.Location = new System.Drawing.Point(1130, 695);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(153, 44);
             this.SaveButton.TabIndex = 13;
@@ -197,16 +207,16 @@
             this.ProductImageUploadButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ProductImageUploadButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ProductImageUploadButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ProductImageUploadButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.ProductImageUploadButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(54)))));
+            this.ProductImageUploadButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.ProductImageUploadButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.ProductImageUploadButton.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.ProductImageUploadButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.ProductImageUploadButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(54)))));
+            this.ProductImageUploadButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.ProductImageUploadButton.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.ProductImageUploadButton.HoverState.FillColor2 = System.Drawing.Color.Transparent;
             this.ProductImageUploadButton.HoverState.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.ProductImageUploadButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(54)))));
-            this.ProductImageUploadButton.Location = new System.Drawing.Point(170, 489);
+            this.ProductImageUploadButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.ProductImageUploadButton.Location = new System.Drawing.Point(482, 589);
             this.ProductImageUploadButton.Name = "ProductImageUploadButton";
             this.ProductImageUploadButton.Size = new System.Drawing.Size(206, 45);
             this.ProductImageUploadButton.TabIndex = 14;
@@ -217,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.Controls.Add(this.ProductImageUploadButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.CancelButton);
@@ -229,7 +239,7 @@
             this.Controls.Add(this.ProductPreviewPictureBox);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InsertProductUserControl";
-            this.Size = new System.Drawing.Size(1148, 731);
+            this.Size = new System.Drawing.Size(1767, 1080);
             ((System.ComponentModel.ISupportInitialize)(this.ProductPreviewPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
