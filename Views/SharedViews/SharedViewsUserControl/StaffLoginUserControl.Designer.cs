@@ -49,9 +49,10 @@
             this.BackButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.BackButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.BackButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.BackButton.Location = new System.Drawing.Point(353, 716);
+            this.BackButton.Location = new System.Drawing.Point(235, 465);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(2);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(137, 80);
+            this.BackButton.Size = new System.Drawing.Size(91, 52);
             this.BackButton.TabIndex = 9;
             this.BackButton.Text = "back";
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
@@ -71,13 +72,13 @@
             this.StaffPasswordTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.StaffPasswordTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StaffPasswordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.StaffPasswordTextBox.Location = new System.Drawing.Point(172, 494);
-            this.StaffPasswordTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.StaffPasswordTextBox.Location = new System.Drawing.Point(115, 321);
+            this.StaffPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.StaffPasswordTextBox.Name = "StaffPasswordTextBox";
             this.StaffPasswordTextBox.PasswordChar = '\0';
             this.StaffPasswordTextBox.PlaceholderText = "";
             this.StaffPasswordTextBox.SelectedText = "";
-            this.StaffPasswordTextBox.Size = new System.Drawing.Size(496, 69);
+            this.StaffPasswordTextBox.Size = new System.Drawing.Size(331, 45);
             this.StaffPasswordTextBox.TabIndex = 8;
             this.StaffPasswordTextBox.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -96,11 +97,13 @@
             this.StaffLoginButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.StaffLoginButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.StaffLoginButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.StaffLoginButton.Location = new System.Drawing.Point(172, 630);
+            this.StaffLoginButton.Location = new System.Drawing.Point(115, 410);
+            this.StaffLoginButton.Margin = new System.Windows.Forms.Padding(2);
             this.StaffLoginButton.Name = "StaffLoginButton";
-            this.StaffLoginButton.Size = new System.Drawing.Size(496, 80);
+            this.StaffLoginButton.Size = new System.Drawing.Size(331, 52);
             this.StaffLoginButton.TabIndex = 7;
             this.StaffLoginButton.Text = "Log in";
+            this.StaffLoginButton.Click += new System.EventHandler(this.StaffLoginButton_Click);
             // 
             // StaffUsernameTextBox
             // 
@@ -117,13 +120,13 @@
             this.StaffUsernameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.StaffUsernameTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StaffUsernameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.StaffUsernameTextBox.Location = new System.Drawing.Point(172, 414);
-            this.StaffUsernameTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.StaffUsernameTextBox.Location = new System.Drawing.Point(115, 269);
+            this.StaffUsernameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.StaffUsernameTextBox.Name = "StaffUsernameTextBox";
             this.StaffUsernameTextBox.PasswordChar = '\0';
             this.StaffUsernameTextBox.PlaceholderText = "";
             this.StaffUsernameTextBox.SelectedText = "";
-            this.StaffUsernameTextBox.Size = new System.Drawing.Size(496, 69);
+            this.StaffUsernameTextBox.Size = new System.Drawing.Size(331, 45);
             this.StaffUsernameTextBox.TabIndex = 6;
             this.StaffUsernameTextBox.TextOffset = new System.Drawing.Point(8, 0);
             // 
@@ -133,16 +136,17 @@
             this.LoginLabel.BackColor = System.Drawing.Color.Transparent;
             this.LoginLabel.Font = new System.Drawing.Font("Century Gothic", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.LoginLabel.Location = new System.Drawing.Point(203, 224);
+            this.LoginLabel.Location = new System.Drawing.Point(135, 142);
+            this.LoginLabel.Margin = new System.Windows.Forms.Padding(2);
             this.LoginLabel.Name = "LoginLabel";
-            this.LoginLabel.Size = new System.Drawing.Size(287, 123);
+            this.LoginLabel.Size = new System.Drawing.Size(191, 80);
             this.LoginLabel.TabIndex = 5;
             this.LoginLabel.Text = "Staff";
             this.LoginLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // StaffLoginUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.Controls.Add(this.BackButton);
@@ -150,8 +154,9 @@
             this.Controls.Add(this.StaffLoginButton);
             this.Controls.Add(this.StaffUsernameTextBox);
             this.Controls.Add(this.LoginLabel);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StaffLoginUserControl";
-            this.Size = new System.Drawing.Size(841, 1080);
+            this.Size = new System.Drawing.Size(561, 1080);
             this.ResumeLayout(false);
 
         }

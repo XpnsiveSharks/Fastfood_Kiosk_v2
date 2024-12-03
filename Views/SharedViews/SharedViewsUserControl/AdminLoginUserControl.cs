@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Fastfood_Kiosk_v2.Helpers;
+using Fastfood_Kiosk_v2.Views.AdminViews;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +24,32 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
             if (this.Parent is Panel panel && panel.FindForm() is MainLoginView mainLogin)
             {
                 mainLogin.RemoveLoginUserControl(this);
+            }
+        }
+
+        private void AdminLoginButton_Click(object sender, EventArgs e)
+        {
+            PasswordHashing passwordHashing = new PasswordHashing();
+
+            try
+            {
+                string username = AdminUsernameTextBox.Text;
+                string pasword = AdminPasswordTextBox.Text;
+
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(pasword))
+                {
+                    MessageBox.Show("Username and Password cannot be empty.");
+                    return;
+                }
+                string hashedPass = passwordHashing.hashPassword(pasword);
+                passwordHashing.SaveToDatabase(username, hashedPass);
+                AdminIndexView adminIndexView = new AdminIndexView();
+                adminIndexView.Show();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error has occured while accessing the database", ex);
             }
         }
     }

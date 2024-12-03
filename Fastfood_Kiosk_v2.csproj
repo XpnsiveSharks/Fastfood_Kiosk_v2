@@ -144,6 +144,7 @@
   <ItemGroup>
     <Compile Include="Configurations\ConfigurationLoader.cs" />
     <Compile Include="Configurations\DatabaseConnection.cs" />
+    <Compile Include="Helpers\PasswordHashing.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Menus.cs" />
     <Compile Include="Models\Products.cs" />

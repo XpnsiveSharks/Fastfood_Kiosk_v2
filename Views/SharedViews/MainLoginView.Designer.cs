@@ -51,9 +51,10 @@
             this.AdminLoginButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.AdminLoginButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.AdminLoginButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.AdminLoginButton.Location = new System.Drawing.Point(202, 398);
+            this.AdminLoginButton.Location = new System.Drawing.Point(135, 259);
+            this.AdminLoginButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AdminLoginButton.Name = "AdminLoginButton";
-            this.AdminLoginButton.Size = new System.Drawing.Size(460, 80);
+            this.AdminLoginButton.Size = new System.Drawing.Size(307, 52);
             this.AdminLoginButton.TabIndex = 0;
             this.AdminLoginButton.Text = "Admin";
             this.AdminLoginButton.Click += new System.EventHandler(this.AdminLoginButton_Click);
@@ -73,9 +74,10 @@
             this.StaffLoginButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.StaffLoginButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.StaffLoginButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.StaffLoginButton.Location = new System.Drawing.Point(202, 505);
+            this.StaffLoginButton.Location = new System.Drawing.Point(135, 328);
+            this.StaffLoginButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.StaffLoginButton.Name = "StaffLoginButton";
-            this.StaffLoginButton.Size = new System.Drawing.Size(460, 80);
+            this.StaffLoginButton.Size = new System.Drawing.Size(307, 52);
             this.StaffLoginButton.TabIndex = 1;
             this.StaffLoginButton.Text = "Staff";
             this.StaffLoginButton.Click += new System.EventHandler(this.StaffLoginButton_Click);
@@ -95,9 +97,10 @@
             this.CustomerLoginButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.CustomerLoginButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.CustomerLoginButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.CustomerLoginButton.Location = new System.Drawing.Point(202, 615);
+            this.CustomerLoginButton.Location = new System.Drawing.Point(135, 400);
+            this.CustomerLoginButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CustomerLoginButton.Name = "CustomerLoginButton";
-            this.CustomerLoginButton.Size = new System.Drawing.Size(460, 80);
+            this.CustomerLoginButton.Size = new System.Drawing.Size(307, 52);
             this.CustomerLoginButton.TabIndex = 2;
             this.CustomerLoginButton.Text = "Customer";
             this.CustomerLoginButton.Click += new System.EventHandler(this.CustomerLoginButton_Click);
@@ -108,9 +111,10 @@
             this.LoginAsLabel.BackColor = System.Drawing.Color.Transparent;
             this.LoginAsLabel.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginAsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.LoginAsLabel.Location = new System.Drawing.Point(187, 307);
+            this.LoginAsLabel.Location = new System.Drawing.Point(125, 200);
+            this.LoginAsLabel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LoginAsLabel.Name = "LoginAsLabel";
-            this.LoginAsLabel.Size = new System.Drawing.Size(490, 85);
+            this.LoginAsLabel.Size = new System.Drawing.Size(327, 55);
             this.LoginAsLabel.TabIndex = 3;
             this.LoginAsLabel.Text = "Login as:";
             this.LoginAsLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -122,19 +126,21 @@
             this.LoginPanel.Controls.Add(this.AdminLoginButton);
             this.LoginPanel.Controls.Add(this.StaffLoginButton);
             this.LoginPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LoginPanel.Location = new System.Drawing.Point(1079, 0);
+            this.LoginPanel.Location = new System.Drawing.Point(1359, 0);
+            this.LoginPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LoginPanel.Name = "LoginPanel";
-            this.LoginPanel.Size = new System.Drawing.Size(841, 1080);
+            this.LoginPanel.Size = new System.Drawing.Size(561, 1080);
             this.LoginPanel.TabIndex = 4;
             // 
             // MainLoginView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.LoginPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainLoginView";
             this.Text = "MainLogin";
             this.LoginPanel.ResumeLayout(false);

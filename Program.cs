@@ -17,8 +17,11 @@ namespace Fastfood_Kiosk_v2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Views.Customer.CustomerMainFrameView());
+            //Application.Run(new Views.Customer.CustomerMainFrameView());
             //Application.Run(new Views.SharedViews.MainLoginView());
+            //Application.Run(new Views.AdminViews.AdminIndexView());
+            Application.Run(new Views.SharedViews.MainLoginView());
+
 
         }
     }
