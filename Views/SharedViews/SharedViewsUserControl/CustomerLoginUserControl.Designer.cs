@@ -54,7 +54,7 @@
             this.CustomerUsernameTextBox.BorderRadius = 20;
             this.CustomerUsernameTextBox.BorderThickness = 2;
             this.CustomerUsernameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.CustomerUsernameTextBox.DefaultText = "Username";
+            this.CustomerUsernameTextBox.DefaultText = "";
             this.CustomerUsernameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.CustomerUsernameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.CustomerUsernameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -67,7 +67,7 @@
             this.CustomerUsernameTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.CustomerUsernameTextBox.Name = "CustomerUsernameTextBox";
             this.CustomerUsernameTextBox.PasswordChar = '\0';
-            this.CustomerUsernameTextBox.PlaceholderText = "";
+            this.CustomerUsernameTextBox.PlaceholderText = "Username";
             this.CustomerUsernameTextBox.SelectedText = "";
             this.CustomerUsernameTextBox.Size = new System.Drawing.Size(496, 69);
             this.CustomerUsernameTextBox.TabIndex = 1;
@@ -100,7 +100,7 @@
             this.CustomerPasswordTextBox.BorderRadius = 20;
             this.CustomerPasswordTextBox.BorderThickness = 2;
             this.CustomerPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.CustomerPasswordTextBox.DefaultText = "Password";
+            this.CustomerPasswordTextBox.DefaultText = "";
             this.CustomerPasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.CustomerPasswordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.CustomerPasswordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -113,7 +113,7 @@
             this.CustomerPasswordTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.CustomerPasswordTextBox.Name = "CustomerPasswordTextBox";
             this.CustomerPasswordTextBox.PasswordChar = '\0';
-            this.CustomerPasswordTextBox.PlaceholderText = "";
+            this.CustomerPasswordTextBox.PlaceholderText = "Password";
             this.CustomerPasswordTextBox.SelectedText = "";
             this.CustomerPasswordTextBox.Size = new System.Drawing.Size(496, 69);
             this.CustomerPasswordTextBox.TabIndex = 3;

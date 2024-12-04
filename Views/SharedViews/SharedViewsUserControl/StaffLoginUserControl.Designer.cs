@@ -62,8 +62,8 @@
             this.StaffPasswordTextBox.BorderRadius = 20;
             this.StaffPasswordTextBox.BorderThickness = 2;
             this.StaffPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.StaffPasswordTextBox.DefaultText = "Password";
-            this.StaffPasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.StaffPasswordTextBox.DefaultText = "";
+            this.StaffPasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.StaffPasswordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.StaffPasswordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.StaffPasswordTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -75,7 +75,7 @@
             this.StaffPasswordTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.StaffPasswordTextBox.Name = "StaffPasswordTextBox";
             this.StaffPasswordTextBox.PasswordChar = '\0';
-            this.StaffPasswordTextBox.PlaceholderText = "";
+            this.StaffPasswordTextBox.PlaceholderText = "Password";
             this.StaffPasswordTextBox.SelectedText = "";
             this.StaffPasswordTextBox.Size = new System.Drawing.Size(496, 69);
             this.StaffPasswordTextBox.TabIndex = 8;
@@ -108,8 +108,8 @@
             this.StaffUsernameTextBox.BorderRadius = 20;
             this.StaffUsernameTextBox.BorderThickness = 2;
             this.StaffUsernameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.StaffUsernameTextBox.DefaultText = "Username";
-            this.StaffUsernameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.StaffUsernameTextBox.DefaultText = "";
+            this.StaffUsernameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.StaffUsernameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.StaffUsernameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.StaffUsernameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -121,7 +121,7 @@
             this.StaffUsernameTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.StaffUsernameTextBox.Name = "StaffUsernameTextBox";
             this.StaffUsernameTextBox.PasswordChar = '\0';
-            this.StaffUsernameTextBox.PlaceholderText = "";
+            this.StaffUsernameTextBox.PlaceholderText = "Username";
             this.StaffUsernameTextBox.SelectedText = "";
             this.StaffUsernameTextBox.Size = new System.Drawing.Size(496, 69);
             this.StaffUsernameTextBox.TabIndex = 6;

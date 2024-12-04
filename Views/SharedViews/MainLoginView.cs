@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,20 +36,17 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews
                 control.Visible = true;
             }
         }
-
         private void AdminLoginButton_Click(object sender, EventArgs e)
         {
-            ShowLoginUserControl(new SharedViewsUserControl.AdminLoginUserControl());
+            ShowLoginUserControl(new SharedViewsUserControl.AdminLoginUserControl("Admin"));
         }
-
         private void StaffLoginButton_Click(object sender, EventArgs e)
         {
-            ShowLoginUserControl(new SharedViewsUserControl.StaffLoginUserControl());
+            ShowLoginUserControl(new SharedViewsUserControl.StaffLoginUserControl("Staff"));
         }
-
         private void CustomerLoginButton_Click(object sender, EventArgs e)
         {
-            ShowLoginUserControl(new SharedViewsUserControl.CustomerLoginUserControl());
+            ShowLoginUserControl(new SharedViewsUserControl.CustomerLoginUserControl("Customer"));
         }
     }
 }

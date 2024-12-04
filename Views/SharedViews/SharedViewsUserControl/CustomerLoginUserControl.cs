@@ -15,6 +15,7 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
         public CustomerLoginUserControl()
         {
             InitializeComponent();
+            UserRole = userRole;
         }
 
         private void BackButton_Click(object sender, EventArgs e)

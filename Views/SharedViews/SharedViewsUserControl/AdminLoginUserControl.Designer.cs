@@ -62,7 +62,7 @@
             this.AdminPasswordTextBox.BorderRadius = 20;
             this.AdminPasswordTextBox.BorderThickness = 2;
             this.AdminPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.AdminPasswordTextBox.DefaultText = "Password";
+            this.AdminPasswordTextBox.DefaultText = "";
             this.AdminPasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.AdminPasswordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.AdminPasswordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -75,7 +75,7 @@
             this.AdminPasswordTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.AdminPasswordTextBox.Name = "AdminPasswordTextBox";
             this.AdminPasswordTextBox.PasswordChar = '\0';
-            this.AdminPasswordTextBox.PlaceholderText = "";
+            this.AdminPasswordTextBox.PlaceholderText = "Password";
             this.AdminPasswordTextBox.SelectedText = "";
             this.AdminPasswordTextBox.Size = new System.Drawing.Size(496, 69);
             this.AdminPasswordTextBox.TabIndex = 13;
@@ -108,7 +108,7 @@
             this.AdminUsernameTextBox.BorderRadius = 20;
             this.AdminUsernameTextBox.BorderThickness = 2;
             this.AdminUsernameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.AdminUsernameTextBox.DefaultText = "Username";
+            this.AdminUsernameTextBox.DefaultText = "";
             this.AdminUsernameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.AdminUsernameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.AdminUsernameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -121,7 +121,7 @@
             this.AdminUsernameTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.AdminUsernameTextBox.Name = "AdminUsernameTextBox";
             this.AdminUsernameTextBox.PasswordChar = '\0';
-            this.AdminUsernameTextBox.PlaceholderText = "";
+            this.AdminUsernameTextBox.PlaceholderText = "Username";
             this.AdminUsernameTextBox.SelectedText = "";
             this.AdminUsernameTextBox.Size = new System.Drawing.Size(496, 69);
             this.AdminUsernameTextBox.TabIndex = 11;

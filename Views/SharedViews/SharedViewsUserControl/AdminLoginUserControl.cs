@@ -12,9 +12,11 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
 {
     public partial class AdminLoginUserControl : UserControl
     {
-        public AdminLoginUserControl()
+        public string UserRole { get; set; }
+        public AdminLoginUserControl(string userRole)
         {
             InitializeComponent();
+            UserRole = userRole;
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -26,3 +28,4 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
         }
     }
 }
+
