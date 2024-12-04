@@ -46,10 +46,9 @@
             this.DineInButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.DineInButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.DineInButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
-            this.DineInButton.Location = new System.Drawing.Point(589, 411);
-            this.DineInButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DineInButton.Location = new System.Drawing.Point(393, 267);
             this.DineInButton.Name = "DineInButton";
-            this.DineInButton.Size = new System.Drawing.Size(270, 277);
+            this.DineInButton.Size = new System.Drawing.Size(180, 180);
             this.DineInButton.TabIndex = 0;
             this.DineInButton.Text = "Dine-in";
             this.DineInButton.Click += new System.EventHandler(this.DineInButton_Click);
@@ -68,23 +67,22 @@
             this.TakeOutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.TakeOutButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.TakeOutButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
-            this.TakeOutButton.Location = new System.Drawing.Point(1072, 411);
-            this.TakeOutButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TakeOutButton.Location = new System.Drawing.Point(715, 267);
             this.TakeOutButton.Name = "TakeOutButton";
-            this.TakeOutButton.Size = new System.Drawing.Size(270, 277);
+            this.TakeOutButton.Size = new System.Drawing.Size(180, 180);
             this.TakeOutButton.TabIndex = 2;
             this.TakeOutButton.Text = "Take-out";
+            this.TakeOutButton.Click += new System.EventHandler(this.TakeOutButton_Click);
             // 
             // OrderTypeUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.Controls.Add(this.TakeOutButton);
             this.Controls.Add(this.DineInButton);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "OrderTypeUserControl";
-            this.Size = new System.Drawing.Size(1920, 1080);
+            this.Size = new System.Drawing.Size(1280, 702);
             this.ResumeLayout(false);
 
         }

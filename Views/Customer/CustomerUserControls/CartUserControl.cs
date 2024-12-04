@@ -6,14 +6,18 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
 {
     public partial class CartUserControl : UserControl
     {
-        public CartUserControl()
+        public CartUserControl(string orderType)
         {
             InitializeComponent();
+            OrderType = orderType;
+            Console.WriteLine(OrderType);
         }
         public FlowLayoutPanel itemsFlowLayoutPanel
         {
             get { return this.ItemsFlowLayoutPanel; }
         }
+        
+        public string OrderType { get; set; }
         public double SubTotal
         {
             get => double.TryParse(SubTotalLabel.Text, out var price) ? price : 0;
@@ -76,13 +80,13 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
 
         private void ProceedButton_Click(object sender, EventArgs e)
         {
-            if (SubTotal == 0)
+             if (SubTotal == 0)
             {
                 MessageBox.Show("Please add items.");
                 return;
             }
 
-            orderListView = new OrderListView();
+            orderListView = new OrderListView(OrderType);
 
             orderListView.SubtotalUpdated += OnOrderListSubtotalUpdated;
 
@@ -94,12 +98,14 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
                     Quantity = item.Quantity,
                     TotalPrice = item.Total,
                     Qty = item.Quantity,
-                    OrderPrice = item.Price
+                    OrderPrice = item.Price,
+                    LinkedItemControl = item,
+                    ProductId = item.ProductId
                 };
                 orderListView.OrderItems.Add(orderListItem);
             }
-
             orderListView.DisplayOrderItems();
+
             orderListView.Show();
         }
 

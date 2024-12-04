@@ -8,28 +8,46 @@ namespace Fastfood_Kiosk_v2.Views.Customer
     public partial class CustomerMainFrameView : Form
     {
         private readonly Dictionary<string, UserControl> _userControls = new Dictionary<string, UserControl>();
+
         public CustomerMainFrameView()
         {
             InitializeComponent();
-            ShowOrderingUserControl();
-        } 
+            ShowOrderTypeUserControl();
+        }
+
         public void ShowOrderTypeUserControl()
         {
-            LoadUserControl("Order Type", () => new OrderTypeUserControl());
-        }
-        public void ShowOrderingUserControl()
-        {
-            LoadUserControl("Customer Ordering", () => new CustomerOrderingUserControl());
-        }
-        private void LoadUserControl(string key, Func<UserControl> createControl)
-        {
-            if (!_userControls.ContainsKey(key))
-                _userControls[key] = createControl();
+            if (!_userControls.TryGetValue("Order Type", out UserControl userControl))
+            {
+                var orderTypeUserControl = new OrderTypeUserControl();
+                orderTypeUserControl.OrderTypeChanged += orderType =>
+                {
+                    ShowOrderingUserControl(orderType); 
+                };
+                _userControls["Order Type"] = orderTypeUserControl;
+            }
 
-            var userControl = _userControls[key];
-            userControl.Dock = DockStyle.Fill;
-            CustomerMainFramePanel.Controls.Clear();
-            CustomerMainFramePanel.Controls.Add(userControl);
+            LoadUserControl("Order Type");
+        }
+
+        public void ShowOrderingUserControl(string orderType)
+        {
+            if (!_userControls.ContainsKey("Customer Ordering"))
+            {
+                _userControls["Customer Ordering"] = new CustomerOrderingUserControl(orderType);
+            }
+
+            LoadUserControl("Customer Ordering");
+        }
+
+        private void LoadUserControl(string key)
+        {
+            if (_userControls.TryGetValue(key, out var userControl))
+            {
+                userControl.Dock = DockStyle.Fill;
+                CustomerMainFramePanel.Controls.Clear();
+                CustomerMainFramePanel.Controls.Add(userControl);
+            }
         }
     }
 }

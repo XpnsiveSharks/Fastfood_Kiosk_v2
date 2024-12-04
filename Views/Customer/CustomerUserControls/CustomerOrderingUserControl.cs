@@ -1,7 +1,9 @@
 ﻿using Fastfood_Kiosk_v2.ViewModels;
 using Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl;
 using Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControls;
+using System;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
 {
@@ -10,12 +12,15 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
         private readonly MenuViewModel _menuViewModel;
         private readonly ProductViewModel _productViewModel;
         private CartUserControl _cartUserControl;
-        public CustomerOrderingUserControl()
+        public string OrderType { get; set; }
+        public CustomerOrderingUserControl(string orderType)
         {
             InitializeComponent();
             _menuViewModel = new MenuViewModel();
             _productViewModel = new ProductViewModel();
             InitializeMenu();
+            OrderType = orderType;
+            Console.WriteLine(OrderType);
         }
         private void InitializeMenu()
         {
@@ -54,20 +59,20 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
                 {
                     productControl.ProductClicked += (s, e) =>
                     {
-                        var (productName, productPrice) = e;
-                        ShowCart(productName, productPrice);
+                        var (productName, productPrice, productId) = e;
+                        ShowCart(productName, productPrice, productId);
                     };
                 }
                 ProductsFLayoutPanel.Controls.Add(control);
             }
         }
-        public void ShowCart(string productName, double productPrice)
+        public void ShowCart(string productName, double productPrice, int productId)
         {
             if (_cartUserControl == null)
             {
-                _cartUserControl = new CartUserControl
+                _cartUserControl = new CartUserControl(OrderType)
                 {
-                    Dock = DockStyle.Fill
+                    Dock = DockStyle.Fill         
                 };
                 CartPanel.Controls.Clear();
                 CartPanel.Controls.Add(_cartUserControl);
@@ -91,7 +96,8 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
                     Product = productName,
                     Price = productPrice,
                     Quantity = 1,
-                    Total = productPrice
+                    Total = productPrice,
+                    ProductId = productId
                 };
 
                 _cartUserControl.AddItem(itemControl); 

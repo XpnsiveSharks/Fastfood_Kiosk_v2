@@ -10,6 +10,7 @@ namespace Fastfood_Kiosk_v2.Models
     {
         public int Customer_Id { get; set; }
         public string Created_At { get; set; }
+        public string Customer_Number { get; set; }
 
     }
 }

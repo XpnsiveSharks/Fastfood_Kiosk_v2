@@ -1,4 +1,5 @@
-﻿using Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls;
+﻿using Fastfood_Kiosk_v2.Models;
+using Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls;
 using System;
 using System.Windows.Forms;
 
@@ -12,22 +13,19 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControl
         public ItemUserControl()
         {
             InitializeComponent();
+
         }
         public string Product 
         { 
             get => ProductLabel.Text; 
             set => ProductLabel.Text = value; 
         }
+        public int ProductId { get; set; }
         public double Price 
         {
             get => double.TryParse(PriceLabel.Text, out var price) ? price : 0;
             set => PriceLabel.Text = value.ToString("F2");
         }
-        /*public int Quantity 
-        {
-            get => int.TryParse(QuantityLabel.Text, out var quantity) ? quantity : 0; 
-            set => QuantityLabel.Text = value.ToString();
-        }*/
         public int Quantity
         {
             get => int.TryParse(QuantityLabel.Text, out var quantity) ? quantity : 0;

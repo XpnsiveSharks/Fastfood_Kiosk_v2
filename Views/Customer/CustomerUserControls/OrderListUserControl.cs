@@ -22,6 +22,7 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
         {
             InitializeComponent();
         }
+        public int ProductId { get; set; }
         public string Product 
         { 
             get => OrderNameLabel.Text; 
@@ -61,18 +62,32 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
                 Qty--;
                 Quantity = Qty;
                 TotalPrice = Quantity * (TotalPrice / (Quantity + 1));
+                QuantityChanged?.Invoke(this, EventArgs.Empty);
 
                 if (LinkedItemControl != null)
                 {
-                    LinkedItemControl.Quantity = Qty;
-                    LinkedItemControl.Total = Qty * LinkedItemControl.Price;
+                    LinkedItemControl.Quantity = Quantity;
+                    LinkedItemControl.Total = TotalPrice;
                 }
-
-                QuantityChanged?.Invoke(this, EventArgs.Empty);
             }
             else
             {
                 MessageBox.Show("Quantity cannot be less than 1.");
+            }
+        }
+
+        private void IncreaseOrderButton_Click(object sender, EventArgs e)
+        {
+            Qty++;
+            Quantity = Qty;
+            TotalPrice = Quantity * (TotalPrice / (Quantity - 1));
+            QuantityChanged?.Invoke(this, EventArgs.Empty);
+
+            // Update the linked ItemUserControl
+            if (LinkedItemControl != null)
+            {
+                LinkedItemControl.Quantity = Quantity;
+                LinkedItemControl.Total = TotalPrice;
             }
         }
 
@@ -97,20 +112,7 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
                 MessageBox.Show("Invalid quantity entered.");
             }
         }
-        private void IncreaseOrderButton_Click(object sender, EventArgs e)
-        {
-            Qty++;
-            Quantity = Qty;
-            TotalPrice = Quantity * (TotalPrice / (Quantity - 1));
-
-            if (LinkedItemControl != null)
-            {
-                LinkedItemControl.Quantity = Qty;
-                LinkedItemControl.Total = Qty * LinkedItemControl.Price;
-            }
-
-            QuantityChanged?.Invoke(this, EventArgs.Empty);
-        }
+        
         public void UpdateQuantity(int newQuantity)
         {
             Qty = newQuantity;
