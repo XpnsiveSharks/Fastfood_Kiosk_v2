@@ -19,6 +19,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews
         private readonly CashierUserControl cashierUserControl = new CashierUserControl();  
         private readonly ReportsUserControl reportsUserControl = new ReportsUserControl();
         private readonly AdminUserControl adminUserCotrol = new AdminUserControl();
+        private readonly SettingsUserControl settingsUserControl = new SettingsUserControl();
         public AdminIndexView()
         {
             InitializeComponent();
@@ -82,7 +83,8 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews
 
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-
+            AdminIndexPanel.Controls.Clear();
+            AdminIndexPanel.Controls.Add(settingsUserControl);
         }
 
         private void HomeButton_Click_1(object sender, EventArgs e)
