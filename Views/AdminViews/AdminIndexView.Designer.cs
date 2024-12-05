@@ -61,7 +61,7 @@
             this.HomeButton.Location = new System.Drawing.Point(24, 25);
             this.HomeButton.Margin = new System.Windows.Forms.Padding(2);
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(98, 53);
+            this.HomeButton.Size = new System.Drawing.Size(147, 82);
             this.HomeButton.TabIndex = 9;
             this.HomeButton.Text = "Home";
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click_1);
@@ -87,7 +87,7 @@
             this.AdminButton.Location = new System.Drawing.Point(24, 84);
             this.AdminButton.Margin = new System.Windows.Forms.Padding(2);
             this.AdminButton.Name = "AdminButton";
-            this.AdminButton.Size = new System.Drawing.Size(98, 53);
+            this.AdminButton.Size = new System.Drawing.Size(147, 82);
             this.AdminButton.TabIndex = 10;
             this.AdminButton.Text = "Admin";
             this.AdminButton.Click += new System.EventHandler(this.AdminButton_Click_1);
@@ -113,7 +113,7 @@
             this.OrdersButton.Location = new System.Drawing.Point(24, 143);
             this.OrdersButton.Margin = new System.Windows.Forms.Padding(2);
             this.OrdersButton.Name = "OrdersButton";
-            this.OrdersButton.Size = new System.Drawing.Size(98, 53);
+            this.OrdersButton.Size = new System.Drawing.Size(147, 82);
             this.OrdersButton.TabIndex = 11;
             this.OrdersButton.Text = "Orders";
             // 
@@ -138,7 +138,7 @@
             this.SalesButton.Location = new System.Drawing.Point(24, 202);
             this.SalesButton.Margin = new System.Windows.Forms.Padding(2);
             this.SalesButton.Name = "SalesButton";
-            this.SalesButton.Size = new System.Drawing.Size(98, 53);
+            this.SalesButton.Size = new System.Drawing.Size(147, 82);
             this.SalesButton.TabIndex = 12;
             this.SalesButton.Text = "Sales";
             this.SalesButton.Click += new System.EventHandler(this.SalesButton_Click);
@@ -164,7 +164,7 @@
             this.ReportsButton.Location = new System.Drawing.Point(24, 261);
             this.ReportsButton.Margin = new System.Windows.Forms.Padding(2);
             this.ReportsButton.Name = "ReportsButton";
-            this.ReportsButton.Size = new System.Drawing.Size(98, 53);
+            this.ReportsButton.Size = new System.Drawing.Size(147, 82);
             this.ReportsButton.TabIndex = 13;
             this.ReportsButton.Text = "Reports";
             this.ReportsButton.Click += new System.EventHandler(this.ReportsButton_Click);
@@ -190,7 +190,7 @@
             this.SettingsButton.Location = new System.Drawing.Point(24, 320);
             this.SettingsButton.Margin = new System.Windows.Forms.Padding(2);
             this.SettingsButton.Name = "SettingsButton";
-            this.SettingsButton.Size = new System.Drawing.Size(98, 53);
+            this.SettingsButton.Size = new System.Drawing.Size(147, 82);
             this.SettingsButton.TabIndex = 14;
             this.SettingsButton.Text = "Settings";
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
@@ -216,7 +216,7 @@
             this.ExitButton.Location = new System.Drawing.Point(24, 1016);
             this.ExitButton.Margin = new System.Windows.Forms.Padding(2);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(76, 53);
+            this.ExitButton.Size = new System.Drawing.Size(114, 82);
             this.ExitButton.TabIndex = 15;
             this.ExitButton.Text = "Exit";
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
@@ -249,14 +249,13 @@
             // 
             // AdminIndexView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.AdminIndexPanel);
             this.Controls.Add(this.AdminButtonsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminIndexView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminIndexView";

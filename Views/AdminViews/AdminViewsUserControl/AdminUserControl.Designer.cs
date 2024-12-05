@@ -47,6 +47,7 @@
             this.AdminFlowLayoutPanel.Name = "AdminFlowLayoutPanel";
             this.AdminFlowLayoutPanel.Size = new System.Drawing.Size(1421, 1019);
             this.AdminFlowLayoutPanel.TabIndex = 2;
+            this.AdminFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AdminFlowLayoutPanel_Paint);
             // 
             // guna2Panel1
             // 
@@ -54,6 +55,7 @@
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1767, 1080);
             this.guna2Panel1.TabIndex = 3;
@@ -75,6 +77,7 @@
             this.guna2Panel2.Controls.Add(this.MenuListButton);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(224, 1080);
             this.guna2Panel2.TabIndex = 3;
@@ -96,9 +99,10 @@
             this.ProductListButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.ProductListButton.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.ProductListButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.ProductListButton.Location = new System.Drawing.Point(9, 163);
+            this.ProductListButton.Location = new System.Drawing.Point(14, 251);
+            this.ProductListButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ProductListButton.Name = "ProductListButton";
-            this.ProductListButton.Size = new System.Drawing.Size(200, 46);
+            this.ProductListButton.Size = new System.Drawing.Size(300, 71);
             this.ProductListButton.TabIndex = 4;
             this.ProductListButton.Text = "Product List";
             this.ProductListButton.Click += new System.EventHandler(this.ProductListButton_Click);
@@ -120,16 +124,17 @@
             this.MenuListButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.MenuListButton.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.MenuListButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.MenuListButton.Location = new System.Drawing.Point(9, 106);
+            this.MenuListButton.Location = new System.Drawing.Point(14, 163);
+            this.MenuListButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MenuListButton.Name = "MenuListButton";
-            this.MenuListButton.Size = new System.Drawing.Size(200, 46);
+            this.MenuListButton.Size = new System.Drawing.Size(300, 71);
             this.MenuListButton.TabIndex = 3;
             this.MenuListButton.Text = "Menu List";
             this.MenuListButton.Click += new System.EventHandler(this.MenuListButton_Click);
             // 
             // AdminUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
