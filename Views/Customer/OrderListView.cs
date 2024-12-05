@@ -1,13 +1,7 @@
-using Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControls;
 using Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using System.Windows.Forms;
 
@@ -16,9 +10,11 @@ namespace Fastfood_Kiosk_v2.Views.Customer
     public partial class OrderListView : Form
     {
         public List<OrderListUserControl> OrderItems { get; set; } = new List<OrderListUserControl>();
-        public OrderListView()
+        public string OrderType { get; set; }
+        public OrderListView(string orderType)
         {
             InitializeComponent();
+            OrderType = orderType;
         }
         public double SubTotal
         {
@@ -62,18 +58,17 @@ namespace Fastfood_Kiosk_v2.Views.Customer
         {
             double total = OrderItems.Sum(item => item.TotalPrice);
             SubTotal = total; 
-        }
-
-        
+        }    
         private void OnQuantityChanged(object sender, EventArgs e)
         {
             UpdateSubtotal();
         }
         private void AddMoreButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Hide(); 
+
         }
-        
+
         public event Action<double> SubtotalUpdated;
 
         private void UpdateSubtotal()
@@ -92,7 +87,13 @@ namespace Fastfood_Kiosk_v2.Views.Customer
 
             SubtotalUpdated?.Invoke(SubTotal);
         }
-
+        private void CheckoutButton_Click_1(object sender, EventArgs e)
+        {
+            var paymentMethodView = new PaymentMethodView(OrderType, OrderItems);
+            paymentMethodView.OrderListViewReference = this;
+            paymentMethodView.Show();
+            this.Hide();
+        }
     }
 
 

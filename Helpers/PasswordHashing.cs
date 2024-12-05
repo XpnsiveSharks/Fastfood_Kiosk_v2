@@ -1,3 +1,4 @@
+
 ﻿using Fastfood_Kiosk_v2.Views.AdminViews;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using Fastfood_Kiosk_v2.Configurations;
 using System.Security.Cryptography;
 using System.Data.SqlClient;
 using Dapper;
+
 
 namespace Fastfood_Kiosk_v2.Helpers
 {
@@ -30,6 +32,7 @@ namespace Fastfood_Kiosk_v2.Helpers
             using (SHA256 sha256 = SHA256.Create())
             {
                 byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+
                 StringBuilder stringBuilder = new StringBuilder();
 
                 foreach (byte b in bytes)
@@ -40,11 +43,13 @@ namespace Fastfood_Kiosk_v2.Helpers
             }
         }
 
+
         public void SaveToDatabase(string username, string passwordHash, string user_role)
         {
 
             using (var connection = _databaseConnection.GetConnection())
             {
+
                 string query = "INSERT INTO users_table (Username, Password, User_Role) VALUES (@username, @password, @user_role)";
                 connection.Execute(query, new
                 {
@@ -55,5 +60,7 @@ namespace Fastfood_Kiosk_v2.Helpers
 
             }
         }
+
+
     }
 }

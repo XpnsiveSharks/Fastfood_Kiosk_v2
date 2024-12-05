@@ -6,7 +6,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 {
     public partial class ProductButtonsUserControl : UserControl
     {
-        public event EventHandler<(string ProductName, double ProductPrice)> ProductClicked;
+        public event EventHandler<(string ProductName, double ProductPrice, int ProductId)> ProductClicked;
         public ProductButtonsUserControl()
         {
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
         }
         private void NotifyProductClicked(object sender, EventArgs e)
         {
-            ProductClicked?.Invoke(this, (ProductNames, ProductPrice));
+            ProductClicked?.Invoke(this, (ProductNames, ProductPrice, ProductId));
         }
 
         private void ProductPanel_Paint(object sender, PaintEventArgs e)
