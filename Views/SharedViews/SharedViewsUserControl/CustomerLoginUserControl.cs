@@ -32,7 +32,7 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
 
         private void CustomerLoginButton_Click(object sender, EventArgs e)
         {
-            PasswordHashing passwordHashing = new PasswordHashing();
+           /* PasswordHashing passwordHashing = new PasswordHashing();
 
             try
             {
@@ -47,11 +47,12 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
                 string hashedPass = passwordHashing.hashPassword(pasword);
                 passwordHashing.SaveToDatabase(username, hashedPass);
 
-            } catch (Exception ex)
-            {
-                throw new Exception("An error has occured while accessing the database" ,ex);
             }
-           
+            catch (Exception ex)
+            {
+                throw new Exception("An error has occured while accessing the database", ex);
+            }*/
+
         }
     }
 }

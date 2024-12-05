@@ -1,7 +1,5 @@
-﻿using Fastfood_Kiosk_v2.Configurations;
-using Fastfood_Kiosk_v2.Helpers;
-using Fastfood_Kiosk_v2.Views.AdminViews;
-using MySql.Data.MySqlClient;
+﻿using Fastfood_Kiosk_v2.Helpers;
+using Fastfood_Kiosk_v2.Views.SharedViews;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,32 +9,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-using Dapper;
 
-namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
+namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 {
     public partial class CreateAccountUserControl : UserControl
     {
-       
 
+      
         public CreateAccountUserControl()
         {
             InitializeComponent();
+           
         }
-
-        public void ShowPassword_()
-        {
-            if (ShowPassword.Checked)
-            {
-                CreatePassword.PasswordChar = '\0';
-            }
-            else
-            {
-                CreatePassword.PasswordChar = '●';
-            }
-        }
-
 
         private void CreateAccountButton_Click(object sender, EventArgs e)
         {
@@ -45,7 +29,7 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
             string user_role = CreateUserRole.Text;
 
             PasswordHashing passwordHashing = new PasswordHashing();
-          
+
 
             try
             {
@@ -57,6 +41,9 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
                 string hashedPass = passwordHashing.hashPassword(password);
                 passwordHashing.SaveToDatabase(username, hashedPass, user_role);
                 MessageBox.Show("Account Has Been Creaed");
+                CreateUsername.Clear();
+                CreatePassword.Clear();
+                CreateUserRole.Items.Clear();
 
 
             }
@@ -66,11 +53,26 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
             }
         }
 
-      
-
         private void ShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            ShowPassword_();
+            if (ShowPassword.Checked)
+            {
+                CreatePassword.PasswordChar = '\0';
+            }
+            else
+            {
+                CreatePassword.PasswordChar = '●';
+            }
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            //note d pa nagana
+
+
+
         }
     }
+    
+    
 }

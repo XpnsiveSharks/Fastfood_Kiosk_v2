@@ -20,6 +20,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews
         private readonly ReportsUserControl reportsUserControl = new ReportsUserControl();
         private readonly AdminUserControl adminUserCotrol = new AdminUserControl();
         private readonly SettingsUserControl settingsUserControl = new SettingsUserControl();
+        private readonly CreateAccountUserControl createAccountUserControl = new CreateAccountUserControl();
         public AdminIndexView()
         {
             InitializeComponent();
