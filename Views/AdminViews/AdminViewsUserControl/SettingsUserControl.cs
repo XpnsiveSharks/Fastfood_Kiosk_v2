@@ -1,4 +1,5 @@
-﻿using Fastfood_Kiosk_v2.Configurations;
+﻿using Dapper;
+using Fastfood_Kiosk_v2.Configurations;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
@@ -11,12 +12,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 {
     public partial class SettingsUserControl : UserControl
     {
-       
+        private readonly DatabaseConnection _databaseConnection;
+        private readonly ConfigurationLoader _configurationLoader;
         internal class DataInsert
         {
             public DatabaseConnection _connection;
@@ -41,8 +44,11 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
                         command.Parameters.AddWithValue("@user_role", user_role);
 
                         int rowsAffected = command.ExecuteNonQuery();
+                        MessageBox.Show("Account Has been Created!");
                     }
                 }
+
+            
             }
         }
         
@@ -56,6 +62,8 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
             var configLoader = new ConfigurationLoader();
             var datainserter = new DataInsert(configLoader);
             datainserter.InsertData("users_table", Username_Account.Text, Password_Account.Text, UserRole_Account.Text);
+
+
         }
 
         public void showpasstest()
@@ -83,10 +91,45 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
             showpasstest();
         }
 
+
+        public void RetrieveData()
+        {
+
+            //mali itech
+            //get mo ang username to show sa settings 
+
+            var connetion = _databaseConnection.GetConnection();
+          
+            MySqlCommand command_retrieve = new MySqlCommand("SELECT username, user_role from users_table where password=@password", connetion);
+            MySqlDataReader read_data;
+
+            read_data = command_retrieve.ExecuteReader();
+            if (read_data.Read())
+            {
+                    username_database.Text = read_data["username"].ToString();
+            }
+
+   
+
+        }
+
+
+
+
+
+
+
+
+
         private void ChangePassword_Click(object sender, EventArgs e)
         {
             
 
+        }
+
+        private void username_database_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
