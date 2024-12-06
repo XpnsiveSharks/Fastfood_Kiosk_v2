@@ -58,10 +58,9 @@
             this.HomeButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.HomeButton.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.HomeButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.HomeButton.Location = new System.Drawing.Point(24, 25);
-            this.HomeButton.Margin = new System.Windows.Forms.Padding(2);
+            this.HomeButton.Location = new System.Drawing.Point(36, 38);
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(98, 53);
+            this.HomeButton.Size = new System.Drawing.Size(147, 82);
             this.HomeButton.TabIndex = 9;
             this.HomeButton.Text = "Home";
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click_1);
@@ -84,10 +83,9 @@
             this.AdminButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.AdminButton.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.AdminButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.AdminButton.Location = new System.Drawing.Point(24, 84);
-            this.AdminButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AdminButton.Location = new System.Drawing.Point(36, 129);
             this.AdminButton.Name = "AdminButton";
-            this.AdminButton.Size = new System.Drawing.Size(98, 53);
+            this.AdminButton.Size = new System.Drawing.Size(147, 82);
             this.AdminButton.TabIndex = 10;
             this.AdminButton.Text = "Admin";
             this.AdminButton.Click += new System.EventHandler(this.AdminButton_Click_1);
@@ -110,10 +108,9 @@
             this.OrdersButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.OrdersButton.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.OrdersButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.OrdersButton.Location = new System.Drawing.Point(24, 143);
-            this.OrdersButton.Margin = new System.Windows.Forms.Padding(2);
+            this.OrdersButton.Location = new System.Drawing.Point(36, 220);
             this.OrdersButton.Name = "OrdersButton";
-            this.OrdersButton.Size = new System.Drawing.Size(98, 53);
+            this.OrdersButton.Size = new System.Drawing.Size(147, 82);
             this.OrdersButton.TabIndex = 11;
             this.OrdersButton.Text = "Orders";
             // 
@@ -135,10 +132,9 @@
             this.SalesButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.SalesButton.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.SalesButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.SalesButton.Location = new System.Drawing.Point(24, 202);
-            this.SalesButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SalesButton.Location = new System.Drawing.Point(36, 311);
             this.SalesButton.Name = "SalesButton";
-            this.SalesButton.Size = new System.Drawing.Size(98, 53);
+            this.SalesButton.Size = new System.Drawing.Size(147, 82);
             this.SalesButton.TabIndex = 12;
             this.SalesButton.Text = "Sales";
             this.SalesButton.Click += new System.EventHandler(this.SalesButton_Click);
@@ -161,10 +157,9 @@
             this.ReportsButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.ReportsButton.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.ReportsButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.ReportsButton.Location = new System.Drawing.Point(24, 261);
-            this.ReportsButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ReportsButton.Location = new System.Drawing.Point(36, 402);
             this.ReportsButton.Name = "ReportsButton";
-            this.ReportsButton.Size = new System.Drawing.Size(98, 53);
+            this.ReportsButton.Size = new System.Drawing.Size(147, 82);
             this.ReportsButton.TabIndex = 13;
             this.ReportsButton.Text = "Reports";
             this.ReportsButton.Click += new System.EventHandler(this.ReportsButton_Click);
@@ -187,10 +182,9 @@
             this.SettingsButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.SettingsButton.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.SettingsButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.SettingsButton.Location = new System.Drawing.Point(24, 320);
-            this.SettingsButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SettingsButton.Location = new System.Drawing.Point(36, 492);
             this.SettingsButton.Name = "SettingsButton";
-            this.SettingsButton.Size = new System.Drawing.Size(98, 53);
+            this.SettingsButton.Size = new System.Drawing.Size(147, 82);
             this.SettingsButton.TabIndex = 14;
             this.SettingsButton.Text = "Settings";
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
@@ -213,10 +207,9 @@
             this.ExitButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.ExitButton.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.ExitButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.ExitButton.Location = new System.Drawing.Point(24, 1016);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ExitButton.Location = new System.Drawing.Point(36, 1563);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(76, 53);
+            this.ExitButton.Size = new System.Drawing.Size(114, 82);
             this.ExitButton.TabIndex = 15;
             this.ExitButton.Text = "Exit";
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
@@ -235,28 +228,29 @@
             this.AdminButtonsPanel.Controls.Add(this.SalesButton);
             this.AdminButtonsPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.AdminButtonsPanel.Location = new System.Drawing.Point(0, 0);
+            this.AdminButtonsPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AdminButtonsPanel.Name = "AdminButtonsPanel";
-            this.AdminButtonsPanel.Size = new System.Drawing.Size(153, 1080);
+            this.AdminButtonsPanel.Size = new System.Drawing.Size(230, 1080);
             this.AdminButtonsPanel.TabIndex = 16;
             // 
             // AdminIndexPanel
             // 
             this.AdminIndexPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AdminIndexPanel.Location = new System.Drawing.Point(153, 0);
+            this.AdminIndexPanel.Location = new System.Drawing.Point(230, 0);
+            this.AdminIndexPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AdminIndexPanel.Name = "AdminIndexPanel";
-            this.AdminIndexPanel.Size = new System.Drawing.Size(1767, 1080);
+            this.AdminIndexPanel.Size = new System.Drawing.Size(1690, 1080);
             this.AdminIndexPanel.TabIndex = 17;
             // 
             // AdminIndexView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.AdminIndexPanel);
             this.Controls.Add(this.AdminButtonsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminIndexView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminIndexView";

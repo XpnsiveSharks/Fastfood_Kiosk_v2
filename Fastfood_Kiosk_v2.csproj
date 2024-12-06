@@ -167,6 +167,7 @@
     <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="Services\OrderingService.cs" />
     <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\OrderDetailsViewModel.cs" />
     <Compile Include="ViewModels\ProductViewModel.cs" />
     <Compile Include="Views\AdminViews\AdminIndexView.cs">
       <SubType>Form</SubType>
@@ -203,6 +204,18 @@
     </Compile>
     <Compile Include="Views\AdminViews\AdminViewsUserControl\OrderDetailsUserControl.Designer.cs">
       <DependentUpon>OrderDetailsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminViewsUserControl\PendingOrderListUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminViewsUserControl\PendingOrderListUserControl.Designer.cs">
+      <DependentUpon>PendingOrderListUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminViewsUserControl\PendingOrderUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminViewsUserControl\PendingOrderUserControl.Designer.cs">
+      <DependentUpon>PendingOrderUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Customer\CustomerOrderingComponentsUserControls\ItemUserControl.cs">
       <SubType>UserControl</SubType>
@@ -345,6 +358,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminViews\AdminViewsUserControl\OrderDetailsUserControl.resx">
       <DependentUpon>OrderDetailsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminViews\AdminViewsUserControl\PendingOrderListUserControl.resx">
+      <DependentUpon>PendingOrderListUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminViews\AdminViewsUserControl\PendingOrderUserControl.resx">
+      <DependentUpon>PendingOrderUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Customer\CustomerOrderingComponentsUserControls\ItemUserControl.resx">
       <DependentUpon>ItemUserControl.cs</DependentUpon>
