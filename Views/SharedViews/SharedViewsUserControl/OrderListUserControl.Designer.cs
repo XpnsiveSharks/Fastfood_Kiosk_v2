@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.OrderPriceLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.QuantityTextBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -66,7 +65,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1081, 207);
             this.guna2Panel1.TabIndex = 0;
-       //     this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // OrderPriceLabel
             // 
@@ -245,7 +243,6 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
-
 
         }
 

@@ -13,38 +13,25 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 {
     public partial class InsertMenuUserControl : UserControl
     {
-        /// <summary>
-        /// Delegate for handling Insert Menu User Control click events.
-        /// </summary>
-        public delegate void InsertMenuUserControlClickedEventHandler();
-        /// <summary>
-        /// Event triggered when the Cancel Menu Button is clicked.
-        /// </summary>
-        public event InsertMenuUserControlClickedEventHandler InsertMenuUserControlClicked;
-        public event InsertMenuUserControlClickedEventHandler InsertMenuUserControlGoToMenuListClicked;
-
         private readonly MenuViewModel menuViewModel = new MenuViewModel();
+        public event Action BackToMenuListEventHandler;
 
         public int MenuId { get; set; }
         public bool IsUpdate { get; set; }
         public InsertMenuUserControl()
         {
             InitializeComponent();
-            IfMenuIsUpdating();
-
-
-
             MenuPreviewPictureBox.DataBindings.Add("Image", menuViewModel, nameof(menuViewModel.SelectedMenuImage), true, DataSourceUpdateMode.OnPropertyChanged);
             MenuNameTextBox.DataBindings.Add("Text", menuViewModel, nameof(menuViewModel.MenuName), true, DataSourceUpdateMode.OnPropertyChanged);
         }
-        /// <summary>
-        /// Handles the click event for Cancel Menu Button and triggers the corresponding event.
-        /// </summary>
-        /// <param name="sender">source of the event</param>
-        /// <param name="e">the <see cref="EventArgs"/> instance containing the event data</param>
+        public void InitializeControl()
+        {
+            IfMenuIsUpdating();
+            Console.WriteLine($"{MenuId} {IsUpdate}");
+        }
         private void CancelMenuButton_Click(object sender, EventArgs e)
         {
-            InsertMenuUserControlClicked?.Invoke();
+            BackToMenuListEventHandler?.Invoke();
         }
 
         private void UploadImageMenuButton_Click(object sender, EventArgs e)
@@ -81,8 +68,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
                 menuViewModel.AddingMenu();
                 MessageBox.Show("Category saved successfully");
             }
-
-            InsertMenuUserControlGoToMenuListClicked?.Invoke();
+            BackToMenuListEventHandler?.Invoke();
         }
         private void IfMenuIsUpdating()
         {

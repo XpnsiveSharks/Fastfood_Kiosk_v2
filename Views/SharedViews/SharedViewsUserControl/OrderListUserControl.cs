@@ -121,6 +121,5 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
 
             QuantityChanged?.Invoke(this, EventArgs.Empty);
         }
-
     }
 }

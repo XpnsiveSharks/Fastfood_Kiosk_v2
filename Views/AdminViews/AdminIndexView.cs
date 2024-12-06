@@ -11,107 +11,72 @@ using System.Windows.Forms;
 
 namespace Fastfood_Kiosk_v2.Views.AdminViews
 {
+
     public partial class AdminIndexView : Form
     {
-        private AdminUserControl adminUserControl;
-        private readonly InsertMenuUserControl insertMenuUserControl = new InsertMenuUserControl();
-        private InsertProductUserControl insertProductUserControl = new InsertProductUserControl();
-        private readonly CashierUserControl cashierUserControl = new CashierUserControl();  
-        private readonly ReportsUserControl reportsUserControl = new ReportsUserControl();
-        private readonly AdminUserControl adminUserCotrol = new AdminUserControl();
-        private readonly SettingsUserControl settingsUserControl = new SettingsUserControl();
+        private MenuListUserControl menuListUserControl;
         public AdminIndexView()
         {
             InitializeComponent();
-            LoadInitialUserControl();
-            insertMenuUserControl.InsertMenuUserControlGoToMenuListClicked += LoadInitialUserControl;
-            ChangeUserControl(cashierUserControl);
+            menuListUserControl = new MenuListUserControl();
+            menuListUserControl.AddMenuEventHandler += OnAddMenu;
+            menuListUserControl.UpdateDeleteMenuListEventHandler += OnUpdateMenu; 
 
         }
-        private void TopMostForm()
-        {
-            UpdateDeleteDialogView updateDeleteDialogView = new UpdateDeleteDialogView();
-            updateDeleteDialogView.TopMost = true;
-        }
-        private void LoadInitialUserControl()
-        {
-            adminUserControl = new AdminUserControl();
-            AdminIndexPanel.Controls.Clear();
-            AdminIndexPanel.Controls.Add(adminUserControl);
 
-            adminUserControl.MenuListAdminUserControlClicked += OnMenuListAdminUserControlClicked;
-            adminUserControl.ProductListAdminUserControlClicked += OnProductListAdminUserControlClicked;
-            
-        }
-        private void OnMenuListAdminUserControlClicked()
-        {
-            insertMenuUserControl.InsertMenuUserControlClicked += LoadInitialUserControl;
-            AdminIndexPanel.Controls.Clear();
-            AdminIndexPanel.Controls.Add(insertMenuUserControl);
-        }
-        private void OnProductListAdminUserControlClicked()
-        {
-            //insertProductUserControl.InsertProductUserControlClicked += LoadInitialUserControl;
 
-            AdminIndexPanel.Controls.Clear();
-            AdminIndexPanel.Controls.Add(insertProductUserControl);
-        }
-        private void AdminButton_Click(object sender, EventArgs e)
-        {
-            LoadInitialUserControl();
-        }
-        private void HomeButton_Click(object sender, EventArgs e)
+        private void DashboardButton_Click(object sender, EventArgs e)
         {
             
         }
+        private void MenuButton_Click(object sender, EventArgs e)
+        {
+            LoadUserControl(menuListUserControl);
+        }
 
-        private void AdminIndexView_Load(object sender, EventArgs e)
+        private void ProductButton_Click(object sender, EventArgs e)
+        {
+            var productList = new ProductListUserControl();
+            LoadUserControl(productList);
+        }
+
+        private void StaffButton_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void SalesButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ReportsButton_Click(object sender, EventArgs e)
-        {
-            AdminIndexPanel.Controls.Clear();
-            AdminIndexPanel.Controls.Add(reportsUserControl);
-        }
-
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-            AdminIndexPanel.Controls.Clear();
-            AdminIndexPanel.Controls.Add(settingsUserControl);
-        }
-
-        private void HomeButton_Click_1(object sender, EventArgs e)
-        {
-            ChangeUserControl(cashierUserControl);
 
         }
+        private void OnReloadMenu()
+        {
+            menuListUserControl.ReloadMenus();
+            LoadUserControl(menuListUserControl);
+        }
+        private void OnAddMenu()
+        {
+            var insertMenuUserControl = new InsertMenuUserControl();
+            insertMenuUserControl.BackToMenuListEventHandler += OnReloadMenu;
+            LoadUserControl(insertMenuUserControl);
+        }
+        private void OnUpdateMenu(int menuId)
+        {
+            var insertMenuUserControl = new InsertMenuUserControl
+            {
+                MenuId = menuId,
+                IsUpdate = true
+            };
+            insertMenuUserControl.InitializeControl();
 
-        public void ChangeUserControl(UserControl userControl)
+            insertMenuUserControl.BackToMenuListEventHandler += OnReloadMenu;
+            LoadUserControl(insertMenuUserControl);
+        }
+
+        private void LoadUserControl(UserControl userControl)
         {
             AdminIndexPanel.Controls.Clear();
+            userControl.Dock = DockStyle.Fill;
             AdminIndexPanel.Controls.Add(userControl);
-        }
-
-        private void AdminButton_Click_1(object sender, EventArgs e)
-        {
-            ChangeUserControl(adminUserCotrol);
-        }
-
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-            var result = MessageBox.Show("Are you sure you want to exit?", "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question); 
-            
-            if (result == DialogResult.Yes) 
-            { 
-                this.Close(); 
-            }
         }
     }
 }
