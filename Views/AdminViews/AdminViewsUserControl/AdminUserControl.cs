@@ -82,5 +82,10 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
             AdminFlowLayoutPanel.Controls.Clear();
             AdminFlowLayoutPanel.Controls.Add(userControl);
         }
+
+        private void AdminFlowLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

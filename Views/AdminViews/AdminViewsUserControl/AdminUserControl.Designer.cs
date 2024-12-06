@@ -47,6 +47,7 @@
             this.AdminFlowLayoutPanel.Name = "AdminFlowLayoutPanel";
             this.AdminFlowLayoutPanel.Size = new System.Drawing.Size(1354, 1080);
             this.AdminFlowLayoutPanel.TabIndex = 2;
+            this.AdminFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AdminFlowLayoutPanel_Paint);
             // 
             // guna2Panel1
             // 
