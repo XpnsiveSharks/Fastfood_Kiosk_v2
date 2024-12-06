@@ -23,6 +23,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
         
         private readonly CreateAccountUserControl createAccountUserControl = new CreateAccountUserControl();
         private readonly UpdateAccountUserControl updateAccountUserControl = new UpdateAccountUserControl();
+        private readonly DeleteAccountUserControl deleteAccountUserControl = new DeleteAccountUserControl();
         public SettingsUserControl()
         {
             InitializeComponent();
@@ -39,6 +40,12 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
         {
             SettingsIndexPanel.Controls.Clear();
             SettingsIndexPanel.Controls.Add(updateAccountUserControl);
+        }
+
+        private void DeleteAccount_Click(object sender, EventArgs e)
+        {
+            SettingsIndexPanel.Controls.Clear();
+            SettingsIndexPanel.Controls.Add(deleteAccountUserControl);
         }
     }
 }

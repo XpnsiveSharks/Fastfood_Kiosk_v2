@@ -1,4 +1,5 @@
 ﻿using Fastfood_Kiosk_v2.Helpers;
+using Fastfood_Kiosk_v2.Models;
 using Fastfood_Kiosk_v2.Views.SharedViews;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 {
     public partial class CreateAccountUserControl : UserControl
     {
-
+        private readonly Users users = new Users();
       
         public CreateAccountUserControl()
         {
@@ -24,12 +25,12 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 
         private void CreateAccountButton_Click(object sender, EventArgs e)
         {
-            string username = CreateUsername.Text;
+            
+            string  username = CreateUsername.Text;
             string password = CreatePassword.Text;
             string user_role = CreateUserRole.Text;
-
+            
             PasswordHashing passwordHashing = new PasswordHashing();
-
 
             try
             {
@@ -38,14 +39,12 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
                     MessageBox.Show("Username and Password cannot be empty.");
                     return;
                 }
-                string hashedPass = passwordHashing.hashPassword(password);
-                passwordHashing.SaveToDatabase(username, hashedPass, user_role);
+                string hashedpassword = passwordHashing.hashPassword(password);
+                passwordHashing.SaveToDatabase(username, hashedpassword, user_role);
                 MessageBox.Show("Account Has Been Creaed");
                 CreateUsername.Clear();
                 CreatePassword.Clear();
                 CreateUserRole.Items.Clear();
-
-
             }
             catch (Exception ex)
             {
