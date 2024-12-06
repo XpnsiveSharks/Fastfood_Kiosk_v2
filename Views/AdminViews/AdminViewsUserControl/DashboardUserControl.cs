@@ -1,4 +1,5 @@
-﻿using LiveCharts;
+﻿using Fastfood_Kiosk_v2.Helpers;
+using LiveCharts;
 using LiveCharts.Wpf;
 using System;
 using System.Collections.Generic;
@@ -15,26 +16,51 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 {
     public partial class DashboardUserControl : UserControl
     {
+        SalesData salesData = new SalesData();
         public DashboardUserControl()
         {
             InitializeComponent();
+            LoadData();
+           
         }
+        private void LoadChart()
+        {
+            var dailySales = salesData.GetSalesData();
+            pieChart.Series.Clear();
+            foreach (var sale in dailySales)
+            {
+                pieChart.Series.Add(new PieSeries
+                {
+                    Title = sale.OrderDate.ToShortDateString(),
+                    Values = new ChartValues<int> { sale.OrderCount },
+                    DataLabels = true,
+                    LabelPoint = chartPoint => $"{chartPoint.Y} Orders ({chartPoint.Participation:P})"
+                });
+            }
+            pieChart.LegendLocation = LegendLocation.Bottom;
+        }   
+        private void LoadDataGridView(List<SalesData> dailySales)
+        {
+            OrderDataGridView.DataSource = null;
+            OrderDataGridView.DataSource = dailySales;
+        }
+        private void LoadData()
+        {
+            var dailySales = salesData.GetSalesData();
+            LoadChart();
+            LoadDataGridView(dailySales);
+        }
+        private void LoadButton_Click(object sender, EventArgs e)
+        {
+            LoadChart();
+        }
+
+
 
         private void DashboardUserControl_Load(object sender, EventArgs e)
         {
-            pieChart.LegendLocation = LegendLocation.Bottom;
+
         }
-
-        Func<ChartPoint, string> labelPoint = chartpoint => string.Format("{0} ({1:P)", chartpoint.Y, chartpoint.Participation);
-
-        private void LoadButton_Click(object sender, EventArgs e)
-        {
-            SeriesCollection series = new SeriesCollection();
-            foreach (var obj in orderDataSet.OrderDataTable)
-                series.Add(new PieSeries() { Title = obj.Date.ToString(), Values = new ChartValues<int> { obj.Total_Sales }, DataLabels = true, LabelPoint = labelPoint });
-            pieChart.Series = series;
-        }
-
         private void OrderDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

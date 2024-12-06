@@ -159,6 +159,7 @@
     <Compile Include="Configurations\ConfigurationLoader.cs" />
     <Compile Include="Configurations\DatabaseConnection.cs" />
     <Compile Include="Helpers\PasswordHashing.cs" />
+    <Compile Include="Helpers\SalesData.cs" />
     <Compile Include="Helpers\ValidateCredentials.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Menus.cs" />
