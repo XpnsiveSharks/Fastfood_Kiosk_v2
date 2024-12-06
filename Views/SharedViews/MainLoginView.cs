@@ -38,7 +38,7 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews
 
         private void AdminLoginButton_Click(object sender, EventArgs e)
         {
-            ShowLoginUserControl(new SharedViewsUserControl.AdminLoginUserControl());
+            ShowLoginUserControl(new SharedViewsUserControl.AdminLoginUserControl("Admin"));
         }
 
         private void StaffLoginButton_Click(object sender, EventArgs e)

@@ -14,10 +14,14 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
 {
     public partial class AdminLoginUserControl : UserControl
     {
-        public AdminLoginUserControl()
+        public string UserRole {  get; set; }
+        ValidateCredentials validateCreds = new ValidateCredentials();
+        public AdminLoginUserControl(string userRole)
         {
             InitializeComponent();
+            UserRole = userRole;
         }
+
 
         private void BackButton_Click(object sender, EventArgs e)
         {
@@ -29,22 +33,21 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
 
         private void AdminLoginButton_Click(object sender, EventArgs e)
         {
-            PasswordHashing passwordHashing = new PasswordHashing();
-
             try
             {
                 string username = AdminUsernameTextBox.Text;
-                string pasword = AdminPasswordTextBox.Text;
+                string password = AdminPasswordTextBox.Text;                
 
-                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(pasword))
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
                     MessageBox.Show("Username and Password cannot be empty.");
                     return;
                 }
-                string hashedPass = passwordHashing.hashPassword(pasword);
-                passwordHashing.SaveToDatabase(username, hashedPass);
-                AdminIndexView adminIndexView = new AdminIndexView();
-                adminIndexView.Show();
+                if (validateCreds.validateCredentials(username, password, UserRole))
+                {
+                    AdminIndexView adminIndexView = new AdminIndexView();
+                    adminIndexView.Show();
+                }
 
             }
             catch (Exception ex)
@@ -54,3 +57,25 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
         }
     }
 }
+
+
+/*try
+{
+    string username = AdminUsernameTextBox.Text;
+    string password = AdminPasswordTextBox.Text;
+
+    if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+    {
+        MessageBox.Show("Username and Password cannot be empty.");
+        return;
+    }
+    string hashedPass = passwordHashing.hashPassword(password);
+    passwordHashing.SaveToDatabase(username, hashedPass);
+    AdminIndexView adminIndexView = new AdminIndexView();
+    adminIndexView.Show();
+
+}
+catch (Exception ex)
+{
+    throw new Exception("An error has occured while accessing the database", ex);
+}*/

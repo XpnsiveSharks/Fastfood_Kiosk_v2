@@ -1,5 +1,6 @@
 ﻿using Fastfood_Kiosk_v2.Helpers;
 using Fastfood_Kiosk_v2.Views.AdminViews;
+using Fastfood_Kiosk_v2.Views.Customer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,12 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
 {
     public partial class StaffLoginUserControl : UserControl
     {
-        public StaffLoginUserControl()
+        public string UserRole { get; set; }
+        ValidateCredentials validateCreds = new ValidateCredentials();
+        public StaffLoginUserControl(string userRole)
         {
             InitializeComponent();
+            UserRole = userRole;    
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -29,22 +33,21 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
 
         private void StaffLoginButton_Click(object sender, EventArgs e)
         {
-            PasswordHashing passwordHashing = new PasswordHashing();
-
             try
             {
                 string username = StaffUsernameTextBox.Text;
-                string pasword = StaffPasswordTextBox.Text;
+                string password = StaffPasswordTextBox.Text;
 
-                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(pasword))
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
                     MessageBox.Show("Username and Password cannot be empty.");
                     return;
                 }
-                string hashedPass = passwordHashing.hashPassword(pasword);
-                passwordHashing.SaveToDatabase(username, hashedPass);
-                AdminIndexView adminIndexView = new AdminIndexView();
-                adminIndexView.Show();
+                if (validateCreds.validateCredentials(username, password, UserRole))
+                {
+                    CustomerMainFrameView customerMainFrameView = new CustomerMainFrameView();
+                    customerMainFrameView.Show();
+                }
 
             }
             catch (Exception ex)
