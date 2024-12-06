@@ -31,13 +31,11 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
             if (string.IsNullOrEmpty(currentPassword) || string.IsNullOrEmpty(newPassword) || string.IsNullOrEmpty(confirmPassword))
             {
                 MessageBox.Show("All fields are required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
             }
 
             if (newPassword != confirmPassword)
             {
                 MessageBox.Show("New password and confirmation password do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
             }
 
             bool isUpdated = adminrepository.UpdateAdmin(currentPassword,newPassword);
