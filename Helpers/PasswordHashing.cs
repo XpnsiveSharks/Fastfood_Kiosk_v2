@@ -1,12 +1,17 @@
-﻿using Dapper;
-using Fastfood_Kiosk_v2.Configurations;
+
+﻿using Fastfood_Kiosk_v2.Views.AdminViews;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Windows.Forms;
+using Fastfood_Kiosk_v2.Configurations;
+using System.Security.Cryptography;
+using System.Data.SqlClient;
+using Dapper;
+
 
 namespace Fastfood_Kiosk_v2.Helpers
 {
@@ -27,7 +32,8 @@ namespace Fastfood_Kiosk_v2.Helpers
             using (SHA256 sha256 = SHA256.Create())
             {
                 byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                StringBuilder stringBuilder = new StringBuilder();  
+
+                StringBuilder stringBuilder = new StringBuilder();
 
                 foreach (byte b in bytes)
                 {
@@ -37,18 +43,24 @@ namespace Fastfood_Kiosk_v2.Helpers
             }
         }
 
-        public void SaveToDatabase(string username, string passwordHash)
+
+        public void SaveToDatabase(string username, string passwordHash, string user_role)
         {
 
             using (var connection = _databaseConnection.GetConnection())
             {
-                string query = "INSERT INTO users_table (Username, Password) VALUES (@username, @password)";
+
+                string query = "INSERT INTO users_table (Username, Password, User_Role) VALUES (@username, @password, @user_role)";
                 connection.Execute(query, new
                 {
                     @username = username,
-                    @password = passwordHash
-                });
+                    @password = passwordHash,
+                    @user_role = user_role
+                }) ;
+
             }
-        }            
+        }
+
+
     }
 }

@@ -112,12 +112,12 @@ namespace Fastfood_Kiosk_v2.Views.Customer
         public string GenerateReceiptContentForCashPayment()
         {
             StringBuilder receiptContent = new StringBuilder();
-            receiptContent.AppendLine("Receipt for Order");
-            receiptContent.AppendLine("-------------------------");
+            receiptContent.AppendLine("             Receipt for Order                  ");
+            receiptContent.AppendLine("----------------------------------------------\n");
             receiptContent.AppendLine($"customer number: {customerNumber}");
-            receiptContent.AppendLine("-------------------------");
+            receiptContent.AppendLine("----------------------------------------------");
             receiptContent.AppendLine($"order number: {orderNumber}");
-            receiptContent.AppendLine("-------------------------");
+            receiptContent.AppendLine("----------------------------------------------");
             receiptContent.AppendLine($"order number: {dateAndTime}");
             return receiptContent.ToString();
         }
@@ -126,9 +126,9 @@ namespace Fastfood_Kiosk_v2.Views.Customer
             StringBuilder receiptContent = new StringBuilder();
             double totalAmount = 0;
             receiptContent.AppendLine(dateAndTime);
-            receiptContent.AppendLine("-------------------------");
-            receiptContent.AppendLine("Receipt for Order");
-            receiptContent.AppendLine("-------------------------");
+            receiptContent.AppendLine("----------------------------------------------");
+            receiptContent.AppendLine("              Receipt for Order               ");
+            receiptContent.AppendLine("----------------------------------------------\n");
 
             foreach (var item in orderItems)
             {
@@ -136,17 +136,16 @@ namespace Fastfood_Kiosk_v2.Views.Customer
                 totalAmount += item.TotalPrice; 
             }
 
-            receiptContent.AppendLine("-------------------------");
+            receiptContent.AppendLine("\n--------------------------------------------");
             receiptContent.AppendLine($"Total: ${totalAmount}");
-
             receiptContent.AppendLine($"Payment Method: {paymentMethod}");
-            receiptContent.AppendLine("-------------------------");
+            receiptContent.AppendLine("----------------------------------------------\n");
 
             receiptContent.AppendLine($"order number: {orderNumber}");
 
-            receiptContent.AppendLine("-------------------------");
-            receiptContent.AppendLine("Thank you for your purchase!");
-
+            receiptContent.AppendLine("----------------------------------------------");
+            receiptContent.AppendLine("      Thank you for your purchase!            ");
+            
             return receiptContent.ToString();
         }
         public void PrintReceipt(string receiptContent)
