@@ -14,10 +14,12 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
     public partial class DeleteAccountUserControl : UserControl
     {
         private readonly UsersRepository usersRepository = new UsersRepository();
+      
 
         public DeleteAccountUserControl()
         {
             InitializeComponent();
+
         }
 
         private void DeleteAccount_Click(object sender, EventArgs e)
@@ -46,7 +48,10 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 
                     if (isDeleted)
                     {
+
                         MessageBox.Show("Account deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        SettingsUserControl settings = new SettingsUserControl();
+                        settings.Show();
                     }
                     else
                     {
@@ -58,6 +63,23 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
                     MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void ShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ShowPassword.Checked)
+            {
+                DeletePassword.PasswordChar = '\0';
+            }
+            else
+            {
+                DeletePassword.PasswordChar = '●';
+            }
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+        
         }
     }
 }

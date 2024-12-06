@@ -38,6 +38,7 @@
             this.UpdateAccount = new Guna.UI2.WinForms.Guna2TileButton();
             this.ShowNewPassword = new Guna.UI2.WinForms.Guna2CheckBox();
             this.ShowConfirmPassword = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.BackButton = new Guna.UI2.WinForms.Guna2TileButton();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -222,10 +223,32 @@
             this.ShowConfirmPassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.ShowConfirmPassword.CheckedChanged += new System.EventHandler(this.ShowCurrentPassword_CheckedChanged);
             // 
+            // BackButton
+            // 
+            this.BackButton.BorderColor = System.Drawing.Color.Transparent;
+            this.BackButton.BorderRadius = 20;
+            this.BackButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BackButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BackButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BackButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BackButton.FillColor = System.Drawing.Color.Transparent;
+            this.BackButton.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.BackButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.BackButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.BackButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.BackButton.Location = new System.Drawing.Point(552, 486);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(2);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(117, 52);
+            this.BackButton.TabIndex = 49;
+            this.BackButton.Text = "back";
+            // 
             // UpdateAccountUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.ShowConfirmPassword);
             this.Controls.Add(this.ShowNewPassword);
             this.Controls.Add(guna2HtmlLabel4);
@@ -251,5 +274,6 @@
         private Guna.UI2.WinForms.Guna2TextBox ConfirmPassword;
         private Guna.UI2.WinForms.Guna2CheckBox ShowNewPassword;
         private Guna.UI2.WinForms.Guna2CheckBox ShowConfirmPassword;
+        private Guna.UI2.WinForms.Guna2TileButton BackButton;
     }
 }

@@ -24,10 +24,16 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
         private readonly CreateAccountUserControl createAccountUserControl = new CreateAccountUserControl();
         private readonly UpdateAccountUserControl updateAccountUserControl = new UpdateAccountUserControl();
         private readonly DeleteAccountUserControl deleteAccountUserControl = new DeleteAccountUserControl();
+
+        public string username { get; set; }
+        
         public SettingsUserControl()
         {
             InitializeComponent();
+            username = CurrentUsernameSettings.Text;
         }
+
+        
 
         private void CreateAccount_Click(object sender, EventArgs e)
         {

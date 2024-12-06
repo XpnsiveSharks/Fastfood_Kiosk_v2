@@ -33,8 +33,19 @@
             this.DeletePassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.BackButton = new Guna.UI2.WinForms.Guna2TileButton();
             this.DeleteAccount = new Guna.UI2.WinForms.Guna2TileButton();
+            this.ShowPassword = new Guna.UI2.WinForms.Guna2CheckBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SuspendLayout();
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            guna2HtmlLabel1.Location = new System.Drawing.Point(68, 54);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new System.Drawing.Size(186, 27);
+            guna2HtmlLabel1.TabIndex = 42;
+            guna2HtmlLabel1.Text = "DELETE ACCOUNT";
             // 
             // DeleteUsername
             // 
@@ -51,13 +62,13 @@
             this.DeleteUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.DeleteUsername.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.DeleteUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.DeleteUsername.Location = new System.Drawing.Point(91, 160);
-            this.DeleteUsername.Margin = new System.Windows.Forms.Padding(5);
+            this.DeleteUsername.Location = new System.Drawing.Point(68, 130);
+            this.DeleteUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DeleteUsername.Name = "DeleteUsername";
             this.DeleteUsername.PasswordChar = '\0';
             this.DeleteUsername.PlaceholderText = "Username";
             this.DeleteUsername.SelectedText = "";
-            this.DeleteUsername.Size = new System.Drawing.Size(441, 55);
+            this.DeleteUsername.Size = new System.Drawing.Size(331, 45);
             this.DeleteUsername.TabIndex = 46;
             this.DeleteUsername.TextOffset = new System.Drawing.Point(8, 0);
             // 
@@ -76,26 +87,15 @@
             this.DeletePassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.DeletePassword.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.DeletePassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.DeletePassword.Location = new System.Drawing.Point(91, 252);
-            this.DeletePassword.Margin = new System.Windows.Forms.Padding(5);
+            this.DeletePassword.Location = new System.Drawing.Point(68, 205);
+            this.DeletePassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DeletePassword.Name = "DeletePassword";
             this.DeletePassword.PasswordChar = '●';
             this.DeletePassword.PlaceholderText = "Password";
             this.DeletePassword.SelectedText = "";
-            this.DeletePassword.Size = new System.Drawing.Size(441, 55);
+            this.DeletePassword.Size = new System.Drawing.Size(331, 45);
             this.DeletePassword.TabIndex = 45;
             this.DeletePassword.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // guna2HtmlLabel1
-            // 
-            guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            guna2HtmlLabel1.Location = new System.Drawing.Point(91, 66);
-            guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new System.Drawing.Size(231, 31);
-            guna2HtmlLabel1.TabIndex = 42;
-            guna2HtmlLabel1.Text = "DELETE ACCOUNT";
             // 
             // BackButton
             // 
@@ -111,12 +111,13 @@
             this.BackButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.BackButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.BackButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.BackButton.Location = new System.Drawing.Point(231, 429);
-            this.BackButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BackButton.Location = new System.Drawing.Point(173, 384);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(156, 64);
+            this.BackButton.Size = new System.Drawing.Size(117, 52);
             this.BackButton.TabIndex = 48;
             this.BackButton.Text = "back";
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // DeleteAccount
             // 
@@ -133,25 +134,47 @@
             this.DeleteAccount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.DeleteAccount.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.DeleteAccount.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.DeleteAccount.Location = new System.Drawing.Point(91, 361);
-            this.DeleteAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteAccount.Location = new System.Drawing.Point(68, 328);
+            this.DeleteAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DeleteAccount.Name = "DeleteAccount";
-            this.DeleteAccount.Size = new System.Drawing.Size(441, 64);
+            this.DeleteAccount.Size = new System.Drawing.Size(331, 52);
             this.DeleteAccount.TabIndex = 47;
             this.DeleteAccount.Text = "Delete Account";
             this.DeleteAccount.Click += new System.EventHandler(this.DeleteAccount_Click);
             // 
+            // ShowPassword
+            // 
+            this.ShowPassword.AutoSize = true;
+            this.ShowPassword.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ShowPassword.CheckedState.BorderRadius = 0;
+            this.ShowPassword.CheckedState.BorderThickness = 0;
+            this.ShowPassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.ShowPassword.Location = new System.Drawing.Point(297, 268);
+            this.ShowPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.ShowPassword.Name = "ShowPassword";
+            this.ShowPassword.Size = new System.Drawing.Size(102, 17);
+            this.ShowPassword.TabIndex = 49;
+            this.ShowPassword.Text = "Show Password";
+            this.ShowPassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.ShowPassword.UncheckedState.BorderRadius = 0;
+            this.ShowPassword.UncheckedState.BorderThickness = 0;
+            this.ShowPassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.ShowPassword.CheckedChanged += new System.EventHandler(this.ShowPassword_CheckedChanged);
+            // 
             // DeleteAccountUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.ShowPassword);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.DeleteAccount);
             this.Controls.Add(this.DeleteUsername);
             this.Controls.Add(this.DeletePassword);
             this.Controls.Add(guna2HtmlLabel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DeleteAccountUserControl";
-            this.Size = new System.Drawing.Size(623, 598);
+            this.Size = new System.Drawing.Size(467, 486);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,5 +186,6 @@
         private Guna.UI2.WinForms.Guna2TextBox DeletePassword;
         private Guna.UI2.WinForms.Guna2TileButton BackButton;
         private Guna.UI2.WinForms.Guna2TileButton DeleteAccount;
+        private Guna.UI2.WinForms.Guna2CheckBox ShowPassword;
     }
 }

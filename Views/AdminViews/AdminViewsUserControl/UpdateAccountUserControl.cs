@@ -55,29 +55,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
             }
 
 
-
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         private void ShowNewPassword_CheckedChanged(object sender, EventArgs e)

@@ -41,10 +41,10 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
                 }
                 string hashedpassword = passwordHashing.hashPassword(password);
                 passwordHashing.SaveToDatabase(username, hashedpassword, user_role);
-                MessageBox.Show("Account Has Been Creaed");
+                MessageBox.Show("Account Has Been Created");
                 CreateUsername.Clear();
                 CreatePassword.Clear();
-                CreateUserRole.Items.Clear();
+               
             }
             catch (Exception ex)
             {
@@ -66,7 +66,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            //note d pa nagana
+          
 
 
 
