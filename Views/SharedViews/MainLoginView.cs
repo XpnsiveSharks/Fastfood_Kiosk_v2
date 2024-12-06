@@ -53,7 +53,7 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews
 
         private void CreateAccount_Click(object sender, EventArgs e)
         {
-            ShowLoginUserControl(new SharedViewsUserControl.CreateAccountUserControl());
+            //ShowLoginUserControl(new SharedViewsUserControl.CreateAccountUserControl());
         }
     }
 }
