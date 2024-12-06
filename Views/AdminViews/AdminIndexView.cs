@@ -111,5 +111,10 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews
                 this.Close(); 
             }
         }
+
+        private void OrdersButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -12,7 +12,9 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
 {
     public partial class CustomerLoginUserControl : UserControl
     {
-        public CustomerLoginUserControl()
+        public string UserRole { get; set; }
+
+        public CustomerLoginUserControl(string userRole)
         {
             InitializeComponent();
             UserRole = userRole;
