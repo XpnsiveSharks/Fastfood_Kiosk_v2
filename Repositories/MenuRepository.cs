@@ -1,7 +1,6 @@
 ﻿using Dapper;
 using Fastfood_Kiosk_v2.Configurations;
 using Fastfood_Kiosk_v2.Models;
-using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;

@@ -30,20 +30,21 @@
         {
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.ProductNameLabel = new System.Windows.Forms.Label();
-            this.MenuPreviewPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.ProductPriceTextBox = new System.Windows.Forms.Label();
+            this.SizeLabel = new System.Windows.Forms.Label();
+            this.ProductNameTextBox = new System.Windows.Forms.Label();
+            this.ProductPreviewPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.CancelMenuButton = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.MenuNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.ProductDescriptionTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.SaveMenuButton = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.UploadImageMenuButton = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.ProductDetailsLabel = new System.Windows.Forms.Label();
-            this.SizeLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.ProductMenuComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MenuPreviewPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductPreviewPictureBox)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,14 +66,15 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
+            this.guna2Panel2.Controls.Add(this.ProductMenuComboBox);
             this.guna2Panel2.Controls.Add(this.guna2TextBox2);
             this.guna2Panel2.Controls.Add(this.guna2TextBox1);
-            this.guna2Panel2.Controls.Add(this.label1);
+            this.guna2Panel2.Controls.Add(this.ProductPriceTextBox);
             this.guna2Panel2.Controls.Add(this.SizeLabel);
-            this.guna2Panel2.Controls.Add(this.ProductNameLabel);
-            this.guna2Panel2.Controls.Add(this.MenuPreviewPictureBox);
+            this.guna2Panel2.Controls.Add(this.ProductNameTextBox);
+            this.guna2Panel2.Controls.Add(this.ProductPreviewPictureBox);
             this.guna2Panel2.Controls.Add(this.CancelMenuButton);
-            this.guna2Panel2.Controls.Add(this.MenuNameTextBox);
+            this.guna2Panel2.Controls.Add(this.ProductDescriptionTextBox);
             this.guna2Panel2.Controls.Add(this.SaveMenuButton);
             this.guna2Panel2.Controls.Add(this.UploadImageMenuButton);
             this.guna2Panel2.Location = new System.Drawing.Point(100, 190);
@@ -80,28 +82,95 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1150, 700);
             this.guna2Panel2.TabIndex = 10;
             // 
-            // ProductNameLabel
+            // guna2TextBox2
             // 
-            this.ProductNameLabel.AutoSize = true;
-            this.ProductNameLabel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.ProductNameLabel.Location = new System.Drawing.Point(85, 128);
-            this.ProductNameLabel.Name = "ProductNameLabel";
-            this.ProductNameLabel.Size = new System.Drawing.Size(221, 34);
-            this.ProductNameLabel.TabIndex = 8;
-            this.ProductNameLabel.Text = "Product Name:";
+            this.guna2TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.guna2TextBox2.BorderRadius = 18;
+            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox2.DefaultText = "Php. 100";
+            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.Location = new System.Drawing.Point(590, 176);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox2.Name = "guna2TextBox2";
+            this.guna2TextBox2.PasswordChar = '\0';
+            this.guna2TextBox2.PlaceholderText = "";
+            this.guna2TextBox2.SelectedText = "";
+            this.guna2TextBox2.Size = new System.Drawing.Size(112, 44);
+            this.guna2TextBox2.TabIndex = 12;
+            this.guna2TextBox2.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             // 
-            // MenuPreviewPictureBox
+            // guna2TextBox1
             // 
-            this.MenuPreviewPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.MenuPreviewPictureBox.BorderRadius = 30;
-            this.MenuPreviewPictureBox.ImageRotate = 0F;
-            this.MenuPreviewPictureBox.Location = new System.Drawing.Point(733, 128);
-            this.MenuPreviewPictureBox.Name = "MenuPreviewPictureBox";
-            this.MenuPreviewPictureBox.Size = new System.Drawing.Size(319, 275);
-            this.MenuPreviewPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.MenuPreviewPictureBox.TabIndex = 0;
-            this.MenuPreviewPictureBox.TabStop = false;
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.guna2TextBox1.BorderRadius = 18;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "123";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Location = new System.Drawing.Point(400, 176);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(112, 44);
+            this.guna2TextBox1.TabIndex = 11;
+            // 
+            // ProductPriceTextBox
+            // 
+            this.ProductPriceTextBox.AutoSize = true;
+            this.ProductPriceTextBox.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductPriceTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.ProductPriceTextBox.Location = new System.Drawing.Point(584, 128);
+            this.ProductPriceTextBox.Name = "ProductPriceTextBox";
+            this.ProductPriceTextBox.Size = new System.Drawing.Size(83, 34);
+            this.ProductPriceTextBox.TabIndex = 10;
+            this.ProductPriceTextBox.Text = "Price";
+            // 
+            // SizeLabel
+            // 
+            this.SizeLabel.AutoSize = true;
+            this.SizeLabel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SizeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.SizeLabel.Location = new System.Drawing.Point(403, 128);
+            this.SizeLabel.Name = "SizeLabel";
+            this.SizeLabel.Size = new System.Drawing.Size(66, 34);
+            this.SizeLabel.TabIndex = 9;
+            this.SizeLabel.Text = "Size";
+            // 
+            // ProductNameTextBox
+            // 
+            this.ProductNameTextBox.AutoSize = true;
+            this.ProductNameTextBox.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.ProductNameTextBox.Location = new System.Drawing.Point(85, 128);
+            this.ProductNameTextBox.Name = "ProductNameTextBox";
+            this.ProductNameTextBox.Size = new System.Drawing.Size(221, 34);
+            this.ProductNameTextBox.TabIndex = 8;
+            this.ProductNameTextBox.Text = "Product Name:";
+            // 
+            // ProductPreviewPictureBox
+            // 
+            this.ProductPreviewPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.ProductPreviewPictureBox.BorderRadius = 30;
+            this.ProductPreviewPictureBox.ImageRotate = 0F;
+            this.ProductPreviewPictureBox.Location = new System.Drawing.Point(733, 128);
+            this.ProductPreviewPictureBox.Name = "ProductPreviewPictureBox";
+            this.ProductPreviewPictureBox.Size = new System.Drawing.Size(319, 275);
+            this.ProductPreviewPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ProductPreviewPictureBox.TabIndex = 0;
+            this.ProductPreviewPictureBox.TabStop = false;
             // 
             // CancelMenuButton
             // 
@@ -122,27 +191,27 @@
             this.CancelMenuButton.TabIndex = 7;
             this.CancelMenuButton.Text = "Cancel";
             // 
-            // MenuNameTextBox
+            // ProductDescriptionTextBox
             // 
-            this.MenuNameTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.MenuNameTextBox.BorderRadius = 18;
-            this.MenuNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.MenuNameTextBox.DefaultText = "             Enter product name";
-            this.MenuNameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.MenuNameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.MenuNameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.MenuNameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.MenuNameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.MenuNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.MenuNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.MenuNameTextBox.Location = new System.Drawing.Point(91, 176);
-            this.MenuNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MenuNameTextBox.Name = "MenuNameTextBox";
-            this.MenuNameTextBox.PasswordChar = '\0';
-            this.MenuNameTextBox.PlaceholderText = "";
-            this.MenuNameTextBox.SelectedText = "";
-            this.MenuNameTextBox.Size = new System.Drawing.Size(250, 44);
-            this.MenuNameTextBox.TabIndex = 1;
+            this.ProductDescriptionTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.ProductDescriptionTextBox.BorderRadius = 18;
+            this.ProductDescriptionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ProductDescriptionTextBox.DefaultText = "             Enter product name";
+            this.ProductDescriptionTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.ProductDescriptionTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.ProductDescriptionTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ProductDescriptionTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ProductDescriptionTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ProductDescriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ProductDescriptionTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ProductDescriptionTextBox.Location = new System.Drawing.Point(91, 176);
+            this.ProductDescriptionTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ProductDescriptionTextBox.Name = "ProductDescriptionTextBox";
+            this.ProductDescriptionTextBox.PasswordChar = '\0';
+            this.ProductDescriptionTextBox.PlaceholderText = "";
+            this.ProductDescriptionTextBox.SelectedText = "";
+            this.ProductDescriptionTextBox.Size = new System.Drawing.Size(250, 44);
+            this.ProductDescriptionTextBox.TabIndex = 1;
             // 
             // SaveMenuButton
             // 
@@ -202,72 +271,20 @@
             this.ProductDetailsLabel.TabIndex = 9;
             this.ProductDetailsLabel.Text = "Product Details";
             // 
-            // SizeLabel
+            // ProductMenuComboBox
             // 
-            this.SizeLabel.AutoSize = true;
-            this.SizeLabel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SizeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.SizeLabel.Location = new System.Drawing.Point(403, 128);
-            this.SizeLabel.Name = "SizeLabel";
-            this.SizeLabel.Size = new System.Drawing.Size(66, 34);
-            this.SizeLabel.TabIndex = 9;
-            this.SizeLabel.Text = "Size";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.label1.Location = new System.Drawing.Point(584, 128);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 34);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Size";
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.guna2TextBox1.BorderRadius = 18;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "123";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(400, 176);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(112, 44);
-            this.guna2TextBox1.TabIndex = 11;
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.guna2TextBox2.BorderRadius = 18;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "Php. 100";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(590, 176);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(112, 44);
-            this.guna2TextBox2.TabIndex = 12;
-            this.guna2TextBox2.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
+            this.ProductMenuComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.ProductMenuComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ProductMenuComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ProductMenuComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ProductMenuComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ProductMenuComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.ProductMenuComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.ProductMenuComboBox.ItemHeight = 30;
+            this.ProductMenuComboBox.Location = new System.Drawing.Point(409, 293);
+            this.ProductMenuComboBox.Name = "ProductMenuComboBox";
+            this.ProductMenuComboBox.Size = new System.Drawing.Size(267, 36);
+            this.ProductMenuComboBox.TabIndex = 13;
             // 
             // InsertProductUserControl
             // 
@@ -282,7 +299,7 @@
             this.Load += new System.EventHandler(this.InsertProductUserControl_Load);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MenuPreviewPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductPreviewPictureBox)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -292,17 +309,18 @@
         #endregion
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.Label ProductNameLabel;
-        private Guna.UI2.WinForms.Guna2PictureBox MenuPreviewPictureBox;
+        private System.Windows.Forms.Label ProductNameTextBox;
+        private Guna.UI2.WinForms.Guna2PictureBox ProductPreviewPictureBox;
         private Guna.UI2.WinForms.Guna2GradientTileButton CancelMenuButton;
-        private Guna.UI2.WinForms.Guna2TextBox MenuNameTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox ProductDescriptionTextBox;
         private Guna.UI2.WinForms.Guna2GradientTileButton SaveMenuButton;
         private Guna.UI2.WinForms.Guna2GradientTileButton UploadImageMenuButton;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label ProductDetailsLabel;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ProductPriceTextBox;
         private System.Windows.Forms.Label SizeLabel;
+        private Guna.UI2.WinForms.Guna2ComboBox ProductMenuComboBox;
     }
 }

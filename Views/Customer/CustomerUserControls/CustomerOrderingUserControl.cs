@@ -98,5 +98,10 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
             }
             _cartUserControl.UpdateSubtotal();
         }
+
+        private void SearchTextBox_TextChanged(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

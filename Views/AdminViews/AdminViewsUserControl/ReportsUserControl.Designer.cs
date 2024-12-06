@@ -40,14 +40,14 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.DataGridHistorySalesLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.StartDateLabel = new System.Windows.Forms.Label();
-            this.EndDateLabel = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.StartDateLabel = new System.Windows.Forms.Label();
+            this.EndDateLabel = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -133,6 +133,30 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Billing No.";
+            this.Column1.MinimumWidth = 10;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Billing Time";
+            this.Column2.MinimumWidth = 10;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Order Type";
+            this.Column3.MinimumWidth = 10;
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Product";
+            this.Column4.MinimumWidth = 10;
+            this.Column4.Name = "Column4";
+            // 
             // guna2DateTimePicker1
             // 
             this.guna2DateTimePicker1.Checked = true;
@@ -184,30 +208,6 @@
             this.EndDateLabel.Size = new System.Drawing.Size(149, 34);
             this.EndDateLabel.TabIndex = 10;
             this.EndDateLabel.Text = "End Date:";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Billing No.";
-            this.Column1.MinimumWidth = 10;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Billing Time";
-            this.Column2.MinimumWidth = 10;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Order Type";
-            this.Column3.MinimumWidth = 10;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Product";
-            this.Column4.MinimumWidth = 10;
-            this.Column4.Name = "Column4";
             // 
             // ReportsUserControl
             // 
