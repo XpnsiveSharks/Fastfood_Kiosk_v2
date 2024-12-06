@@ -105,5 +105,9 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerUserControls
             _cartUserControl.UpdateSubtotal(); 
         }
 
+        private void ProductsFLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

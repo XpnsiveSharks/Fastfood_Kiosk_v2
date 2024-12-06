@@ -36,6 +36,7 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
 
         private void CustomerLoginButton_Click(object sender, EventArgs e)
         {
+
             try
             {
                 string username = CustomerUsernameTextBox.Text;
@@ -52,11 +53,12 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
                     customerMainFrameView.Show();
                 }
 
-            } catch (Exception ex)
-            {
-                throw new Exception("An error has occured while accessing the database" ,ex);
             }
-           
+            catch (Exception ex)
+            {
+                throw new Exception("An error has occured while accessing the database", ex);
+            }*/
+
         }
     }
 }

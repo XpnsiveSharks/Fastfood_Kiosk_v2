@@ -33,6 +33,7 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
 
         private void AdminLoginButton_Click(object sender, EventArgs e)
         {
+
             try
             {
                 string username = AdminUsernameTextBox.Text;
@@ -53,7 +54,7 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
             catch (Exception ex)
             {
                 throw new Exception("An error has occured while accessing the database", ex);
-            }
+            }*/
         }
     }
 }

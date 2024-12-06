@@ -46,7 +46,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -57,9 +56,8 @@
             this.guna2Panel1.Controls.Add(this.DataGridHistorySalesLabel);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1440, 65);
+            this.guna2Panel1.Size = new System.Drawing.Size(2160, 100);
             this.guna2Panel1.TabIndex = 0;
             // 
             // DataGridHistorySalesLabel
@@ -67,10 +65,9 @@
             this.DataGridHistorySalesLabel.BackColor = System.Drawing.Color.Transparent;
             this.DataGridHistorySalesLabel.Font = new System.Drawing.Font("Century Gothic", 23F, System.Drawing.FontStyle.Bold);
             this.DataGridHistorySalesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.DataGridHistorySalesLabel.Location = new System.Drawing.Point(15, 14);
-            this.DataGridHistorySalesLabel.Margin = new System.Windows.Forms.Padding(2);
+            this.DataGridHistorySalesLabel.Location = new System.Drawing.Point(22, 22);
             this.DataGridHistorySalesLabel.Name = "DataGridHistorySalesLabel";
-            this.DataGridHistorySalesLabel.Size = new System.Drawing.Size(114, 39);
+            this.DataGridHistorySalesLabel.Size = new System.Drawing.Size(167, 57);
             this.DataGridHistorySalesLabel.TabIndex = 10;
             this.DataGridHistorySalesLabel.Text = "Reports";
             // 
@@ -101,8 +98,7 @@
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5,
-            this.Column6});
+            this.Column5});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -113,13 +109,12 @@
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             this.guna2DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.Gray;
-            this.guna2DataGridView1.Location = new System.Drawing.Point(0, 65);
-            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(0, 100);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1440, 738);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(2160, 1135);
             this.guna2DataGridView1.TabIndex = 1;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -147,49 +142,42 @@
             // 
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column1.HeaderText = "DATE";
+            this.Column1.HeaderText = "Order No.";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "TIME";
+            this.Column2.HeaderText = "Order Date";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "PRODUCT SOLD";
+            this.Column3.HeaderText = "Order Type";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "QUANTITY";
+            this.Column4.HeaderText = "Product";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "PRICE";
+            this.Column5.HeaderText = "Price";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "TOTAL SALES";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            // 
             // ReportsUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.guna2Panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ReportsUserControl";
-            this.Size = new System.Drawing.Size(1440, 803);
+            this.Size = new System.Drawing.Size(2160, 1235);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
@@ -202,13 +190,13 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel DataGridHistorySalesLabel;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+
+        #endregion
+
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-
-        #endregion
     }
 }

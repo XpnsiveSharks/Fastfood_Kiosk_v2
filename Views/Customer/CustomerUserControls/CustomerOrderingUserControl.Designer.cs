@@ -41,9 +41,8 @@
             this.MenuFlowLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.MenuFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuFlowLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.MenuFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MenuFlowLayoutPanel.Name = "MenuFlowLayoutPanel";
-            this.MenuFlowLayoutPanel.Size = new System.Drawing.Size(147, 702);
+            this.MenuFlowLayoutPanel.Size = new System.Drawing.Size(220, 1080);
             this.MenuFlowLayoutPanel.TabIndex = 0;
             // 
             // SearchTextBox
@@ -61,12 +60,13 @@
             this.SearchTextBox.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(144)))), ((int)(((byte)(144)))));
             this.SearchTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.SearchTextBox.Location = new System.Drawing.Point(673, 12);
+            this.SearchTextBox.Location = new System.Drawing.Point(1010, 18);
+            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.PasswordChar = '\0';
             this.SearchTextBox.PlaceholderText = "";
             this.SearchTextBox.SelectedText = "";
-            this.SearchTextBox.Size = new System.Drawing.Size(197, 27);
+            this.SearchTextBox.Size = new System.Drawing.Size(296, 42);
             this.SearchTextBox.TabIndex = 3;
             this.SearchTextBox.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -74,42 +74,42 @@
             // 
             this.CartPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.CartPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.CartPanel.Location = new System.Drawing.Point(1043, 0);
-            this.CartPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CartPanel.Location = new System.Drawing.Point(1564, 0);
             this.CartPanel.Name = "CartPanel";
-            this.CartPanel.Size = new System.Drawing.Size(237, 702);
+            this.CartPanel.Size = new System.Drawing.Size(356, 1080);
             this.CartPanel.TabIndex = 4;
             // 
             // CustomerOrderingLabelPanel
             // 
             this.CustomerOrderingLabelPanel.Controls.Add(this.SearchTextBox);
             this.CustomerOrderingLabelPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CustomerOrderingLabelPanel.Location = new System.Drawing.Point(147, 0);
-            this.CustomerOrderingLabelPanel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.CustomerOrderingLabelPanel.Location = new System.Drawing.Point(220, 0);
+            this.CustomerOrderingLabelPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CustomerOrderingLabelPanel.Name = "CustomerOrderingLabelPanel";
-            this.CustomerOrderingLabelPanel.Size = new System.Drawing.Size(896, 54);
+            this.CustomerOrderingLabelPanel.Size = new System.Drawing.Size(1344, 83);
             this.CustomerOrderingLabelPanel.TabIndex = 5;
             // 
             // ProductsFLayoutPanel
             // 
             this.ProductsFLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProductsFLayoutPanel.Location = new System.Drawing.Point(147, 54);
-            this.ProductsFLayoutPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProductsFLayoutPanel.Location = new System.Drawing.Point(220, 83);
             this.ProductsFLayoutPanel.Name = "ProductsFLayoutPanel";
-            this.ProductsFLayoutPanel.Size = new System.Drawing.Size(896, 648);
+            this.ProductsFLayoutPanel.Size = new System.Drawing.Size(1344, 997);
             this.ProductsFLayoutPanel.TabIndex = 6;
+            this.ProductsFLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ProductsFLayoutPanel_Paint);
             // 
             // CustomerOrderingUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.Controls.Add(this.ProductsFLayoutPanel);
             this.Controls.Add(this.CustomerOrderingLabelPanel);
             this.Controls.Add(this.CartPanel);
             this.Controls.Add(this.MenuFlowLayoutPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CustomerOrderingUserControl";
-            this.Size = new System.Drawing.Size(1280, 702);
+            this.Size = new System.Drawing.Size(1920, 1080);
             this.CustomerOrderingLabelPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 

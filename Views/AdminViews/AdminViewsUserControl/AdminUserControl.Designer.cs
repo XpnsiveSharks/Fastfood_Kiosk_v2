@@ -42,10 +42,10 @@
             // AdminFlowLayoutPanel
             // 
             this.AdminFlowLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
-            this.AdminFlowLayoutPanel.Location = new System.Drawing.Point(32, 17);
-            this.AdminFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.AdminFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AdminFlowLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.AdminFlowLayoutPanel.Name = "AdminFlowLayoutPanel";
-            this.AdminFlowLayoutPanel.Size = new System.Drawing.Size(1421, 1019);
+            this.AdminFlowLayoutPanel.Size = new System.Drawing.Size(1354, 1080);
             this.AdminFlowLayoutPanel.TabIndex = 2;
             this.AdminFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AdminFlowLayoutPanel_Paint);
             // 
@@ -57,7 +57,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1767, 1080);
+            this.guna2Panel1.Size = new System.Drawing.Size(1690, 1080);
             this.guna2Panel1.TabIndex = 3;
             // 
             // guna2Panel3
@@ -65,9 +65,10 @@
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.guna2Panel3.Controls.Add(this.AdminFlowLayoutPanel);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel3.Location = new System.Drawing.Point(224, 0);
+            this.guna2Panel3.Location = new System.Drawing.Point(336, 0);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1543, 1080);
+            this.guna2Panel3.Size = new System.Drawing.Size(1354, 1080);
             this.guna2Panel3.TabIndex = 4;
             // 
             // guna2Panel2
@@ -79,7 +80,7 @@
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(224, 1080);
+            this.guna2Panel2.Size = new System.Drawing.Size(336, 1080);
             this.guna2Panel2.TabIndex = 3;
             // 
             // ProductListButton
@@ -137,9 +138,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminUserControl";
-            this.Size = new System.Drawing.Size(1767, 1080);
+            this.Size = new System.Drawing.Size(1690, 1080);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
