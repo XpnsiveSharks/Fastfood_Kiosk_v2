@@ -147,6 +147,7 @@
     <Compile Include="Helpers\PasswordHashing.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Menus.cs" />
+    <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="Models\OrderItems.cs" />
     <Compile Include="Models\Orders.cs" />
     <Compile Include="Models\Products.cs" />
@@ -155,10 +156,12 @@
     <Compile Include="Repositories\CustomerRepository.cs" />
     <Compile Include="Repositories\ICustomerRepository.cs" />
     <Compile Include="Repositories\IMenuRepository.cs" />
+    <Compile Include="Repositories\IOrderDetailsRepository.cs" />
     <Compile Include="Repositories\IOrderItemsRepository.cs" />
     <Compile Include="Repositories\IOrdersRepository.cs" />
     <Compile Include="Repositories\IProductRepository.cs" />
     <Compile Include="Repositories\MenuRepository.cs" />
+    <Compile Include="Repositories\OrderDetailsRepository.cs" />
     <Compile Include="Repositories\OrderItemsRepository.cs" />
     <Compile Include="Repositories\OrdersRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
@@ -194,6 +197,12 @@
     </Compile>
     <Compile Include="Views\AdminViews\AdminViewsUserControl\InsertProductUserControl.Designer.cs">
       <DependentUpon>InsertProductUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminViewsUserControl\OrderDetailsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminViewsUserControl\OrderDetailsUserControl.Designer.cs">
+      <DependentUpon>OrderDetailsUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Customer\CustomerOrderingComponentsUserControls\ItemUserControl.cs">
       <SubType>UserControl</SubType>
@@ -333,6 +342,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminViews\AdminViewsUserControl\InsertProductUserControl.resx">
       <DependentUpon>InsertProductUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminViews\AdminViewsUserControl\OrderDetailsUserControl.resx">
+      <DependentUpon>OrderDetailsUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Customer\CustomerOrderingComponentsUserControls\ItemUserControl.resx">
       <DependentUpon>ItemUserControl.cs</DependentUpon>
