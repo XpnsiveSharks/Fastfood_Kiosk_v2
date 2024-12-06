@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Fastfood_Kiosk_v2.Repositories
 {
-    internal class OrderDetailsRepository : IOrderDetailsRepository 
+    internal class OrderDetailsRepository : IOrderDetailsRepository
     {
         private readonly DatabaseConnection _databaseConnection;
         private readonly ConfigurationLoader _configurationLoader;

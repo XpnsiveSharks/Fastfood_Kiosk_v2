@@ -33,7 +33,7 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControl
             {
                 QuantityLabel.Text = value.ToString();
                 Total = value * Price;
-                LinkedOrderControl?.UpdateQuantity(value);//
+                LinkedOrderControl?.UpdateQuantity(value);
             }
         }
 
@@ -57,5 +57,9 @@ namespace Fastfood_Kiosk_v2.Views.Customer.CustomerOrderingComponentsUserControl
             RemoveItemClicked?.Invoke(this, EventArgs.Empty);
         }
 
+        private void TotalLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
