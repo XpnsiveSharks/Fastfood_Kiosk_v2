@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 {
-    public partial class ReportsUserControl : UserControl
+    public partial class AddStaffUserControl : UserControl
     {
-        public ReportsUserControl()
+        public AddStaffUserControl()
         {
             InitializeComponent();
-        }
-
-        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

@@ -93,5 +93,25 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
         {
             InsertProductUserControlCancelClicked?.Invoke();
         }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void InsertProductUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,224 +28,281 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ProductPreviewPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.ProductNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.ProductMenuComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.ProductPriceTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.ProductDescriptionTextBox = new System.Windows.Forms.RichTextBox();
-            this.AddCategoryLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.CancelButton = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.SaveButton = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.ProductImageUploadButton = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductPreviewPictureBox)).BeginInit();
+            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.ProductNameLabel = new System.Windows.Forms.Label();
+            this.MenuPreviewPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.CancelMenuButton = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.MenuNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.SaveMenuButton = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.UploadImageMenuButton = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.ProductDetailsLabel = new System.Windows.Forms.Label();
+            this.SizeLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MenuPreviewPictureBox)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ProductPreviewPictureBox
+            // guna2ContextMenuStrip1
             // 
-            this.ProductPreviewPictureBox.BorderRadius = 18;
-            this.ProductPreviewPictureBox.ImageRotate = 0F;
-            this.ProductPreviewPictureBox.Location = new System.Drawing.Point(64, 127);
-            this.ProductPreviewPictureBox.Margin = new System.Windows.Forms.Padding(2);
-            this.ProductPreviewPictureBox.Name = "ProductPreviewPictureBox";
-            this.ProductPreviewPictureBox.Size = new System.Drawing.Size(440, 343);
-            this.ProductPreviewPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ProductPreviewPictureBox.TabIndex = 0;
-            this.ProductPreviewPictureBox.TabStop = false;
+            this.guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
+            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
+            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // ProductNameTextBox
+            // guna2Panel2
             // 
-            this.ProductNameTextBox.BorderRadius = 18;
-            this.ProductNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ProductNameTextBox.DefaultText = "Product name";
-            this.ProductNameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.ProductNameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.ProductNameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ProductNameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ProductNameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ProductNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ProductNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ProductNameTextBox.Location = new System.Drawing.Point(545, 145);
-            this.ProductNameTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.ProductNameTextBox.Name = "ProductNameTextBox";
-            this.ProductNameTextBox.PasswordChar = '\0';
-            this.ProductNameTextBox.PlaceholderText = "Product Name";
-            this.ProductNameTextBox.SelectedText = "";
-            this.ProductNameTextBox.Size = new System.Drawing.Size(315, 35);
-            this.ProductNameTextBox.TabIndex = 1;
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
+            this.guna2Panel2.Controls.Add(this.guna2TextBox2);
+            this.guna2Panel2.Controls.Add(this.guna2TextBox1);
+            this.guna2Panel2.Controls.Add(this.label1);
+            this.guna2Panel2.Controls.Add(this.SizeLabel);
+            this.guna2Panel2.Controls.Add(this.ProductNameLabel);
+            this.guna2Panel2.Controls.Add(this.MenuPreviewPictureBox);
+            this.guna2Panel2.Controls.Add(this.CancelMenuButton);
+            this.guna2Panel2.Controls.Add(this.MenuNameTextBox);
+            this.guna2Panel2.Controls.Add(this.SaveMenuButton);
+            this.guna2Panel2.Controls.Add(this.UploadImageMenuButton);
+            this.guna2Panel2.Location = new System.Drawing.Point(100, 190);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(1150, 700);
+            this.guna2Panel2.TabIndex = 10;
             // 
-            // ProductMenuComboBox
+            // ProductNameLabel
             // 
-            this.ProductMenuComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.ProductMenuComboBox.BorderRadius = 18;
-            this.ProductMenuComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ProductMenuComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ProductMenuComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ProductMenuComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ProductMenuComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.ProductMenuComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.ProductMenuComboBox.ItemHeight = 30;
-            this.ProductMenuComboBox.Location = new System.Drawing.Point(545, 198);
-            this.ProductMenuComboBox.Margin = new System.Windows.Forms.Padding(2);
-            this.ProductMenuComboBox.Name = "ProductMenuComboBox";
-            this.ProductMenuComboBox.Size = new System.Drawing.Size(206, 36);
-            this.ProductMenuComboBox.TabIndex = 2;
+            this.ProductNameLabel.AutoSize = true;
+            this.ProductNameLabel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.ProductNameLabel.Location = new System.Drawing.Point(85, 128);
+            this.ProductNameLabel.Name = "ProductNameLabel";
+            this.ProductNameLabel.Size = new System.Drawing.Size(221, 34);
+            this.ProductNameLabel.TabIndex = 8;
+            this.ProductNameLabel.Text = "Product Name:";
             // 
-            // ProductPriceTextBox
+            // MenuPreviewPictureBox
             // 
-            this.ProductPriceTextBox.BorderRadius = 18;
-            this.ProductPriceTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ProductPriceTextBox.DefaultText = "Price";
-            this.ProductPriceTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.ProductPriceTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.ProductPriceTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ProductPriceTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ProductPriceTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ProductPriceTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ProductPriceTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ProductPriceTextBox.Location = new System.Drawing.Point(545, 249);
-            this.ProductPriceTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.ProductPriceTextBox.Name = "ProductPriceTextBox";
-            this.ProductPriceTextBox.PasswordChar = '\0';
-            this.ProductPriceTextBox.PlaceholderText = "";
-            this.ProductPriceTextBox.SelectedText = "";
-            this.ProductPriceTextBox.Size = new System.Drawing.Size(206, 35);
-            this.ProductPriceTextBox.TabIndex = 3;
+            this.MenuPreviewPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.MenuPreviewPictureBox.BorderRadius = 30;
+            this.MenuPreviewPictureBox.ImageRotate = 0F;
+            this.MenuPreviewPictureBox.Location = new System.Drawing.Point(733, 128);
+            this.MenuPreviewPictureBox.Name = "MenuPreviewPictureBox";
+            this.MenuPreviewPictureBox.Size = new System.Drawing.Size(319, 275);
+            this.MenuPreviewPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MenuPreviewPictureBox.TabIndex = 0;
+            this.MenuPreviewPictureBox.TabStop = false;
             // 
-            // ProductDescriptionTextBox
+            // CancelMenuButton
             // 
-            this.ProductDescriptionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ProductDescriptionTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(144)))), ((int)(((byte)(144)))));
-            this.ProductDescriptionTextBox.Location = new System.Drawing.Point(545, 301);
-            this.ProductDescriptionTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.ProductDescriptionTextBox.Name = "ProductDescriptionTextBox";
-            this.ProductDescriptionTextBox.Size = new System.Drawing.Size(315, 148);
-            this.ProductDescriptionTextBox.TabIndex = 5;
-            this.ProductDescriptionTextBox.Text = "Description";
+            this.CancelMenuButton.BorderRadius = 20;
+            this.CancelMenuButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CancelMenuButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CancelMenuButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CancelMenuButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CancelMenuButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CancelMenuButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.CancelMenuButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.CancelMenuButton.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelMenuButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
+            this.CancelMenuButton.Location = new System.Drawing.Point(91, 606);
+            this.CancelMenuButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CancelMenuButton.Name = "CancelMenuButton";
+            this.CancelMenuButton.Size = new System.Drawing.Size(178, 44);
+            this.CancelMenuButton.TabIndex = 7;
+            this.CancelMenuButton.Text = "Cancel";
             // 
-            // AddCategoryLabel
+            // MenuNameTextBox
             // 
-            this.AddCategoryLabel.BackColor = System.Drawing.Color.Transparent;
-            this.AddCategoryLabel.Font = new System.Drawing.Font("Century Gothic", 23F, System.Drawing.FontStyle.Bold);
-            this.AddCategoryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.AddCategoryLabel.Location = new System.Drawing.Point(64, 67);
-            this.AddCategoryLabel.Margin = new System.Windows.Forms.Padding(2);
-            this.AddCategoryLabel.Name = "AddCategoryLabel";
-            this.AddCategoryLabel.Size = new System.Drawing.Size(208, 39);
-            this.AddCategoryLabel.TabIndex = 9;
-            this.AddCategoryLabel.Text = "Insert Product";
+            this.MenuNameTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.MenuNameTextBox.BorderRadius = 18;
+            this.MenuNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.MenuNameTextBox.DefaultText = "             Enter product name";
+            this.MenuNameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.MenuNameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.MenuNameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.MenuNameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.MenuNameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.MenuNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.MenuNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.MenuNameTextBox.Location = new System.Drawing.Point(91, 176);
+            this.MenuNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MenuNameTextBox.Name = "MenuNameTextBox";
+            this.MenuNameTextBox.PasswordChar = '\0';
+            this.MenuNameTextBox.PlaceholderText = "";
+            this.MenuNameTextBox.SelectedText = "";
+            this.MenuNameTextBox.Size = new System.Drawing.Size(250, 44);
+            this.MenuNameTextBox.TabIndex = 1;
             // 
-            // CancelButton
+            // SaveMenuButton
             // 
-            this.CancelButton.BorderColor = System.Drawing.Color.Transparent;
-            this.CancelButton.BorderRadius = 19;
-            this.CancelButton.BorderThickness = 2;
-            this.CancelButton.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(54)))));
-            this.CancelButton.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.CancelButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.CancelButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.CancelButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.CancelButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.CancelButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.CancelButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(54)))));
-            this.CancelButton.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.CancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.CancelButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(54)))));
-            this.CancelButton.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.CancelButton.HoverState.FillColor2 = System.Drawing.Color.Transparent;
-            this.CancelButton.HoverState.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.CancelButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(54)))));
-            this.CancelButton.Location = new System.Drawing.Point(644, 595);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(153, 44);
-            this.CancelButton.TabIndex = 12;
-            this.CancelButton.Text = "Cancel";
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.SaveMenuButton.BorderRadius = 20;
+            this.SaveMenuButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SaveMenuButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SaveMenuButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SaveMenuButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SaveMenuButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SaveMenuButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.SaveMenuButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.SaveMenuButton.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveMenuButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
+            this.SaveMenuButton.Location = new System.Drawing.Point(275, 606);
+            this.SaveMenuButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SaveMenuButton.Name = "SaveMenuButton";
+            this.SaveMenuButton.Size = new System.Drawing.Size(178, 44);
+            this.SaveMenuButton.TabIndex = 5;
+            this.SaveMenuButton.Text = "Save";
             // 
-            // SaveButton
+            // UploadImageMenuButton
             // 
-            this.SaveButton.BorderColor = System.Drawing.Color.Transparent;
-            this.SaveButton.BorderRadius = 19;
-            this.SaveButton.BorderThickness = 2;
-            this.SaveButton.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.SaveButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.SaveButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.SaveButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.SaveButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.SaveButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(208)))), ((int)(((byte)(139)))));
-            this.SaveButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(208)))), ((int)(((byte)(139)))));
-            this.SaveButton.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.SaveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.SaveButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(208)))), ((int)(((byte)(139)))));
-            this.SaveButton.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.SaveButton.HoverState.FillColor2 = System.Drawing.Color.Transparent;
-            this.SaveButton.HoverState.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.SaveButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(208)))), ((int)(((byte)(139)))));
-            this.SaveButton.Location = new System.Drawing.Point(818, 595);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(153, 44);
-            this.SaveButton.TabIndex = 13;
-            this.SaveButton.Text = "Save";
-            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            this.UploadImageMenuButton.BorderRadius = 20;
+            this.UploadImageMenuButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.UploadImageMenuButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.UploadImageMenuButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.UploadImageMenuButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.UploadImageMenuButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.UploadImageMenuButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.UploadImageMenuButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.UploadImageMenuButton.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UploadImageMenuButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
+            this.UploadImageMenuButton.Location = new System.Drawing.Point(733, 417);
+            this.UploadImageMenuButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UploadImageMenuButton.Name = "UploadImageMenuButton";
+            this.UploadImageMenuButton.Size = new System.Drawing.Size(319, 44);
+            this.UploadImageMenuButton.TabIndex = 6;
+            this.UploadImageMenuButton.Text = "Browse Image";
             // 
-            // ProductImageUploadButton
+            // guna2Panel1
             // 
-            this.ProductImageUploadButton.BorderColor = System.Drawing.Color.Transparent;
-            this.ProductImageUploadButton.BorderRadius = 19;
-            this.ProductImageUploadButton.BorderThickness = 2;
-            this.ProductImageUploadButton.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.ProductImageUploadButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ProductImageUploadButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ProductImageUploadButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ProductImageUploadButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ProductImageUploadButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.ProductImageUploadButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(54)))));
-            this.ProductImageUploadButton.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.ProductImageUploadButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.ProductImageUploadButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(54)))));
-            this.ProductImageUploadButton.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.ProductImageUploadButton.HoverState.FillColor2 = System.Drawing.Color.Transparent;
-            this.ProductImageUploadButton.HoverState.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.ProductImageUploadButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(54)))));
-            this.ProductImageUploadButton.Location = new System.Drawing.Point(170, 489);
-            this.ProductImageUploadButton.Name = "ProductImageUploadButton";
-            this.ProductImageUploadButton.Size = new System.Drawing.Size(206, 45);
-            this.ProductImageUploadButton.TabIndex = 14;
-            this.ProductImageUploadButton.Text = "Upload Image";
-            this.ProductImageUploadButton.Click += new System.EventHandler(this.ProductImageUploadButton_Click);
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.guna2Panel1.Controls.Add(this.ProductDetailsLabel);
+            this.guna2Panel1.Location = new System.Drawing.Point(100, 190);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1150, 70);
+            this.guna2Panel1.TabIndex = 9;
+            // 
+            // ProductDetailsLabel
+            // 
+            this.ProductDetailsLabel.AutoSize = true;
+            this.ProductDetailsLabel.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductDetailsLabel.ForeColor = System.Drawing.Color.White;
+            this.ProductDetailsLabel.Location = new System.Drawing.Point(32, 12);
+            this.ProductDetailsLabel.Name = "ProductDetailsLabel";
+            this.ProductDetailsLabel.Size = new System.Drawing.Size(287, 44);
+            this.ProductDetailsLabel.TabIndex = 9;
+            this.ProductDetailsLabel.Text = "Product Details";
+            // 
+            // SizeLabel
+            // 
+            this.SizeLabel.AutoSize = true;
+            this.SizeLabel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SizeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.SizeLabel.Location = new System.Drawing.Point(403, 128);
+            this.SizeLabel.Name = "SizeLabel";
+            this.SizeLabel.Size = new System.Drawing.Size(66, 34);
+            this.SizeLabel.TabIndex = 9;
+            this.SizeLabel.Text = "Size";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.label1.Location = new System.Drawing.Point(584, 128);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 34);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Size";
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.guna2TextBox1.BorderRadius = 18;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "123";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Location = new System.Drawing.Point(400, 176);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(112, 44);
+            this.guna2TextBox1.TabIndex = 11;
+            // 
+            // guna2TextBox2
+            // 
+            this.guna2TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.guna2TextBox2.BorderRadius = 18;
+            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox2.DefaultText = "Php. 100";
+            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.Location = new System.Drawing.Point(590, 176);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox2.Name = "guna2TextBox2";
+            this.guna2TextBox2.PasswordChar = '\0';
+            this.guna2TextBox2.PlaceholderText = "";
+            this.guna2TextBox2.SelectedText = "";
+            this.guna2TextBox2.Size = new System.Drawing.Size(112, 44);
+            this.guna2TextBox2.TabIndex = 12;
+            this.guna2TextBox2.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             // 
             // InsertProductUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.Controls.Add(this.ProductImageUploadButton);
-            this.Controls.Add(this.SaveButton);
-            this.Controls.Add(this.CancelButton);
-            this.Controls.Add(this.AddCategoryLabel);
-            this.Controls.Add(this.ProductDescriptionTextBox);
-            this.Controls.Add(this.ProductPriceTextBox);
-            this.Controls.Add(this.ProductMenuComboBox);
-            this.Controls.Add(this.ProductNameTextBox);
-            this.Controls.Add(this.ProductPreviewPictureBox);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.guna2Panel2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "InsertProductUserControl";
-            this.Size = new System.Drawing.Size(1148, 731);
-            ((System.ComponentModel.ISupportInitialize)(this.ProductPreviewPictureBox)).EndInit();
+            this.Size = new System.Drawing.Size(1354, 1080);
+            this.Load += new System.EventHandler(this.InsertProductUserControl_Load);
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MenuPreviewPictureBox)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2PictureBox ProductPreviewPictureBox;
-        private Guna.UI2.WinForms.Guna2TextBox ProductNameTextBox;
-        private Guna.UI2.WinForms.Guna2ComboBox ProductMenuComboBox;
-        private Guna.UI2.WinForms.Guna2TextBox ProductPriceTextBox;
-        private System.Windows.Forms.RichTextBox ProductDescriptionTextBox;
-        private Guna.UI2.WinForms.Guna2HtmlLabel AddCategoryLabel;
-        private Guna.UI2.WinForms.Guna2GradientTileButton CancelButton;
-        private Guna.UI2.WinForms.Guna2GradientTileButton SaveButton;
-        private Guna.UI2.WinForms.Guna2GradientTileButton ProductImageUploadButton;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private System.Windows.Forms.Label ProductNameLabel;
+        private Guna.UI2.WinForms.Guna2PictureBox MenuPreviewPictureBox;
+        private Guna.UI2.WinForms.Guna2GradientTileButton CancelMenuButton;
+        private Guna.UI2.WinForms.Guna2TextBox MenuNameTextBox;
+        private Guna.UI2.WinForms.Guna2GradientTileButton SaveMenuButton;
+        private Guna.UI2.WinForms.Guna2GradientTileButton UploadImageMenuButton;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.Label ProductDetailsLabel;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label SizeLabel;
     }
 }

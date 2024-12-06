@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 {
-    public partial class ReportsUserControl : UserControl
+    public partial class StaffListUserControl : UserControl
     {
-        public ReportsUserControl()
+        public StaffListUserControl()
         {
             InitializeComponent();
         }
 
-        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void StaffListUserControl_Load(object sender, EventArgs e)
         {
 
         }

@@ -161,6 +161,12 @@
     <Compile Include="Views\AdminViews\AdminIndexView.Designer.cs">
       <DependentUpon>AdminIndexView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\AdminViews\AdminViewsUserControl\AddStaffUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminViewsUserControl\AddStaffUserControl.Designer.cs">
+      <DependentUpon>AddStaffUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\AdminViews\AdminViewsUserControl\AdminUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,6 +191,12 @@
     <Compile Include="Views\AdminViews\AdminViewsUserControl\InsertProductUserControl.Designer.cs">
       <DependentUpon>InsertProductUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\AdminViews\AdminViewsUserControl\StaffListUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminViewsUserControl\StaffListUserControl.Designer.cs">
+      <DependentUpon>StaffListUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Customer\CustomerOrderingComponentsUserControls\ItemUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -197,14 +209,12 @@
     <Compile Include="Views\Customer\CustomerUserControls\CartUserControl.Designer.cs">
       <DependentUpon>CartUserControl.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Views\Customer\CustomerUserControls\OrderListUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\Customer\CustomerUserControls\OrderListUserControl.Designer.cs">
       <DependentUpon>OrderListUserControl.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Views\Customer\OrderListView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -308,6 +318,9 @@
     <EmbeddedResource Include="Views\AdminViews\AdminIndexView.resx">
       <DependentUpon>AdminIndexView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminViews\AdminViewsUserControl\AddStaffUserControl.resx">
+      <DependentUpon>AddStaffUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminViews\AdminViewsUserControl\AdminUserControl.resx">
       <DependentUpon>AdminUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -320,13 +333,15 @@
     <EmbeddedResource Include="Views\AdminViews\AdminViewsUserControl\InsertProductUserControl.resx">
       <DependentUpon>InsertProductUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminViews\AdminViewsUserControl\StaffListUserControl.resx">
+      <DependentUpon>StaffListUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Customer\CustomerOrderingComponentsUserControls\ItemUserControl.resx">
       <DependentUpon>ItemUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Customer\CustomerUserControls\CartUserControl.resx">
       <DependentUpon>CartUserControl.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Views\Customer\CustomerUserControls\OrderListUserControl.resx">
       <DependentUpon>OrderListUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,7 +350,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SharedViews\MainLoginView.resx">
       <DependentUpon>MainLoginView.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SharedViews\SharedViewComponentsUserControl\MenuForCashierUserControl.resx">
       <DependentUpon>MenuForCashierUserControl.cs</DependentUpon>
