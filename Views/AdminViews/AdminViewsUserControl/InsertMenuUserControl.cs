@@ -27,7 +27,6 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
         public void InitializeControl()
         {
             IfMenuIsUpdating();
-            Console.WriteLine($"{MenuId} {IsUpdate}");
         }
         private void CancelMenuButton_Click(object sender, EventArgs e)
         {

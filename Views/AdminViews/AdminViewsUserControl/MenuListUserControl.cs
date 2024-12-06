@@ -15,7 +15,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
     {
         private readonly MenuViewModel menuViewModel = new MenuViewModel();
         public event Action AddMenuEventHandler;
-        public event Action<int> UpdateDeleteMenuListEventHandler;
+        public event Action<int, bool, bool> UpdateDeleteMenuListEventHandler;
 
         public MenuListUserControl()
         {
@@ -46,13 +46,15 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 
         private void MenuListDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex >= 0 && MenuListDataGridView.Columns.Contains("Menu_Id"))
             {
-                DataGridViewRow selectedRow = MenuListDataGridView.Rows[e.RowIndex];      
+                DataGridViewRow selectedRow = MenuListDataGridView.Rows[e.RowIndex];
                 int menuId = Convert.ToInt32(selectedRow.Cells["Menu_Id"].Value);
-                UpdateDeleteMenuListEventHandler?.Invoke(menuId);
+
+                UpdateDeleteMenuListEventHandler?.Invoke(menuId, false, true);
             }
         }
+
         public void ReloadMenus()
         {
             menuViewModel.LoadMenus(); 

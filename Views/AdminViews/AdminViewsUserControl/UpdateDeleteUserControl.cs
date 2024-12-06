@@ -1,4 +1,5 @@
 ﻿using Fastfood_Kiosk_v2.ViewModels;
+using Mysqlx.Crud;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,9 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 {
     public partial class UpdateDeleteUserControl : UserControl
     {
-        public event Action<int, bool> InsertMenuEventHandler;
+        public event Action<int> UpdateMenuEventHandler;
+        public event Action<int> UpdateProductEventHandler;
+
         public bool IsProductUpdate { get; set; }
         public bool IsFromMenuListUserControl { get; set; }
         public int MenuAndProductId { get; set; }
@@ -24,20 +27,16 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
             InitializeComponent();
             insertMenuUserControl = new InsertMenuUserControl();
         }
-
         private void UpdateButton_Click(object sender, EventArgs e)
         {
             if (IsProductUpdate)
             {
-                
+
+                UpdateProductEventHandler?.Invoke(MenuAndProductId);
             }
             else
             {
-                var menuListUserControl = new MenuListUserControl();
-                menuListUserControl.UpdateDeleteMenuListEventHandler += menuId =>
-                {
-                    InsertMenuEventHandler?.Invoke(menuId, true);
-                };
+                UpdateMenuEventHandler?.Invoke(MenuAndProductId);
             }
 
         }
@@ -81,9 +80,20 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
                     MessageBoxIcon.Warning);
             return result == DialogResult.Yes;
         }
+        public event Action BackToMenuListEventHandler;
+        public event Action BackToProductListEventHandler;
+
+
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            
+            if (IsFromMenuListUserControl)
+            {
+                BackToMenuListEventHandler?.Invoke();
+            }
+            else
+            {
+                BackToProductListEventHandler?.Invoke();
+            }
         }
     }
 }

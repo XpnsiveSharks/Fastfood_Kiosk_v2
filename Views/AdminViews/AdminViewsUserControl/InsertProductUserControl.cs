@@ -8,12 +8,12 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 {
     public partial class InsertProductUserControl : UserControl
     {
-        public delegate void InsertProductUserControlClickedEventHandler();
-        public event InsertProductUserControlClickedEventHandler InsertProductUserControlCancelClicked;
-        public event InsertProductUserControlClickedEventHandler InsertProductUserControlNavigateToMenuList;
+
         private readonly ProductViewModel productViewModel = new ProductViewModel();
+        public event Action BackToProductListEventHandler;
+
         public int ProductId { get; set; }
-        private bool IsUpdate;
+        public bool IsUpdate;
         public InsertProductUserControl()
         {
             InitializeComponent();
@@ -28,6 +28,26 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
             ProductPriceTextBox.DataBindings.Add("Text", productViewModel, nameof(productViewModel.ProductPrice), true, DataSourceUpdateMode.OnPropertyChanged);
             ProductDescriptionTextBox.DataBindings.Add("Text", productViewModel, nameof(productViewModel.Description), true, DataSourceUpdateMode.OnPropertyChanged);
         }
+        public void InitializeControl()
+        {
+            if (IsUpdate)
+            {
+                DisplaySelectedProduct();
+            }
+            else
+            {
+                ResetForm();
+            }
+        }
+        private void ResetForm()
+        {
+            productViewModel.ProductName = string.Empty;
+            productViewModel.ProductPrice = 0;
+            productViewModel.Description = string.Empty;
+            productViewModel.ProductImageFilePath = string.Empty;
+            productViewModel.MenuId = 0;
+        }
+
         private void IsProductUpdating()
         {
             IsUpdate = ProductId != 0;
@@ -36,13 +56,21 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
         }
         private void DisplaySelectedProduct()
         {
-            var menu = productViewModel.GetProductById(ProductId);
-            productViewModel.MenuId = menu.Menu_Id;
-            productViewModel.ProductName = menu.Product_Name; 
-            productViewModel.ProductPrice = menu.Product_Price;
-            productViewModel.Description = menu.Description;
-            productViewModel.ProductImageFilePath = menu.Product_Image_File_Path;
+            var product = productViewModel.GetProductById(ProductId);
+            if (product == null)
+            {
+                MessageBox.Show("Product not found. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                BackToProductListEventHandler?.Invoke();
+                return;
+            }
+
+            productViewModel.MenuId = product.Menu_Id;
+            productViewModel.ProductName = product.Product_Name;
+            productViewModel.ProductPrice = product.Product_Price;
+            productViewModel.Description = product.Description;
+            productViewModel.ProductImageFilePath = product.Product_Image_File_Path;
         }
+
         private void LoadMenuInComboBox()
         {
             var menuViewModel = new MenuViewModel();
@@ -87,11 +115,11 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
                 productViewModel.AddingMenu();
                 MessageBox.Show("Product saved successfully");
             }
-            InsertProductUserControlNavigateToMenuList?.Invoke();
+            BackToProductListEventHandler?.Invoke();
         }
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            InsertProductUserControlCancelClicked?.Invoke();
+            BackToProductListEventHandler?.Invoke();
         }
     }
 }
