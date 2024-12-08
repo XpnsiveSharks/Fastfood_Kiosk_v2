@@ -204,12 +204,6 @@
     <Compile Include="Views\AdminViews\AdminIndexView.Designer.cs">
       <DependentUpon>AdminIndexView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\AdminViews\AdminViewsUserControl\AdminUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\AdminViews\AdminViewsUserControl\AdminUserControl.Designer.cs">
-      <DependentUpon>AdminUserControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\AdminViews\AdminViewsUserControl\CashierUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -246,13 +240,13 @@
     <Compile Include="Views\AdminViews\AdminViewsUserControl\InsertProductUserControl.Designer.cs">
       <DependentUpon>InsertProductUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\AdminViews\AdminViewsUserControl\OrderDetailsUserControl.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Views\Staff\StaffIndexView.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\AdminViews\AdminViewsUserControl\OrderDetailsUserControl.Designer.cs">
-      <DependentUpon>OrderDetailsUserControl.cs</DependentUpon>
+    <Compile Include="Views\Staff\StaffIndexView.Designer.cs">
+      <DependentUpon>StaffIndexView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\AdminViews\AdminViewsUserControl\PendingOrderListUserControl.cs">
+    <Compile Include="Views\SharedViews\SharedViewComponentsUserControl\ItemUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\AdminViews\AdminViewsUserControl\PendingOrderListUserControl.Designer.cs">
@@ -282,22 +276,22 @@
     <Compile Include="Views\Customer\CustomerOrderingComponentsUserControls\ItemUserControl.Designer.cs">
       <DependentUpon>ItemUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Customer\CustomerUserControls\CartUserControl.cs">
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\CartUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\Customer\CustomerUserControls\CartUserControl.Designer.cs">
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\CartUserControl.Designer.cs">
       <DependentUpon>CartUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Customer\CustomerUserControls\OrderListUserControl.cs">
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\OrderListUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\Customer\CustomerUserControls\OrderListUserControl.Designer.cs">
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\OrderListUserControl.Designer.cs">
       <DependentUpon>OrderListUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Customer\OrderListView.cs">
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\OrderListView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Customer\OrderListView.Designer.cs">
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\OrderListView.Designer.cs">
       <DependentUpon>OrderListView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Customer\PaymentMethodView.cs">
@@ -331,22 +325,22 @@
     <Compile Include="Views\AdminViews\AdminViewsUserControl\UpdateDeleteUserControl.Designer.cs">
       <DependentUpon>UpdateDeleteUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Customer\CustomerMainFrameView.cs">
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\CustomerMainFrameView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Customer\CustomerMainFrameView.Designer.cs">
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\CustomerMainFrameView.Designer.cs">
       <DependentUpon>CustomerMainFrameView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Customer\CustomerUserControls\CustomerOrderingUserControl.cs">
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\CustomerOrderingUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\Customer\CustomerUserControls\CustomerOrderingUserControl.Designer.cs">
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\CustomerOrderingUserControl.Designer.cs">
       <DependentUpon>CustomerOrderingUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Customer\CustomerUserControls\OrderTypeUserControl.cs">
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\OrderTypeUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\Customer\CustomerUserControls\OrderTypeUserControl.Designer.cs">
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\OrderTypeUserControl.Designer.cs">
       <DependentUpon>OrderTypeUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\SharedViews\SharedViewComponentsUserControl\ProductButtonsUserControl.cs">
@@ -403,9 +397,6 @@
     <EmbeddedResource Include="Views\AdminViews\AdminIndexView.resx">
       <DependentUpon>AdminIndexView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\AdminViews\AdminViewsUserControl\AdminUserControl.resx">
-      <DependentUpon>AdminUserControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminViews\AdminViewsUserControl\CashierUserControl.resx">
       <DependentUpon>CashierUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -439,13 +430,13 @@
     <EmbeddedResource Include="Views\Customer\CustomerOrderingComponentsUserControls\ItemUserControl.resx">
       <DependentUpon>ItemUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Customer\CustomerUserControls\CartUserControl.resx">
+    <EmbeddedResource Include="Views\SharedViews\SharedViewsUserControl\CartUserControl.resx">
       <DependentUpon>CartUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Customer\CustomerUserControls\OrderListUserControl.resx">
+    <EmbeddedResource Include="Views\SharedViews\SharedViewsUserControl\OrderListUserControl.resx">
       <DependentUpon>OrderListUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Customer\OrderListView.resx">
+    <EmbeddedResource Include="Views\SharedViews\SharedViewsUserControl\OrderListView.resx">
       <DependentUpon>OrderListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Customer\PaymentMethodView.resx">
@@ -472,13 +463,13 @@
     <EmbeddedResource Include="Views\AdminViews\UpdateDeleteDialogView.resx">
       <DependentUpon>UpdateDeleteDialogView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Customer\CustomerMainFrameView.resx">
+    <EmbeddedResource Include="Views\SharedViews\SharedViewsUserControl\CustomerMainFrameView.resx">
       <DependentUpon>CustomerMainFrameView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Customer\CustomerUserControls\CustomerOrderingUserControl.resx">
+    <EmbeddedResource Include="Views\SharedViews\SharedViewsUserControl\CustomerOrderingUserControl.resx">
       <DependentUpon>CustomerOrderingUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Customer\CustomerUserControls\OrderTypeUserControl.resx">
+    <EmbeddedResource Include="Views\SharedViews\SharedViewsUserControl\OrderTypeUserControl.resx">
       <DependentUpon>OrderTypeUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SharedViews\SharedViewComponentsUserControl\ProductButtonsUserControl.resx">
@@ -519,6 +510,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Customer\CustomerOrderingComponentsUserControls\" />
+    <Folder Include="Views\Customer\CustomerUserControls\" />
+    <Folder Include="Views\Staff\StaffComponentsUserControls\" />
+    <Folder Include="Views\Staff\StaffUserViewsControl\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

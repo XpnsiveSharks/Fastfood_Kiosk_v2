@@ -23,7 +23,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
             InitializeComponent();
             LoadProducts();
         }
-
+       
         private void ProductListDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && ProductListDataGridView.Columns.Contains("Product_Id"))
@@ -33,6 +33,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
                 UpdateDeleteProductListEventHandler?.Invoke(productId, true, false);
             }
         }
+
         private void LoadProducts()
         {
             ProductListDataGridView.DataSource = productViewModel.Products;

@@ -115,6 +115,9 @@
             this.SettingsButton.TabIndex = 14;
             this.SettingsButton.Text = "Settings";
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
+            this.SettingsButton.TabIndex = 14;
+            this.SettingsButton.Text = "Settings";
+            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
             // ExitButton
             // 
@@ -191,6 +194,57 @@
             this.AdminIndexPanel.Size = new System.Drawing.Size(1421, 920);
             this.AdminIndexPanel.TabIndex = 17;
             this.AdminIndexPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AdminIndexPanel_Paint);
+            // 
+            // SettingsButton
+            // 
+            this.SettingsButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.SettingsButton.BorderRadius = 20;
+            this.SettingsButton.BorderThickness = 2;
+            this.SettingsButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SettingsButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SettingsButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SettingsButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SettingsButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SettingsButton.FillColor = System.Drawing.Color.Transparent;
+            this.SettingsButton.FillColor2 = System.Drawing.Color.Transparent;
+            this.SettingsButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.SettingsButton.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.SettingsButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.SettingsButton.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.SettingsButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
+            this.SettingsButton.Location = new System.Drawing.Point(24, 312);
+            this.SettingsButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SettingsButton.Name = "SettingsButton";
+            this.SettingsButton.Size = new System.Drawing.Size(98, 53);
+            this.SettingsButton.TabIndex = 16;
+            this.SettingsButton.Text = "Settings";
+            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
+            // 
+            // InventoryButton
+            // 
+            this.InventoryButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.InventoryButton.BorderRadius = 20;
+            this.InventoryButton.BorderThickness = 2;
+            this.InventoryButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.InventoryButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.InventoryButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.InventoryButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.InventoryButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.InventoryButton.FillColor = System.Drawing.Color.Transparent;
+            this.InventoryButton.FillColor2 = System.Drawing.Color.Transparent;
+            this.InventoryButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InventoryButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.InventoryButton.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.InventoryButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.InventoryButton.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.InventoryButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
+            this.InventoryButton.Location = new System.Drawing.Point(24, 255);
+            this.InventoryButton.Margin = new System.Windows.Forms.Padding(2);
+            this.InventoryButton.Name = "InventoryButton";
+            this.InventoryButton.Size = new System.Drawing.Size(98, 53);
+            this.InventoryButton.TabIndex = 17;
+            this.InventoryButton.Text = "Inventory";
             // 
             // AdminIndexView
             // 

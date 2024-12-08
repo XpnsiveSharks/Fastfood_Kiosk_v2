@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace Fastfood_Kiosk_v2.Views.AdminViews
 {
+
     public partial class AdminIndexView : Form
     {
         private MenuListUserControl menuListUserControl;

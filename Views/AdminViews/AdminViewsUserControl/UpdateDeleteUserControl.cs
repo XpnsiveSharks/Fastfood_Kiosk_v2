@@ -1,4 +1,5 @@
 ﻿using Fastfood_Kiosk_v2.ViewModels;
+using Mysqlx.Crud;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,11 +22,13 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
         public bool IsProductUpdate { get; set; }
         public bool IsFromMenuListUserControl { get; set; }
         public int MenuAndProductId { get; set; }
+
+        private InsertMenuUserControl insertMenuUserControl;
         public UpdateDeleteUserControl()
         {
             InitializeComponent();
+            insertMenuUserControl = new InsertMenuUserControl();
         }
-
         private void UpdateButton_Click(object sender, EventArgs e)
         {
             if (IsProductUpdate)         
@@ -75,6 +78,10 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
                     MessageBoxIcon.Warning);
             return result == DialogResult.Yes;
         }
+        public event Action BackToMenuListEventHandler;
+        public event Action BackToProductListEventHandler;
+
+
         private void CancelButton_Click(object sender, EventArgs e)
         {
             if (IsFromMenuListUserControl)

@@ -53,6 +53,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
                 UpdateDeleteMenuListEventHandler?.Invoke(menuId, false, true);
             }
         }
+
         public void ReloadMenus()
         {
             menuViewModel.LoadMenus(); 

@@ -19,7 +19,6 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews
         public event UpdateDialogViewEventHandler UpdateDialogViewEventHandlerNavigateToMenuList;
         public event UpdateDialogViewEventHandler UpdateDialogViewEventHandlerNavigateToProductList;
 
-        private readonly AdminUserControl adminUserControl = new AdminUserControl();
         //private InsertMenuUserControl insertMenuUserControl;
         public bool IsProductUpdate { get; set; }
         public int MenuAndProductId { get; set; }
