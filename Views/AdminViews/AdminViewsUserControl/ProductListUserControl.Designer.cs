@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ProductListDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.SearchProductTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.AddProductButton = new Guna.UI2.WinForms.Guna2GradientTileButton();
             ((System.ComponentModel.ISupportInitialize)(this.ProductListDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +69,7 @@
             this.ProductListDataGridView.RowHeadersWidth = 51;
             this.ProductListDataGridView.RowTemplate.Height = 24;
             this.ProductListDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.ProductListDataGridView.Size = new System.Drawing.Size(1065, 570);
+            this.ProductListDataGridView.Size = new System.Drawing.Size(1215, 570);
             this.ProductListDataGridView.TabIndex = 6;
             this.ProductListDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.ProductListDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -95,34 +94,6 @@
             this.ProductListDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.ProductListDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductListDataGridView_CellContentClick);
             // 
-            // SearchProductTextBox
-            // 
-            this.SearchProductTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.SearchProductTextBox.BorderRadius = 15;
-            this.SearchProductTextBox.BorderThickness = 2;
-            this.SearchProductTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.SearchProductTextBox.DefaultText = "";
-            this.SearchProductTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.SearchProductTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.SearchProductTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.SearchProductTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.SearchProductTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.SearchProductTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(54)))));
-            this.SearchProductTextBox.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.SearchProductTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.SearchProductTextBox.HoverState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.SearchProductTextBox.IconLeftSize = new System.Drawing.Size(0, 0);
-            this.SearchProductTextBox.IconRightOffset = new System.Drawing.Point(10, -2);
-            this.SearchProductTextBox.IconRightSize = new System.Drawing.Size(30, 30);
-            this.SearchProductTextBox.Location = new System.Drawing.Point(42, 46);
-            this.SearchProductTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SearchProductTextBox.Name = "SearchProductTextBox";
-            this.SearchProductTextBox.PasswordChar = '\0';
-            this.SearchProductTextBox.PlaceholderText = "Search ";
-            this.SearchProductTextBox.SelectedText = "";
-            this.SearchProductTextBox.Size = new System.Drawing.Size(312, 36);
-            this.SearchProductTextBox.TabIndex = 10;
-            // 
             // AddProductButton
             // 
             this.AddProductButton.BorderColor = System.Drawing.Color.Transparent;
@@ -142,7 +113,7 @@
             this.AddProductButton.HoverState.FillColor2 = System.Drawing.Color.Transparent;
             this.AddProductButton.HoverState.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.AddProductButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.AddProductButton.Location = new System.Drawing.Point(904, 36);
+            this.AddProductButton.Location = new System.Drawing.Point(1067, 46);
             this.AddProductButton.Name = "AddProductButton";
             this.AddProductButton.Size = new System.Drawing.Size(205, 46);
             this.AddProductButton.TabIndex = 11;
@@ -155,7 +126,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.Controls.Add(this.AddProductButton);
-            this.Controls.Add(this.SearchProductTextBox);
             this.Controls.Add(this.ProductListDataGridView);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ProductListUserControl";
@@ -168,7 +138,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DataGridView ProductListDataGridView;
-        private Guna.UI2.WinForms.Guna2TextBox SearchProductTextBox;
         private Guna.UI2.WinForms.Guna2GradientTileButton AddProductButton;
     }
 }

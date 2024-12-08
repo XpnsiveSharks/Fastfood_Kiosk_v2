@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MenuListDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.CategorySearchBarTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.AddMenuButton = new Guna.UI2.WinForms.Guna2GradientTileButton();
             ((System.ComponentModel.ISupportInitialize)(this.MenuListDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -79,7 +78,7 @@
             this.MenuListDataGridView.RowHeadersWidth = 51;
             this.MenuListDataGridView.RowTemplate.Height = 24;
             this.MenuListDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.MenuListDataGridView.Size = new System.Drawing.Size(1065, 570);
+            this.MenuListDataGridView.Size = new System.Drawing.Size(1214, 570);
             this.MenuListDataGridView.TabIndex = 5;
             this.MenuListDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.MenuListDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -104,33 +103,6 @@
             this.MenuListDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.MenuListDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MenuListDataGridView_CellContentClick);
             // 
-            // CategorySearchBarTextBox
-            // 
-            this.CategorySearchBarTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.CategorySearchBarTextBox.BorderRadius = 15;
-            this.CategorySearchBarTextBox.BorderThickness = 2;
-            this.CategorySearchBarTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.CategorySearchBarTextBox.DefaultText = "";
-            this.CategorySearchBarTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.CategorySearchBarTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.CategorySearchBarTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.CategorySearchBarTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.CategorySearchBarTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(251)))));
-            this.CategorySearchBarTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CategorySearchBarTextBox.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.CategorySearchBarTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.CategorySearchBarTextBox.IconLeftSize = new System.Drawing.Size(0, 0);
-            this.CategorySearchBarTextBox.IconRightOffset = new System.Drawing.Point(10, -2);
-            this.CategorySearchBarTextBox.IconRightSize = new System.Drawing.Size(30, 30);
-            this.CategorySearchBarTextBox.Location = new System.Drawing.Point(44, 46);
-            this.CategorySearchBarTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.CategorySearchBarTextBox.Name = "CategorySearchBarTextBox";
-            this.CategorySearchBarTextBox.PasswordChar = '\0';
-            this.CategorySearchBarTextBox.PlaceholderText = "";
-            this.CategorySearchBarTextBox.SelectedText = "";
-            this.CategorySearchBarTextBox.Size = new System.Drawing.Size(312, 36);
-            this.CategorySearchBarTextBox.TabIndex = 9;
-            // 
             // AddMenuButton
             // 
             this.AddMenuButton.BorderColor = System.Drawing.Color.Transparent;
@@ -150,7 +122,7 @@
             this.AddMenuButton.HoverState.FillColor2 = System.Drawing.Color.Transparent;
             this.AddMenuButton.HoverState.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.AddMenuButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.AddMenuButton.Location = new System.Drawing.Point(904, 36);
+            this.AddMenuButton.Location = new System.Drawing.Point(1044, 36);
             this.AddMenuButton.Name = "AddMenuButton";
             this.AddMenuButton.Size = new System.Drawing.Size(205, 46);
             this.AddMenuButton.TabIndex = 12;
@@ -163,7 +135,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.Controls.Add(this.AddMenuButton);
-            this.Controls.Add(this.CategorySearchBarTextBox);
             this.Controls.Add(this.MenuListDataGridView);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuListUserControl";
@@ -175,7 +146,6 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2DataGridView MenuListDataGridView;
-        private Guna.UI2.WinForms.Guna2TextBox CategorySearchBarTextBox;
         private Guna.UI2.WinForms.Guna2GradientTileButton AddMenuButton;
     }
 }

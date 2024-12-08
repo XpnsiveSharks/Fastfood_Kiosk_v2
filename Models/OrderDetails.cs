@@ -12,7 +12,6 @@ namespace Fastfood_Kiosk_v2.Models
         public string OrderDate { get; set; }
         public string OrderType { get; set; }
         public decimal TotalAmount { get; set; }
-        public string PaymentMethod { get; set; }
         public string ProductName { get; set; }
         public int Quantity { get; set; }
     }

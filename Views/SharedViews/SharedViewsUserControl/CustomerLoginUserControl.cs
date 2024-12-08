@@ -57,8 +57,7 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
             catch (Exception ex)
             {
                 throw new Exception("An error has occured while accessing the database", ex);
-            }*/
-
+            }
         }
     }
 }

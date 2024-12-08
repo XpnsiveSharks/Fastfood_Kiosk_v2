@@ -5,7 +5,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 {
     public partial class AdminUserControl : UserControl
     {
-        public delegate void AdminUserControlClickedEventHandler();
+        /*public delegate void AdminUserControlClickedEventHandler();
         public event AdminUserControlClickedEventHandler MenuListAdminUserControlClicked;
         public event AdminUserControlClickedEventHandler ProductListAdminUserControlClicked;
 
@@ -13,14 +13,14 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
         private readonly InsertMenuUserControl insertMenuUserControl = new InsertMenuUserControl();
         private readonly ProductListUserControl productListUserControl = new ProductListUserControl();
         private readonly InsertProductUserControl insertProductUserControl = new InsertProductUserControl();
-        private readonly UpdateDeleteUserControl updateDeleteUserControl = new UpdateDeleteUserControl();
+        private readonly UpdateDeleteUserControl updateDeleteUserControl = new UpdateDeleteUserControl();*/
         public AdminUserControl()
         {
             InitializeComponent();
-            InitializeEventHandlers();
-            DisplayListMenuUserControl();
+           /* InitializeEventHandlers();
+            DisplayListMenuUserControl();*/
         }
-
+/*
         private void InitializeEventHandlers()
         {
             menuListUserControl.MenuListUserControlAddMenuClicked += OnMenuListUserControlAddMenuClicked;
@@ -86,6 +86,6 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
         private void AdminFlowLayoutPanel_Paint(object sender, PaintEventArgs e)
         {
 
-        }
+        }*/
     }
 }

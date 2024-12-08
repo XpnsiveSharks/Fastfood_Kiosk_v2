@@ -6,8 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.UI;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 {

@@ -20,23 +20,31 @@ namespace Fastfood_Kiosk_v2.Helpers
 
         public bool validateCredentials(string username, string password, string userRole)
         {
+            PasswordHashing passwordHashing = new PasswordHashing();
             try
             {
                 using (var connection = _databaseConnection.GetConnection())
                 {
-                    string query = "SELECT COUNT(1) from users_table WHERE user_role = @userRole AND Username = @username AND Password = @password";
-                    int count = connection.ExecuteScalar<int>(query, new
+                    var selectQuery = "SELECT Password FROM users_table WHERE Username = @username AND User_Role = @userRole";
+                    string storedPasswordHash = connection.QuerySingleOrDefault<string>(selectQuery, new
                     {
-                        @username = username,
-                        @password = password,
-                        @userRole = userRole
+                        username = username,
+                        userRole = userRole
                     });
-                    return count == 1;
+
+                    if (string.IsNullOrEmpty(storedPasswordHash))
+                    {
+                        return false; // User not found or role mismatch
+                    }
+
+                    string enteredPasswordHash = passwordHashing.hashPassword(password);
+                    return storedPasswordHash == enteredPasswordHash;
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception("An error has occurred while accessing the database", ex);
+                throw new Exception($"An error occurred while accessing the database: {ex.Message}");
+                return false;
             }
         }
 

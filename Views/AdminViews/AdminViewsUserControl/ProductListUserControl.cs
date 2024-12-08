@@ -16,9 +16,8 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
         private readonly ProductViewModel productViewModel = new ProductViewModel();
         private UpdateDeleteUserControl updateDeleteUserControl;
 
-        public delegate void ProductListUserControlClickedEventHandler();
-        public event ProductListUserControlClickedEventHandler ProductListUserControlAddProductClicked;
-        public event ProductListUserControlClickedEventHandler ProductListUserControlNavigateToUpdateDeleteUserControl;
+        public event Action<int, bool, bool> UpdateDeleteProductListEventHandler;
+        public event Action AddProductEventHandler;
         public ProductListUserControl()
         {
             InitializeComponent();
@@ -27,16 +26,11 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 
         private void ProductListDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex >= 0 && ProductListDataGridView.Columns.Contains("Product_Id"))
             {
-                DataGridViewRow selectedRow = ProductListDataGridView.Rows[e.RowIndex];         
+                DataGridViewRow selectedRow = ProductListDataGridView.Rows[e.RowIndex];
                 int productId = Convert.ToInt32(selectedRow.Cells["Product_Id"].Value);
-
-                updateDeleteUserControl = new UpdateDeleteUserControl
-                {
-                    IsFromMenuListUserControl = false
-                };
-                ProductListUserControlNavigateToUpdateDeleteUserControl?.Invoke();
+                UpdateDeleteProductListEventHandler?.Invoke(productId, true, false);
             }
         }
         private void LoadProducts()
@@ -78,7 +72,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
         }
         private void AddProductButton_Click(object sender, EventArgs e)
         {
-            ProductListUserControlAddProductClicked?.Invoke();
+            AddProductEventHandler?.Invoke();
         }
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.OrderPriceLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.QuantityTextBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -61,12 +60,11 @@
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.guna2Panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(88, 16);
+            this.guna2Panel1.Location = new System.Drawing.Point(39, 14);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1081, 207);
             this.guna2Panel1.TabIndex = 0;
-       //     this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // OrderPriceLabel
             // 
@@ -241,11 +239,10 @@
             this.Controls.Add(this.guna2Panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OrderListUserControl";
-            this.Size = new System.Drawing.Size(1196, 237);
+            this.Size = new System.Drawing.Size(1161, 237);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
-
 
         }
 

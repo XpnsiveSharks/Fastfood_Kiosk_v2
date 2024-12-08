@@ -94,6 +94,11 @@ namespace Fastfood_Kiosk_v2.Views.Customer
             paymentMethodView.Show();
             this.Hide();
         }
+
+        private void TaxTextLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

@@ -1,5 +1,5 @@
 ﻿using Fastfood_Kiosk_v2.Helpers;
-using Fastfood_Kiosk_v2.Views.SharedViews;
+using Fastfood_Kiosk_v2.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,22 +14,24 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 {
     public partial class CreateAccountUserControl : UserControl
     {
+        private readonly Users users = new Users();
+        public event Action BackSettingsUserControltEventHandler;
 
-      
+
         public CreateAccountUserControl()
         {
             InitializeComponent();
-           
+
         }
 
         private void CreateAccountButton_Click(object sender, EventArgs e)
         {
+
             string username = CreateUsername.Text;
             string password = CreatePassword.Text;
             string user_role = CreateUserRole.Text;
 
             PasswordHashing passwordHashing = new PasswordHashing();
-
 
             try
             {
@@ -38,19 +40,18 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
                     MessageBox.Show("Username and Password cannot be empty.");
                     return;
                 }
-                string hashedPass = passwordHashing.hashPassword(password);
-                passwordHashing.SaveToDatabase(username, hashedPass, user_role);
-                MessageBox.Show("Account Has Been Creaed");
+                string hashedpassword = passwordHashing.hashPassword(password);
+                passwordHashing.SaveToDatabase(username, hashedpassword, user_role);
+                MessageBox.Show("Account Has Been Created");
                 CreateUsername.Clear();
                 CreatePassword.Clear();
-                CreateUserRole.Items.Clear();
-
 
             }
             catch (Exception ex)
             {
                 throw new Exception("An error has occured while accessing the database", ex);
             }
+            BackSettingsUserControltEventHandler?.Invoke();
         }
 
         private void ShowPassword_CheckedChanged(object sender, EventArgs e)
@@ -67,12 +68,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            //note d pa nagana
-
-
-
+            BackSettingsUserControltEventHandler?.Invoke();
         }
     }
-    
-    
 }

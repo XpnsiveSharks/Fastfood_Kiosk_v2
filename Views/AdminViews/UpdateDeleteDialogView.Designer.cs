@@ -57,7 +57,6 @@
             this.UpdateButton.Size = new System.Drawing.Size(178, 44);
             this.UpdateButton.TabIndex = 6;
             this.UpdateButton.Text = "Update";
-            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // DeleteButton
             // 
@@ -83,7 +82,6 @@
             this.DeleteButton.Size = new System.Drawing.Size(178, 44);
             this.DeleteButton.TabIndex = 7;
             this.DeleteButton.Text = "Delete";
-            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // CancelButton
             // 
@@ -109,7 +107,6 @@
             this.CancelButton.Size = new System.Drawing.Size(178, 44);
             this.CancelButton.TabIndex = 8;
             this.CancelButton.Text = "Cancel";
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // UpdateDeleteDialogView
             // 

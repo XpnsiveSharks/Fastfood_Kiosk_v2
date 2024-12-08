@@ -13,7 +13,7 @@ namespace Fastfood_Kiosk_v2.Configurations
         public ConfigurationLoader()
         {
             Configuration = new ConfigurationBuilder()
-                .SetBasePath("C:\\Users\\Arriane Gonzales\\source\\repos\\Fastfood_Kiosk_v2\\Configurations")
+                .SetBasePath("D:\\Fastfood_Kiosk_v2\\Configurations")
                 .AddJsonFile("AppSettings.json", optional: false, reloadOnChange: true)
                 .Build();
         }

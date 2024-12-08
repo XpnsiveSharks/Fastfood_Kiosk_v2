@@ -47,7 +47,6 @@
             this.AdminFlowLayoutPanel.Name = "AdminFlowLayoutPanel";
             this.AdminFlowLayoutPanel.Size = new System.Drawing.Size(1354, 1080);
             this.AdminFlowLayoutPanel.TabIndex = 2;
-            this.AdminFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AdminFlowLayoutPanel_Paint);
             // 
             // guna2Panel1
             // 
@@ -106,7 +105,6 @@
             this.ProductListButton.Size = new System.Drawing.Size(300, 71);
             this.ProductListButton.TabIndex = 4;
             this.ProductListButton.Text = "Product List";
-            this.ProductListButton.Click += new System.EventHandler(this.ProductListButton_Click);
             // 
             // MenuListButton
             // 
@@ -131,7 +129,6 @@
             this.MenuListButton.Size = new System.Drawing.Size(300, 71);
             this.MenuListButton.TabIndex = 3;
             this.MenuListButton.Text = "Menu List";
-            this.MenuListButton.Click += new System.EventHandler(this.MenuListButton_Click);
             // 
             // AdminUserControl
             // 

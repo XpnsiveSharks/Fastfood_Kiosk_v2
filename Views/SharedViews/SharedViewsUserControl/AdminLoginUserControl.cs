@@ -14,14 +14,16 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
 {
     public partial class AdminLoginUserControl : UserControl
     {
-        public string UserRole {  get; set; }
+        private readonly AdminIndexView adminIndexView = new AdminIndexView();
+
+        public string UserRole { get; set; }
         ValidateCredentials validateCreds = new ValidateCredentials();
+
         public AdminLoginUserControl(string userRole)
         {
             InitializeComponent();
             UserRole = userRole;
         }
-
 
         private void BackButton_Click(object sender, EventArgs e)
         {
@@ -33,50 +35,39 @@ namespace Fastfood_Kiosk_v2.Views.SharedViews.SharedViewsUserControl
 
         private void AdminLoginButton_Click(object sender, EventArgs e)
         {
-
             try
             {
                 string username = AdminUsernameTextBox.Text;
-                string password = AdminPasswordTextBox.Text;                
+                string password = AdminPasswordTextBox.Text;
+
 
                 if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
                     MessageBox.Show("Username and Password cannot be empty.");
                     return;
                 }
-                if (validateCreds.validateCredentials(username, password, UserRole))
+                if (validateCreds.validateCredentials(username, password, "admin"))
                 {
-                    AdminIndexView adminIndexView = new AdminIndexView();
+                    CurrentUser.UserRole = "admin";
+                    CurrentUser.Username = username;
                     adminIndexView.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Username and password", "Error");
                 }
 
             }
             catch (Exception ex)
             {
                 throw new Exception("An error has occured while accessing the database", ex);
-            }*/
+            }
+        }
+        public static class CurrentUser
+        {
+            public static string Username { get; set; }
+            public static string UserRole { get; set; }
         }
     }
 }
 
-
-/*try
-{
-    string username = AdminUsernameTextBox.Text;
-    string password = AdminPasswordTextBox.Text;
-
-    if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
-    {
-        MessageBox.Show("Username and Password cannot be empty.");
-        return;
-    }
-    string hashedPass = passwordHashing.hashPassword(password);
-    passwordHashing.SaveToDatabase(username, hashedPass);
-    AdminIndexView adminIndexView = new AdminIndexView();
-    adminIndexView.Show();
-
-}
-catch (Exception ex)
-{
-    throw new Exception("An error has occured while accessing the database", ex);
-}*/

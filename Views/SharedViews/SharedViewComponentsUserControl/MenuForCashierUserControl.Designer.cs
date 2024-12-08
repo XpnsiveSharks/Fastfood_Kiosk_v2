@@ -52,22 +52,22 @@
             this.MenuButton.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.MenuButton.HoverState.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.MenuButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
-            this.MenuButton.Location = new System.Drawing.Point(8, 6);
+            this.MenuButton.Location = new System.Drawing.Point(5, 1);
+            this.MenuButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MenuButton.Name = "MenuButton";
-            this.MenuButton.Size = new System.Drawing.Size(202, 40);
+            this.MenuButton.Size = new System.Drawing.Size(194, 51);
             this.MenuButton.TabIndex = 23;
             this.MenuButton.Text = "asdad";
             this.MenuButton.Click += new System.EventHandler(this.MenuButton_Click);
             // 
             // MenuForCashierUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.MenuButton);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MenuForCashierUserControl";
-            this.Size = new System.Drawing.Size(220, 56);
+            this.Size = new System.Drawing.Size(228, 57);
             this.ResumeLayout(false);
 
         }

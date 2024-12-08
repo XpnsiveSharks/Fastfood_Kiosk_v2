@@ -56,9 +56,10 @@
             this.guna2Panel1.Controls.Add(this.ClearOrderButton);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 858);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 835);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(322, 222);
+            this.guna2Panel1.Size = new System.Drawing.Size(379, 245);
             this.guna2Panel1.TabIndex = 0;
             // 
             // ProceedButton
@@ -76,9 +77,10 @@
             this.ProceedButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.ProceedButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.ProceedButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.ProceedButton.Location = new System.Drawing.Point(46, 155);
+            this.ProceedButton.Location = new System.Drawing.Point(46, 148);
+            this.ProceedButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ProceedButton.Name = "ProceedButton";
-            this.ProceedButton.Size = new System.Drawing.Size(232, 35);
+            this.ProceedButton.Size = new System.Drawing.Size(274, 51);
             this.ProceedButton.TabIndex = 7;
             this.ProceedButton.Text = "Proceed";
             this.ProceedButton.Click += new System.EventHandler(this.ProceedButton_Click);
@@ -86,37 +88,41 @@
             // SubTotalLabel
             // 
             this.SubTotalLabel.AutoSize = true;
-            this.SubTotalLabel.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.SubTotalLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.SubTotalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.SubTotalLabel.Location = new System.Drawing.Point(231, 43);
+            this.SubTotalLabel.Location = new System.Drawing.Point(281, 28);
+            this.SubTotalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SubTotalLabel.Name = "SubTotalLabel";
-            this.SubTotalLabel.Size = new System.Drawing.Size(119, 34);
+            this.SubTotalLabel.Size = new System.Drawing.Size(87, 24);
             this.SubTotalLabel.TabIndex = 6;
             this.SubTotalLabel.Text = "P000.00";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.label1.Location = new System.Drawing.Point(10, 43);
+            this.label1.Location = new System.Drawing.Point(16, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 34);
+            this.label1.Size = new System.Drawing.Size(101, 24);
             this.label1.TabIndex = 5;
             this.label1.Text = "Sub Total";
             // 
             // DiscountLabel
             // 
             this.DiscountLabel.Location = new System.Drawing.Point(0, 0);
+            this.DiscountLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DiscountLabel.Name = "DiscountLabel";
-            this.DiscountLabel.Size = new System.Drawing.Size(100, 23);
+            this.DiscountLabel.Size = new System.Drawing.Size(67, 15);
             this.DiscountLabel.TabIndex = 8;
             // 
             // label
             // 
             this.label.Location = new System.Drawing.Point(0, 0);
+            this.label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(100, 23);
+            this.label.Size = new System.Drawing.Size(67, 15);
             this.label.TabIndex = 9;
             // 
             // ClearOrderButton
@@ -134,18 +140,20 @@
             this.ClearOrderButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.ClearOrderButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.ClearOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.ClearOrderButton.Location = new System.Drawing.Point(46, 112);
+            this.ClearOrderButton.Location = new System.Drawing.Point(46, 81);
+            this.ClearOrderButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ClearOrderButton.Name = "ClearOrderButton";
-            this.ClearOrderButton.Size = new System.Drawing.Size(232, 35);
+            this.ClearOrderButton.Size = new System.Drawing.Size(274, 51);
             this.ClearOrderButton.TabIndex = 1;
             this.ClearOrderButton.Text = "Clear Order";
             this.ClearOrderButton.Click += new System.EventHandler(this.ClearOrderButton_Click);
             // 
             // ItemsFlowLayoutPanel
             // 
-            this.ItemsFlowLayoutPanel.Location = new System.Drawing.Point(0, 71);
+            this.ItemsFlowLayoutPanel.Location = new System.Drawing.Point(0, 46);
+            this.ItemsFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ItemsFlowLayoutPanel.Name = "ItemsFlowLayoutPanel";
-            this.ItemsFlowLayoutPanel.Size = new System.Drawing.Size(322, 782);
+            this.ItemsFlowLayoutPanel.Size = new System.Drawing.Size(379, 615);
             this.ItemsFlowLayoutPanel.TabIndex = 1;
             // 
             // Item
@@ -153,9 +161,10 @@
             this.Item.AutoSize = true;
             this.Item.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.Item.Location = new System.Drawing.Point(9, 46);
+            this.Item.Location = new System.Drawing.Point(16, 18);
+            this.Item.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Item.Name = "Item";
-            this.Item.Size = new System.Drawing.Size(75, 34);
+            this.Item.Size = new System.Drawing.Size(51, 22);
             this.Item.TabIndex = 2;
             this.Item.Text = "Item";
             // 
@@ -164,9 +173,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.label2.Location = new System.Drawing.Point(153, 46);
+            this.label2.Location = new System.Drawing.Point(190, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 34);
+            this.label2.Size = new System.Drawing.Size(45, 22);
             this.label2.TabIndex = 3;
             this.label2.Text = "Qty";
             // 
@@ -175,15 +185,16 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.label3.Location = new System.Drawing.Point(196, 46);
+            this.label3.Location = new System.Drawing.Point(248, 17);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 34);
+            this.label3.Size = new System.Drawing.Size(54, 22);
             this.label3.TabIndex = 4;
             this.label3.Text = "Price";
             // 
             // CartUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.Controls.Add(this.label3);
@@ -191,9 +202,8 @@
             this.Controls.Add(this.Item);
             this.Controls.Add(this.ItemsFlowLayoutPanel);
             this.Controls.Add(this.guna2Panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CartUserControl";
-            this.Size = new System.Drawing.Size(322, 1080);
+            this.Size = new System.Drawing.Size(379, 1080);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -15,7 +15,7 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews
 {
     public partial class UpdateDeleteDialogView : Form
     {
-        public delegate void UpdateDialogViewEventHandler();
+        /*public delegate void UpdateDialogViewEventHandler();
         public event UpdateDialogViewEventHandler UpdateDialogViewEventHandlerNavigateToMenuList;
         public event UpdateDialogViewEventHandler UpdateDialogViewEventHandlerNavigateToProductList;
 
@@ -32,17 +32,17 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews
             this.Close();
             if (IsProductUpdate)
             {
-                //InsertProductUserControl insertProductUserControl = new InsertProductUserControl(MenuAndProductId);
-                //UpdateDialogViewClickedForMenuUpdate?.Invoke();
+                InsertProductUserControl insertProductUserControl = new InsertProductUserControl(MenuAndProductId);
+                UpdateDialogViewClickedForMenuUpdate?.Invoke();
             }
             else
             {
-               /* insertMenuUserControl = new InsertMenuUserControl
+                insertMenuUserControl = new InsertMenuUserControl
                 {
                     MenuId = MenuAndProductId,
                 };
                 AdminUserControl adminUserControl = new AdminUserControl();
-                adminUserControl.ChangeUserControlInAdminUserControl(insertMenuUserControl);*/
+                adminUserControl.ChangeUserControlInAdminUserControl(insertMenuUserControl);
             }
                 
         }
@@ -92,6 +92,6 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews
         private void CancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
+        }*/
     }
 }

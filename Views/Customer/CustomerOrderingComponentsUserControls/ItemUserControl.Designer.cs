@@ -41,9 +41,10 @@
             this.ProductLabel.AutoSize = true;
             this.ProductLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.ProductLabel.Location = new System.Drawing.Point(9, 12);
+            this.ProductLabel.Location = new System.Drawing.Point(16, 18);
+            this.ProductLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ProductLabel.Name = "ProductLabel";
-            this.ProductLabel.Size = new System.Drawing.Size(95, 39);
+            this.ProductLabel.Size = new System.Drawing.Size(62, 24);
             this.ProductLabel.TabIndex = 1;
             this.ProductLabel.Text = "Meal";
             // 
@@ -52,9 +53,10 @@
             this.PriceLabel.AutoSize = true;
             this.PriceLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PriceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.PriceLabel.Location = new System.Drawing.Point(9, 35);
+            this.PriceLabel.Location = new System.Drawing.Point(14, 42);
+            this.PriceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PriceLabel.Name = "PriceLabel";
-            this.PriceLabel.Size = new System.Drawing.Size(99, 30);
+            this.PriceLabel.Size = new System.Drawing.Size(68, 21);
             this.PriceLabel.TabIndex = 2;
             this.PriceLabel.Text = "P000.00";
             this.PriceLabel.Click += new System.EventHandler(this.PriceLabel_Click);
@@ -64,9 +66,10 @@
             this.QuantityLabel.AutoSize = true;
             this.QuantityLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.QuantityLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.QuantityLabel.Location = new System.Drawing.Point(153, 22);
+            this.QuantityLabel.Location = new System.Drawing.Point(190, 22);
+            this.QuantityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.QuantityLabel.Name = "QuantityLabel";
-            this.QuantityLabel.Size = new System.Drawing.Size(31, 36);
+            this.QuantityLabel.Size = new System.Drawing.Size(21, 22);
             this.QuantityLabel.TabIndex = 3;
             this.QuantityLabel.Text = "2";
             // 
@@ -75,9 +78,10 @@
             this.TotalLabel.AutoSize = true;
             this.TotalLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.TotalLabel.Location = new System.Drawing.Point(196, 22);
+            this.TotalLabel.Location = new System.Drawing.Point(245, 23);
+            this.TotalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TotalLabel.Name = "TotalLabel";
-            this.TotalLabel.Size = new System.Drawing.Size(119, 36);
+            this.TotalLabel.Size = new System.Drawing.Size(81, 22);
             this.TotalLabel.TabIndex = 4;
             this.TotalLabel.Text = "P000.00";
             this.TotalLabel.Click += new System.EventHandler(this.TotalLabel_Click);
@@ -93,15 +97,16 @@
             this.RemoveItemButton.ForeColor = System.Drawing.Color.White;
             this.RemoveItemButton.Image = ((System.Drawing.Image)(resources.GetObject("RemoveItemButton.Image")));
             this.RemoveItemButton.ImageSize = new System.Drawing.Size(30, 30);
-            this.RemoveItemButton.Location = new System.Drawing.Point(312, 22);
+            this.RemoveItemButton.Location = new System.Drawing.Point(319, 19);
+            this.RemoveItemButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RemoveItemButton.Name = "RemoveItemButton";
-            this.RemoveItemButton.Size = new System.Drawing.Size(32, 29);
+            this.RemoveItemButton.Size = new System.Drawing.Size(30, 30);
             this.RemoveItemButton.TabIndex = 5;
             this.RemoveItemButton.Click += new System.EventHandler(this.RemoveItemButton_Click);
             // 
             // ItemUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.Controls.Add(this.RemoveItemButton);
@@ -109,9 +114,8 @@
             this.Controls.Add(this.QuantityLabel);
             this.Controls.Add(this.PriceLabel);
             this.Controls.Add(this.ProductLabel);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ItemUserControl";
-            this.Size = new System.Drawing.Size(346, 83);
+            this.Size = new System.Drawing.Size(379, 69);
             this.ResumeLayout(false);
             this.PerformLayout();
 

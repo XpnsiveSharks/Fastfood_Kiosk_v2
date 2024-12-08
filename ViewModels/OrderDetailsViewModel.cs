@@ -45,7 +45,7 @@ namespace Fastfood_Kiosk_v2.ViewModels
             List<OrderDetailsUserControl> orderDetailsUserControls = new List<OrderDetailsUserControl>();
             foreach(var item in _orderDetailsRepository.GetOrderDetails())
             {
-                OrderDetailsUserControl orderDetailsUserControl = new OrderDetailsUserControl
+                OrderDetailsUserControl orderDetailsUserControl = new OrderDetailsUserControl("")
                 {
                     Order_Number = item.OrderNumber,
                     Order_Date = item.OrderDate,
