@@ -62,8 +62,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.MenuListDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.MenuListDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.MenuListDataGridView.Location = new System.Drawing.Point(44, 116);
-            this.MenuListDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.MenuListDataGridView.Location = new System.Drawing.Point(48, 38);
             this.MenuListDataGridView.Name = "MenuListDataGridView";
             this.MenuListDataGridView.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -78,7 +77,7 @@
             this.MenuListDataGridView.RowHeadersWidth = 51;
             this.MenuListDataGridView.RowTemplate.Height = 24;
             this.MenuListDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.MenuListDataGridView.Size = new System.Drawing.Size(1214, 570);
+            this.MenuListDataGridView.Size = new System.Drawing.Size(1157, 648);
             this.MenuListDataGridView.TabIndex = 5;
             this.MenuListDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.MenuListDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -122,23 +121,23 @@
             this.AddMenuButton.HoverState.FillColor2 = System.Drawing.Color.Transparent;
             this.AddMenuButton.HoverState.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.AddMenuButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.AddMenuButton.Location = new System.Drawing.Point(1044, 36);
+            this.AddMenuButton.Location = new System.Drawing.Point(1566, 55);
+            this.AddMenuButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AddMenuButton.Name = "AddMenuButton";
-            this.AddMenuButton.Size = new System.Drawing.Size(205, 46);
+            this.AddMenuButton.Size = new System.Drawing.Size(308, 71);
             this.AddMenuButton.TabIndex = 12;
             this.AddMenuButton.Text = "Add New Menu";
             this.AddMenuButton.Click += new System.EventHandler(this.AddMenuButton_Click);
             // 
             // MenuListUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.Controls.Add(this.AddMenuButton);
             this.Controls.Add(this.MenuListDataGridView);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuListUserControl";
-            this.Size = new System.Drawing.Size(1767, 1080);
+            this.Size = new System.Drawing.Size(1280, 720);
             ((System.ComponentModel.ISupportInitialize)(this.MenuListDataGridView)).EndInit();
             this.ResumeLayout(false);
 

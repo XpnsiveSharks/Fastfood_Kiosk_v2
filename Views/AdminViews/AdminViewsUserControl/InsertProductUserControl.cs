@@ -121,5 +121,10 @@ namespace Fastfood_Kiosk_v2.Views.AdminViews.AdminViewsUserControl
         {
             BackToProductListEventHandler?.Invoke();
         }
+
+        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
